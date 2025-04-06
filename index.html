@@ -4,22 +4,104 @@
     html5up.net | @ajlkn
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
     <head>
-        <class="image fit"><img src="images/profile.png" alt="" /> 
         <title>AGAYA Consulting Inc.</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="icon" type="image/png" href="assets/images/logo.png">
         <link rel="stylesheet" href="assets/css/main.css" />
+
         <style>
+
+            html, body {
+                    margin: 0;
+                    padding: 0;
+                        }
+
+            #nav {
+                margin: 0;
+                border: none;
+                box-shadow: none;
+                }
+                
+                * {
+                box-sizing: border-box;
+                }
+
             h1 {
               color: #A22120 !important;
               font-size: 3rem !important;
               line-height: 1.1;
               margin: 0 0 2rem 0;
             }
-          
+
+            h3 {
+                color: #2b2a2a !important;
+                margin-bottom: 0.5rem;
+                }
+                    
+            .tagline {
+                font-size:0.85rem;
+                text-transform: none;
+                color: #2b2a2a !important;
+                margin-top: 0;
+                    }
+
+            .profile-photo {
+                    width: 180px;           /* adjust size as needed */
+                    height: 180px;          /* make it square for circle */
+                    object-fit: cover;      /* crop excess nicely */
+                    object-position: center top; /* shift focus slightly down */
+                    border-radius: 50%;     /* makes it circular */
+                    display: block;
+                    margin:1.5rem auto 0.5rem auto;      /* centers it with some spacing */
+                    margin-bottom: 0.
+                                }
+
+            .profile-container {
+                    text-align: center;
+                    margin-top: 1rem;
+                     /* reduced space above */
+                    margin-bottom: 1rem;
+                                }
+            
+            .profile-name {
+                color: #2B2A2A !important;
+                text-align: center;
+                margin-top: 0.5rem;
+                margin-bottom: 0.25rem;
+                font-weight: 500; /* optional: adds a bit more presence */
+                          }
+
+            body {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+                    }
+
+            #intro {
+                background-color: #dededa;
+                padding-top: 1rem !important; /* adjust or reduce as needed */
+                margin-top: 0 !important;
+                    }
+
+            h1 {
+                margin-top: 0 !important;
+                }
+
+            .logo-container {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                z-index: 999;
+                 }
+
+            .logo {
+                height: 90px;
+                width: auto;
+                }
+
             .custom-section {
               text-align: left;
               line-height: 1.5;
@@ -35,6 +117,64 @@
               font-size: 80%;
               line-height: 1;
             }
+
+            .icons {
+                background-color: #A22120;
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+                border-radius: 5px;
+                    }
+
+            .icons a {
+                color: #dededa !important;
+                font-size: 2rem;
+                    }
+
+            #nav {
+                background-color: #A22120;
+                width: 100%;
+                padding: 0;
+                padding-top: 0;
+                margin: 0;
+                margin-top: 0;
+                border: #A22120;
+                display: flex;
+                box-shadow: none;
+                position: relative;
+                }
+              
+            #nav .icons {
+                list-style: none;
+                justify-content: center;
+                gap: 2rem;
+                margin: 0;
+                padding: 0
+                        }
+
+            #nav .icons a {
+                color: #dededa !important;
+                font-size: 1.2rem;
+                text-decoration: none;
+                font-weight: 800; /* makes text bold */
+                }
+
+        #nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+                }
+
+        #nav ul.links {
+            display: none; /* since you're not using this list */
+                }
+
+        #nav ul.icons {
+            margin: 0;
+            padding: 0;
+                }
+
           </style>
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
@@ -56,21 +196,27 @@
     
     <body class="is-preload">
 
+        <div class="logo-container">
+            <img src="/images/logo.png" alt="AGAYA Consulting Logo" class="logo" />
+          </div>
+          
+
         <!-- Wrapper -->
             <div id="wrapper" class="fade-in">
 
                 <!-- Intro -->
                     <div id="intro">
                         <h1>AGAYA Consulting Inc.</h1>
-                        <h3><p>Turning Nonprofit Data into Actionable Insights</p></h3>
-                        <h2><p>Smart data for people on a mission. Because your work is too important to be slowed down by guesswork.</p></h2>
-                        <ul class="actions">
-                            <class="image fit"><img src="images/profile.png" alt="" /> <br />
-                            <p>Indu Sambandam</p>
-                        </ul>
+                        <h3>Turning Nonprofit Data into Actionable Insights</h3>
+                        <h2><p class="tagline">Smart data for people on a mission. Because your work is too important to be slowed down by guesswork.</p></h2>
+                        <div class="profile-container">
+                            <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
+                            <p class="profile-name">Indu Sambandam</p>
+                        </div>
+                        
                     </div>
 
-                
+                    
 
                 <!-- Nav -->
                     <nav id="nav">
@@ -80,9 +226,8 @@
                         </ul>
                         <ul class="icons">
                             <li><a href="https://www.linkedin.com/in/isambandam/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-                            <li><a href="https://github.com/isam2003" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                            <li><a href="blog.html" target="_blank"</a>Blog</a></li>
                             
+                            <li><a href="blog.html" target="_blank">Blog</a></li>
                         </ul>
                     </nav>
 
