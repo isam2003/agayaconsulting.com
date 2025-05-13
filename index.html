@@ -83,9 +83,17 @@
                     }
 
             #intro {
+               
+
                 background-color: #dededa;
-                padding-top: 0rem !important; /* adjust or reduce as needed */
                 margin-top: 0 !important;
+                min-height: 100vh; /* fills the full screen */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; /* pushes nav to the bottom */
+                align-items: center;
+                padding: 2rem 1rem; /* some internal spacing */
+                text-align: center;
                     }
 
             h1 {
@@ -134,20 +142,16 @@
                 font-size: 2rem;
                     }
 
+          
             #nav {
-                background-color: #A22120;
-                width: 100%;
-                padding: 0;
-                padding-top: 0;
-                margin: 0;
-                margin-top: 0;
-                border: #A22120;
-                display: flex;
-                box-shadow: none;
-                position: relative;
-                justify-content: center;
+                    background-color: #A22120;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    box-shadow: none;
+                    margin-top: 2rem; /* <-- This adds vertical space above the nav */
+                    padding: 1rem 0;
                 }
-
            
             #nav .icons {
                 list-style: none;
@@ -240,12 +244,8 @@ footer {
                             <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
                             <p class="profile-name">Indu Sambandam</p>
                         </div>
-                        
-                    </div>
-
                     
-
-                <!-- Nav -->
+                     <!-- Nav -->
                     <nav id="nav">
                         <ul class="links">
                             <li class="active"><a href="index.html"></a></li>
@@ -257,6 +257,12 @@ footer {
                             <li><a href="https://calendly.com/indu_sam/30min" target="_blank">Book a Call</a></li>
                         </ul>
                     </nav>
+
+                    </div>
+
+                    
+
+               
 
                 <!-- Main -->
                     <div id="main">
