@@ -23,7 +23,7 @@
             #nav {
                 margin: 0;
                 border: none;
-                position: absolute
+                position: absolute;
                 box-shadow: none;
                 }
                 
@@ -83,8 +83,6 @@
                     }
 
             #intro {
-               
-
                 background-color: #dededa;
                 margin-top: 0 !important;
                 min-height: 100vh; /* fills the full screen */
@@ -94,7 +92,9 @@
                 align-items: center;
                 padding: 2rem 1rem; /* some internal spacing */
                 text-align: center;
-                    }
+                position: relative;          /* ✅ Add this line */
+                padding-bottom: 4rem;   
+                }
 
             h1 {
                 margin-top: 4% !important;
@@ -144,12 +144,16 @@
 
           
             #nav {
-                    background-color: #A22120;
+                position:absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;                
+                background-color: #A22120;
                     width: 100%;
                     display: flex;
                     justify-content: center;
                     box-shadow: none;
-                    margin-top: 2rem; /* <-- This adds vertical space above the nav */
+                    margin-top: 0; /* <-- This adds vertical space above the nav */
                     padding: 1rem 0;
                 }
            
