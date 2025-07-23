@@ -8,22 +8,23 @@
   <h1>Indu's Blog</h1>  
   <a href="index.html">Back to Home</a>
   
-  <div style="margin-top: 1em; margin-bottom: 1.5em;">
-    <label for="topicDropdown"><strong>Filter by Topic:</strong></label>
-    <select id="topicDropdown" onchange="filterPosts()" style="margin-left: 0.5em;">
-      <option value="all">All Topics</option>
-      <option value="ai">Analytics & AI Adoption</option>
-      <option value="donor">Donor Analytics & Behavior</option>
-      <option value="strategy">Data Strategy & Quality</option>
-      <option value="storytelling">Storytelling & Reporting</option>
-      <option value="fundraising">Fundraising Tactics & Ethics</option>
-      <option value="systems">Systems & Vendor Management</option>
-      <option value="clarity">Clarity Before Action</option>
-      <option value="sector">Sector Reflections</option>
-      <option value="volun">Volunteerism</option>
-      <option value="case">Case Examples</option>
-    </select>
-  </div>
+<div style="margin-top: 1em; margin-bottom: 1.5em;">
+  <label for="topicDropdown" style="font-size: 1.4em;"><strong>Filter by Topic:</strong></label><br>
+  <select id="topicDropdown" onchange="filterPosts()" 
+          style="margin-top: 0.5em; width: 100%; max-width: 400px; font-size: 1em; padding: 0.5em;">
+    <option value="all">All Topics</option>
+    <option value="ai">Analytics & AI Adoption</option>
+    <option value="donor">Donor Analytics & Behavior</option>
+    <option value="strategy">Data Strategy & Quality</option>
+    <option value="storytelling">Storytelling & Reporting</option>
+    <option value="fundraising">Fundraising Tactics & Ethics</option>
+    <option value="systems">Systems & Vendor Management</option>
+    <option value="clarity">Clarity Before Action</option>
+    <option value="sector">Sector Reflections</option>
+    <option value="volun">Volunteerism</option>
+    <option value="case">Case Examples</option>
+  </select>
+</div>
 
   <!-- Blog posts here --> 
   <div class="post" data-topic="ai">
