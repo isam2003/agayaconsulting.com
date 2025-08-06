@@ -278,25 +278,33 @@ footer {
       background: transparent;
     }
     .carousel-slide {
-      display: none;
-    margin:0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     border: none;
+    display: none;
     }
+
     .carousel-slide.active {
       display: block;
-    }
+     }
+
     .carousel-slide img {
       width: 100%;
-      margin: 0;
-      padding: 0;
+      margin: 0 !important;
+      padding: 0 !important;
       border: none;
       box-shadow: none; /*remove any subtle shadows */
       display: block;
     }
+
     .carousel-buttons {
-      margin-top: 10px;
+      margin-top: 0;
+        padding-top: 0;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
     }
+
     .carousel-buttons button {
       background:transparent;
       border: none;
@@ -452,10 +460,9 @@ footer {
 
                                             <!-- New Case Study Section with Image Carousel -->
                 <article style="margin-bottom: 0;">
-                <h3 style="text-align: left;">Case Study</h3>
+                <h3 style="text-align: left;">Case Studies</h3>
                 <div class="custom-section" style="text-align: center;">
                     <p>How one nonprofit reclaimed 40+ hours a quarter with smarter reports:</p>
-
                     <div class="carousel-container">
                     <div class="carousel-slide active"><img src="images/slide_1.jpg" alt="Slide 1"></div>
                     <div class="carousel-slide"><img src="images/slide_2.jpg" alt="Slide 2"></div>
@@ -468,16 +475,12 @@ footer {
                     <div class="carousel-slide"><img src="images/slide_9.jpg" alt="Slide 9"></div>
                     <div class="carousel-slide"><img src="images/slide_10.jpg" alt="Slide 10"></div>
                     <div class="carousel-slide"><img src="images/slide_11.jpg" alt="Slide 11"></div>
-                    </div>
-
-                    <div class="carousel-buttons">
+                    </div><div class="carousel-buttons">
                     <button onclick="plusSlides(-1)">❮</button>
                     <button onclick="plusSlides(1)">❯</button>
                     </div>
-
-                <div style="margin-top: 20px; text-align: center;">
-                <p style="font-size: 1.1em;">🔍 Want to explore a similar solution?</p>
-
+                <div style="margin-top: 10px; text-align: center;">
+                <p style="font-size: 1.1em;">🔍 Want to explore a similar solutions?</p>
                 <button onclick="document.getElementById('emailReveal').style.display='inline'; this.style.display='none';"
         style="font-size: 1.1em; background-color:transparent; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; box-shadow: none; outline: none;">
   Let’s Talk
