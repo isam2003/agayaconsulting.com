@@ -60,7 +60,7 @@
                     border-radius: 50%;     /* makes it circular */
                     display: block;
                     margin:1.5rem auto 0.5rem auto;      /* centers it with some spacing */
-                    margin-bottom: 0.
+                    margin-bottom: 0;
                                 }
 
             .profile-container {
@@ -270,51 +270,51 @@ footer {
         font-size: 90%;
     }
 }
+
+/* Carousel */
 .carousel-container {
-      position: relative;
-      max-width: 700px;
-      margin: auto;
-      border: none;
-      background: transparent;
-    }
-    .carousel-slide {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none;
-    display: none;
-    }
-
-    .carousel-slide.active {
-      display: block;
-     }
-
-    .carousel-slide img {
-      width: 100%;
-      margin: 0 !important;
-      padding: 0 !important;
-      border: none;
-      box-shadow: none; /*remove any subtle shadows */
-      display: block;
-    }
-
-    .carousel-buttons {
-      margin-top: 0;
-        padding-top: 0;
-        line-height: 1;
-        display: flex;
-        justify-content: center;
-    }
-
-    .carousel-buttons button {
-      background:transparent;
-      border: none;
-      padding: 0;
-      font-size: 24px;
-      cursor: pointer;
-      margin: 0 10px;
-      box-shadow: none;
-      outline: none;
-    }
+  position: relative;
+  max-width: 700px;    /* adjust if you want smaller slides */
+  margin: auto;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+.carousel-slide {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  display: none;
+}
+.carousel-slide.active {
+  display: block;
+}
+.carousel-slide img {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  box-shadow: none; /* remove any subtle shadows */
+  display: block;
+}
+.carousel-buttons {
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.carousel-buttons button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+  box-shadow: none;
+  outline: none;
+}
 
           </style>
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -386,7 +386,7 @@ footer {
                                     
                                     <h3 style="text-align: left;">About</h3>
                                                                         
-                                                                              
+                                       
                                         <div class="custom-section">
 										<p>Hi, I’m Indu.</p>
                                             <p> You're driving change but decisions are harder when data is scattered, unclear, or outdated. Nonprofit teams are stretched thin. We get it. We’ve worked with incredible organizations that change lives, but too often, they’re stuck guessing what’s working. That’s where we come in.</p>
@@ -458,38 +458,69 @@ footer {
                                 </div>
                             </article>
 
-                                            <!-- New Case Study Section with Image Carousel -->
-                <article style="margin-bottom: 0;">
-                <h3 style="text-align: left;">Case Studies</h3>
-                <div class="custom-section" style="text-align: center;">
-                    <p>How one nonprofit reclaimed 40+ hours a quarter with smarter reports:</p>
-                    <div class="carousel-container">
-                    <div class="carousel-slide active"><img src="images/slide_1.jpg" alt="Slide 1"></div>
-                    <div class="carousel-slide"><img src="images/slide_2.jpg" alt="Slide 2"></div>
-                    <div class="carousel-slide"><img src="images/slide_3.jpg" alt="Slide 3"></div>
-                    <div class="carousel-slide"><img src="images/slide_4.jpg" alt="Slide 4"></div>
-                    <div class="carousel-slide"><img src="images/slide_5.jpg" alt="Slide 5"></div>
-                    <div class="carousel-slide"><img src="images/slide_6.jpg" alt="Slide 6"></div>
-                    <div class="carousel-slide"><img src="images/slide_7.jpg" alt="Slide 7"></div>
-                    <div class="carousel-slide"><img src="images/slide_8.jpg" alt="Slide 8"></div>
-                    <div class="carousel-slide"><img src="images/slide_9.jpg" alt="Slide 9"></div>
-                    <div class="carousel-slide"><img src="images/slide_10.jpg" alt="Slide 10"></div>
-                    <div class="carousel-slide"><img src="images/slide_11.jpg" alt="Slide 11"></div>
-                    </div><div class="carousel-buttons">
-                    <button onclick="plusSlides(-1)">❮</button>
-                    <button onclick="plusSlides(1)">❯</button>
-                    </div>
-                <div style="margin-top: 10px; text-align: center;">
-                <p style="font-size: 1.1em;">🔍 Want to explore similar solutions?</p>
-                <button onclick="document.getElementById('emailReveal').style.display='inline'; this.style.display='none';"
-        style="font-size: 1.1em; background-color:transparent; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; box-shadow: none; outline: none;">
-  Let’s Talk
-</button>
+            <!-- Case Studies (two carousels stacked) -->
+            <article style="margin-bottom: 0;">
+              <h3 style="text-align: left;">Case Studies</h3>
 
+              <!-- Case Study A: Reporting / Time Savings -->
+              <div class="custom-section" style="text-align: center; margin-bottom: 4rem;">
+                <p style="margin: 0 0 8px 0;color:#A22120; font-weight:700; font-size:1.2em;">How one nonprofit reclaimed 40+ hours a quarter with smarter reports:</p>
+
+                <div class="carousel-container" data-carousel="reporting">
+                  <div class="carousel-slide active"><img src="images/slide_1.jpg" alt="Reporting slide 1"></div>
+                  <div class="carousel-slide"><img src="images/slide_2.jpg" alt="Reporting slide 2"></div>
+                  <div class="carousel-slide"><img src="images/slide_3.jpg" alt="Reporting slide 3"></div>
+                  <div class="carousel-slide"><img src="images/slide_4.jpg" alt="Reporting slide 4"></div>
+                  <div class="carousel-slide"><img src="images/slide_5.jpg" alt="Reporting slide 5"></div>
+                  <div class="carousel-slide"><img src="images/slide_6.jpg" alt="Reporting slide 6"></div>
+                  <div class="carousel-slide"><img src="images/slide_7.jpg" alt="Reporting slide 7"></div>
+                  <div class="carousel-slide"><img src="images/slide_8.jpg" alt="Reporting slide 8"></div>
+                  <div class="carousel-slide"><img src="images/slide_9.jpg" alt="Reporting slide 9"></div>
+                  <div class="carousel-slide"><img src="images/slide_10.jpg" alt="Reporting slide 10"></div>
+                  <div class="carousel-slide"><img src="images/slide_11.jpg" alt="Reporting slide 11"></div>
+                </div>
+
+                <div class="carousel-buttons">
+                  <button type="button" aria-label="Previous reporting slide" onclick="plusSlides('reporting', -1)">❮</button>
+                  <button type="button" aria-label="Next reporting slide" onclick="plusSlides('reporting', 1)">❯</button>
+                </div>
+              </div>
+
+              <!-- Case Study B: Food Bank / Dignity Metrics -->
+              <div class="custom-section" style="text-align: center; margin-bottom: 1.25rem;">
+                <p style="margin: 0 0 8px 0;color:#A22120; font-weight:700; font-size:1.2em;">How a food bank moved beyond pounds and people to measure trust and dignity:</p>
+
+                <div class="carousel-container" data-carousel="foodbank">
+                  <div class="carousel-slide active"><img src="images/fb1.jpg" alt="Food Bank slide 1"></div>
+                  <div class="carousel-slide"><img src="images/fb2.jpg" alt="Food Bank slide 2"></div>
+                  <div class="carousel-slide"><img src="images/fb3.jpg" alt="Food Bank slide 3"></div>
+                  <div class="carousel-slide"><img src="images/fb4.jpg" alt="Food Bank slide 4"></div>
+                  <div class="carousel-slide"><img src="images/fb5.jpg" alt="Food Bank slide 5"></div>
+                  <div class="carousel-slide"><img src="images/fb6.jpg" alt="Food Bank slide 6"></div>
+                  <div class="carousel-slide"><img src="images/fb7.jpg" alt="Food Bank slide 7"></div>
+                  <div class="carousel-slide"><img src="images/fb8.jpg" alt="Food Bank slide 8"></div>
+                  <div class="carousel-slide"><img src="images/fb9.jpg" alt="Food Bank slide 9"></div>
+                  <div class="carousel-slide"><img src="images/fb10.jpg" alt="Food Bank slide 10"></div>
+                  <div class="carousel-slide"><img src="images/fb11.jpg" alt="Food Bank slide 11"></div>
+                </div>
+
+                <div class="carousel-buttons">
+                  <button type="button" aria-label="Previous food bank slide" onclick="plusSlides('foodbank', -1)">❮</button>
+                  <button type="button" aria-label="Next food bank slide" onclick="plusSlides('foodbank', 1)">❯</button>
+                </div>
+              </div>
+
+              <!-- Single CTA below the second carousel -->
+              <div style="text-align: center; margin-top: 10px;">
+                <p style="font-size: 1.1em; margin: 0 0 8px 0;">🔍 Want to explore similar solutions?</p>
+                <button
+                  onclick="document.getElementById('emailReveal').style.display='inline'; this.style.display='none';"
+                  style="font-size: 1.1em; background-color:transparent; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; box-shadow: none; outline: none;">
+                  Let’s Talk
+                </button>
                 <span id="emailReveal" style="display: none; font-size: 1.1em;">indu@agayaconsulting.com</span>
-                </div>
-                </div>
-                </article>
+              </div>
+            </article>
 
 
                             <!-- Featured Post -->
@@ -668,27 +699,38 @@ footer {
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
     
-    <!-- Carousel Functionality -->
+    <!-- Carousel Functionality (multi-carousel) -->
     <script>
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName("carousel-slide");
+      // Keeps the current index per carousel
+      const carouselState = {};
 
-    function showSlide(index) {
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
+      function getSlides(name) {
+        const container = document.querySelector(`.carousel-container[data-carousel="${name}"]`);
+        return container ? container.querySelectorAll('.carousel-slide') : [];
       }
-      slides[index].classList.add("active");
-    }
 
-    function plusSlides(n) {
-      slideIndex += n;
-      if (slideIndex >= slides.length) slideIndex = 0;
-      if (slideIndex < 0) slideIndex = slides.length - 1;
-      showSlide(slideIndex);
-    }
+      function showSlide(name, idx) {
+        const slides = getSlides(name);
+        if (!slides.length) return;
 
-    showSlide(slideIndex);
-  </script>  
+        // wrap index
+        idx = (idx + slides.length) % slides.length;
+
+        // toggle visibility
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === idx));
+
+        // persist index
+        carouselState[name] = idx;
+      }
+
+      function plusSlides(name, delta) {
+        const current = carouselState[name] ?? 0;
+        showSlide(name, current + delta);
+      }
+
+      // Initialize both carousels
+      ['reporting', 'foodbank'].forEach(name => showSlide(name, 0));
+    </script>  
 
     </body>
 </html>
