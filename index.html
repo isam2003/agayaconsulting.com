@@ -274,7 +274,7 @@ footer {
 /* Carousel */
 .carousel-container {
   position: relative;
-  max-width: 700px;    /* adjust if you want smaller slides */
+  max-width: 400px;    /* adjust if you want smaller slides */
   margin: auto;
   border: none;
   background: transparent;
@@ -511,15 +511,18 @@ footer {
               </div>
 
               <!-- Single CTA below the second carousel -->
-              <div style="text-align: center; margin-top: 10px;">
-                <p style="font-size: 1.1em; margin: 0 0 8px 0;">🔍 Want to explore similar solutions?</p>
-                <button
-                  onclick="document.getElementById('emailReveal').style.display='inline'; this.style.display='none';"
-                  style="font-size: 1.1em; background-color:transparent; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; box-shadow: none; outline: none;">
-                  Let’s Talk
-                </button>
-                <span id="emailReveal" style="display: none; font-size: 1.1em;">indu@agayaconsulting.com</span>
-              </div>
+<div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-top:10px; flex-wrap:wrap;">
+  <span style="font-size:1.1em;">🔍 Ready for a similar, tailored solution?</span>
+
+  <button
+    onclick="document.getElementById('emailReveal').style.display='inline'; this.style.display='none';"
+    style="font-size:1.1em; background-color:transparent; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; box-shadow:none; outline:none;">
+    Let’s Talk
+  </button>
+
+  <span id="emailReveal" style="display:none; font-size:1.1em;">indu@agayaconsulting.com</span>
+</div>
+
             </article>
 
 
