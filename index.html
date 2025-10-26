@@ -363,41 +363,93 @@ h3 {
 }
 
 /* ===== MOBILE-ONLY FIX (keeps desktop intact) ===== */
+/* ======= AGAYA FINAL MOBILE POLISH (≤768px) ======= */
 @media screen and (max-width: 768px) {
 
-  /* Scale title properly and allow wrapping */
-  #intro h1 {
-    font-size: clamp(1.6rem, 5.5vw, 2.4rem) !important;
-    white-space: normal !important;
-    text-align: center;
-    padding: 0 1rem;
-    margin: 0.5rem auto;
+  /* Remove overflow issues */
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
   }
 
-  /* Stack and center nav links under hero instead of fixing them */
+  /* Header & logo */
+  .header-top {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .header-top .logo {
+    width: 58px;
+    height: auto;
+    margin-bottom: 0.25rem;
+  }
+
+  .header-top h1 {
+    font-size: clamp(1.25rem, 5vw, 1.7rem);
+    text-align: center;
+    line-height: 1.15;
+    white-space: normal !important;
+    padding: 0 1rem;
+  }
+
+  /* Hero section tweaks */
+  #intro {
+    padding: 2.5rem 1rem 2rem;
+  }
+  #intro h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0.25rem 0 0.6rem;
+  }
+
+  /* Profile image sizing */
+  .profile-photo {
+    width: 130px;
+    height: 130px;
+  }
+  .profile-name {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  /* Reflow the fixed navs */
   .nav-left, .nav-right {
     position: static !important;
-    display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin: 1rem 0;
-    background: transparent !important;
-    z-index: 10;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 1rem 0 0.75rem;
   }
 
   .nav-left a, .nav-right a {
-    color: var(--agaya-dark);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.35rem;
     font-weight: 600;
-    text-decoration: none;
-    padding: 0.25rem 0.4rem;
   }
 
-  /* Shorter bottom bar so content breathes */
-  #bottom-bar { height: 1.25rem; }
+  /* Shrink bottom red bar */
+  #bottom-bar {
+    height: 1.1rem;
+  }
+
+  /* Avoid tight edge padding */
+  #main {
+    padding: 1rem 1rem 3rem !important;
+  }
+
+  /* Ensure carousels fit */
+  .carousel-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 }
+
 
   </style>
 
