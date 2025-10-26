@@ -323,137 +323,113 @@ h3 {
   }
 }
 
-/* ======== Mobile polish (≤768px) ======== */
-@media (max-width: 768px) {
-  /* Avoid horizontal scrollbars */
+/* ======== Mobile polish & alignment fixes (≤768px) ======== */
+@media screen and (max-width: 768px) {
+
+  /* Prevent sideways scrolling */
   html, body {
     overflow-x: hidden;
   }
 
   /* Header row (logo + title) */
   .header-row {
+    flex-direction: column;       /* stacks neatly on small screens */
     align-items: center;
-    gap: .5rem;
-    padding: .25rem .75rem;
+    gap: 0.4rem;
+    padding: 0.25rem 0.75rem;
+    text-align: center;
   }
+
   .logo {
-    height: 40px;     /* smaller logo on mobile */
+    height: 40px;
     width: auto;
+    margin-bottom: 0.25rem;
   }
 
-  /* Title: scale to fit, keep on one line if possible */
+  /* Title (main heading) */
   h1 {
-    font-size: 7vw;          /* responsive, fits small screens */
-    line-height: 1.1;
-    white-space: nowrap;     /* try to keep one line on most phones */
-    margin: .35rem 0 .25rem;
-    letter-spacing: 0.01em;
+    font-size: 6.2vw !important;  /* responsive scaling */
+    white-space: normal;          /* wrap as needed */
+    text-align: center;
+    line-height: 1.15;
+    margin: 0.5rem auto 0.25rem;
+    padding: 0 0.5rem;
   }
 
-  /* Hero lines + tagline */
-  #intro h3 {
-    font-size: 1rem;
-    margin: .25rem 0 .35rem;
+  /* Hero section text */
+  #intro {
+    align-items: center;
     text-align: center;
+    margin-top: 0.5rem;
   }
+
+  #intro h3,
   .tagline {
-    font-size: 1rem;         /* identical to h3 as requested */
-    margin: .2rem 0 .9rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--agaya-dark);
+    margin: 0.25rem 0 0.75rem;
     text-align: center;
   }
 
-  /* Profile block */
+  /* Profile section */
   .profile-container,
-  .profile {                 /* support either class name */
-    margin-top: .75rem;      /* space under tagline */
+  .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .profile-photo {
-    width: 140px;            /* slightly larger on mobile */
-    height: 140px;
-  }
-  .profile-name {
-    font-size: 1rem;
-    margin-top: .4rem;
+    margin-top: 0.75rem;
   }
 
-  /* Side nav becomes a centered, non-fixed row */
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-name {
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+
+  /* Nav sections: centered and non-overlapping */
   .nav-left,
   .nav-right {
-    position: static;        /* no more fixed overlay */
+    position: static;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.9rem;
-    margin: 1rem 0 1.25rem;
     background: transparent;
-    padding: 0;
-    z-index: 1;              /* ensure it sits below content that follows */
-  }
-  .nav-left a,
-  .nav-right a {
-    font-size: 1.05rem;
-    border: 0;
+    gap: 0.6rem;
+    margin: 0.5rem 0 1rem;
+    z-index: 1;
   }
 
-  /* Main content padding so everything breathes */
-  #wrapper, #main, .inner, section {
+  .nav-left a,
+  .nav-right a {
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    color: #2B2A2A;
+    border: none;
+    text-decoration: none;
+    padding: 0.25rem 0.4rem;
+  }
+
+  /* Prevent overlap on testimonials and text */
+  #wrapper,
+  #main,
+  .inner,
+  section {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
 
-  /* Shorter bottom bar on mobile so it doesn’t crowd */
+  /* Bottom bar smaller and less intrusive */
   #bottom-bar {
     height: 1.25rem;
   }
 }
 
-/* === Mobile fixes for title + nav alignment === */
-@media screen and (max-width: 768px) {
-
-  /* Title fits and wraps naturally */
-  h1 {
-    font-size: 6vw !important;    /* scales with screen */
-    white-space: normal;          /* allows wrapping */
-    text-align: center;
-    margin: 1rem auto 0.5rem auto;
-    line-height: 1.2;
-    padding: 0 0.5rem;            /* small left/right padding */
-  }
-
-  /* Make sure hero text is centered */
-  #intro {
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Prevent nav links overlapping profile */
-  #nav {
-    position: static;             /* no longer overlaps content */
-    background: none;
-    margin-top: 1rem;
-    height: auto;
-  }
-
-  /* Tighten link spacing */
-  #nav .icons {
-    flex-wrap: wrap;
-    gap: 0.75rem;                 /* smaller gap to avoid extra lines */
-    justify-content: center;
-  }
-
-  #nav .icons a {
-    font-size: 1rem;
-    color: #A22120;
-  }
-
-  /* Optional: add a bottom buffer so nothing hits red bar */
-  #main {
-    padding-bottom: 3rem;
-  }
-}
 
   </style>
 
