@@ -362,6 +362,42 @@ h3 {
   padding: 0 1rem; /* small breathing room for mobile edge cutoffs */
 }
 
+/* ===== MOBILE-ONLY FIX (keeps desktop intact) ===== */
+@media screen and (max-width: 768px) {
+
+  /* Scale title properly and allow wrapping */
+  #intro h1 {
+    font-size: clamp(1.6rem, 5.5vw, 2.4rem) !important;
+    white-space: normal !important;
+    text-align: center;
+    padding: 0 1rem;
+    margin: 0.5rem auto;
+  }
+
+  /* Stack and center nav links under hero instead of fixing them */
+  .nav-left, .nav-right {
+    position: static !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    background: transparent !important;
+    z-index: 10;
+  }
+
+  .nav-left a, .nav-right a {
+    color: var(--agaya-dark);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.25rem 0.4rem;
+  }
+
+  /* Shorter bottom bar so content breathes */
+  #bottom-bar { height: 1.25rem; }
+}
 
   </style>
 
