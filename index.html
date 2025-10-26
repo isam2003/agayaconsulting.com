@@ -410,6 +410,51 @@ h3 {
   }
 }
 
+/* === Mobile fixes for title + nav alignment === */
+@media screen and (max-width: 768px) {
+
+  /* Title fits and wraps naturally */
+  h1 {
+    font-size: 6vw !important;    /* scales with screen */
+    white-space: normal;          /* allows wrapping */
+    text-align: center;
+    margin: 1rem auto 0.5rem auto;
+    line-height: 1.2;
+    padding: 0 0.5rem;            /* small left/right padding */
+  }
+
+  /* Make sure hero text is centered */
+  #intro {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Prevent nav links overlapping profile */
+  #nav {
+    position: static;             /* no longer overlaps content */
+    background: none;
+    margin-top: 1rem;
+    height: auto;
+  }
+
+  /* Tighten link spacing */
+  #nav .icons {
+    flex-wrap: wrap;
+    gap: 0.75rem;                 /* smaller gap to avoid extra lines */
+    justify-content: center;
+  }
+
+  #nav .icons a {
+    font-size: 1rem;
+    color: #A22120;
+  }
+
+  /* Optional: add a bottom buffer so nothing hits red bar */
+  #main {
+    padding-bottom: 3rem;
+  }
+}
+
   </style>
 
   <!-- Google tag (gtag.js) -->
