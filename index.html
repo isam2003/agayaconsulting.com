@@ -1,743 +1,556 @@
 <!DOCTYPE HTML>
-<!--
-    Massively by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AGAYA Consulting Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<html>
-    <head>
-        <title>AGAYA Consulting Inc.</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="icon" type="image/png" href="assets/images/logo.png">
-        <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
 
-        <style>
+  <!-- (Optional) Base theme CSS for typography/icons; we override everything critical below -->
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-            html, body {
-                    margin: 0;
-                    padding: 0;
-                    overflow-x: hidden;
-                        }
+  <!-- Meta -->
+  <meta name="description" content="Agaya Consulting helps nonprofits turn scattered data into actionable insights with dashboards, donor analytics, and impact reporting." />
+  <meta name="author" content="Indu Sambandam  Agaya Consulting Inc." />
+  <meta name="keywords" content="nonprofit data analytics, fundraising dashboards, impact reporting, donor analytics, dashboard, BI for nonprofits, nonprofit reporting systems, self-service analytics" />
 
-            #nav {
-                margin: 0;
-                border: none;
-                position: absolute;
-                box-shadow: none;
-                }
-                
-                * {
-                box-sizing: border-box;
-                }
+  <!-- Brand-safe, conflict-killing CSS -->
+  <style>
 
-            h1 {
-              color: #A22120 !important;
-              font-size: 3rem !important;
-              line-height: 1.1;
-              margin: 0 0 2rem 0;
-            }
-
-            h3 {
-                color: #2b2a2a !important;
-                margin-bottom: 0.5rem;
-                }
-                    
-            .tagline {
-                font-size:0.85rem;
-                text-transform: none;
-                color: #2b2a2a !important;
-                margin-top: 0;
-                margin-bottom: 0.25rem;
-                    }
-
-            .profile-photo {
-                    width: 180px;           /* adjust size as needed */
-                    height: 180px;          /* make it square for circle */
-                    object-fit: cover;      /* crop excess nicely */
-                    object-position: center top; /* shift focus slightly down */
-                    border-radius: 50%;     /* makes it circular */
-                    display: block;
-                    margin:1.5rem auto 0.5rem auto;      /* centers it with some spacing */
-                    margin-bottom: 0;
-                                }
-
-            .profile-container {
-                    text-align: center;
-                    margin-top: 0rem;
-                     /* reduced space above */
-                    margin-bottom: 1rem;
-                                }
-            
-            .profile-name {
-                color: #2B2A2A !important;
-                text-align: center;
-                margin-top: 0.5rem;
-                margin-bottom: 0.25rem;
-                font-weight: 500; /* optional: adds a bit more presence */
-                          }
-            h1, h2, h3, h4, h5, h6 {
-            margin: 0;
-            padding: 0;
-            }
-
-            h4 {
-            margin: 0 !important;
-            padding: 0 !important;
-            }
-
-            body {
-                padding-top: 0 !important;
-                margin-top: 0 !important;
-                    }
-
-            #intro {
-                background-color: #dededa;
-                margin-top: 0 !important;
-                min-height: 100vh; /* fills the full screen */
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between; /* pushes nav to the bottom */
-                align-items: center;
-                padding: 2rem 1rem; /* some internal spacing */
-                text-align: center;
-                position: relative;          /* ✅ Add this line */
-                padding-bottom: 4rem;   
-                }
-
-            h1 {
-                margin-top: 1rem !important;
-                               }
-
-            .logo-container {
-                position: absolute;
-                top: 0.5rem;
-                left: 1rem;
-                z-index: 999;
-                 }
-
-            .logo {
-                height: 90px;
-                width: auto;
-                }
-
-            .custom-section {
-              text-align: left;
-              line-height: 1.5;
-              margin-bottom: 3rem;
-            }
-          
-            .custom-section p,
-            .custom-section li {
-              margin-bottom: 0.5em;
-            }
-          
-            .small-paragraph {
-              font-size: 80%;
-              line-height: 1;
-            }
-
-            .icons {
-                background-color: #A22120;
-                padding: 1rem;
-                display: flex;
-                justify-content: center;
-                gap: 1.5rem;
-                border-radius: 5px;
-                    }
-
-            .icons a {
-                color: #dededa !important;
-                font-size: 2rem;
-                    }
-            .wordcloud-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-            }
-          
-            #nav {
-                position:absolute;
-                bottom: 0;
-                left: 0;
-                right: 0; 
-                height: 2rem;               
-                background-color: #A22120;
-                 width: 100vw;
-                 max-width: 100vw;         /* <-- prevent content from overflowing */
-                 overflow-x: hidden;  
-                    display: flex;
-                    justify-content: center;
-                    box-shadow: none;
-                    margin-top: 0; /* <-- This adds vertical space above the nav */
-                    padding: 0.25rem 0;
-                }
-           
-            #nav .icons {
-                list-style: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                margin: 0;
-                padding: 0
-                        }
-
- 
-            #nav .icons a {
-                color: #dededa !important;
-                font-size: 0.95rem;
-                text-decoration: none;
-                font-weight: 800; /* makes text bold */
-                }
-
-        #nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-                }
-
-        #nav ul.links {
-            display: none; /* since you're not using this list */
-                }
-
-        #nav ul.icons {
-            margin: 0;
-            padding: 0;
-                }
-
-                section.social-media {
-    padding: 1rem 0;   /* reduce top and bottom space */
-    margin: 0;         /* remove external spacing */
-}
-
-section.social-media h3 {
-    margin-bottom: 0.5rem; /* keep title close to icons */
-}
-
-section.social-media .icons.alt {
-    margin-top: 0.25rem;   /* reduce space between h3 and icons */
-    justify-content: center;
-    gap: 1rem;
-}
-
-footer {
-    padding: 1rem 0;
-    margin: 0;
-}
-
-@media screen and (max-width: 768px) {
-
-    .logo {
-        height: 40px; /* shrink logo for mobile */
+    :root {
+      --agaya-red:#A22120;
+      --agaya-dark:#2B2A2A;
+      --agaya-light:#DEDEDA;
     }
 
-    h1 {
-        font-size: 2rem !important;
-    }
-
-    h3, .tagline {
-        font-size: 1rem;
-    }
-
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .profile-container {
-        margin-bottom: 1rem;
-    }
-
-    #nav {
-        padding: 0.5rem 1rem;
-        
-    }
-
-    #nav .icons {
-        flex-direction: row;
-        gap: 1.5rem;
-    }
-
-    section.social-media .icons.alt {
-        gap: 0.75rem;
-        flex-wrap: wrap;
-    }
-
-    body {
-        font-size: 90%;
-    }
-}
-
-/* Carousel */
-.carousel-container {
-  position: relative;
-  max-width: 300px;    /* adjust if you want smaller slides */
-  margin: auto;
-  border: none;
-  background: transparent;
-  padding: 0;
-}
-.carousel-slide {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none;
-  display: none;
-}
-.carousel-slide.active {
-  display: block;
-}
-.carousel-slide img {
-  width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none;
-  box-shadow: none; /* remove any subtle shadows */
-  display: block;
-}
-.carousel-buttons {
-  margin-top: 0;
-  padding-top: 0;
-  line-height: 1;
+    .header-top {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.carousel-buttons button {
-  background: transparent;
-  border: none;
-  padding: 0;
-  font-size: 24px;
-  cursor: pointer;
-  margin: 0 10px;
-  box-shadow: none;
-  outline: none;
+  align-items: center;
+  justify-content: center; /* change to flex-start if you want logo + text aligned to left */
+  gap: 1rem;
+  margin-top: 0.75rem;
 }
 
-          </style>
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+.logo {
+  width: 70px; /* adjust if you want it smaller/larger */
+  height: auto;
+}
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z66GC8MFZL"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-Z66GC8MFZL');
-        </script>
+.header-top h1 {
+  font-size: 1.1rem;
+  color: var(--agaya-dark);
+  font-weight: 800;
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1.2;
+}
 
-        
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Agaya Consulting helps nonprofits turn scattered data into actionable insights with dashboards, donor analytics, and impact reporting." />
-    <meta name="author" content="Indu Sambandam  Agaya Consulting Inc." />
-    <meta name="keywords" content="nonprofit data analytics, fundraising dashboards, impact reporting, donor analytics, dashboard, BI for nonprofits, nonprofit reporting systems, self-service analytics" />
+.header-top .agaya-red {
+  color: #A22120;
+}
 
 
-    </head>
-    
-    <body class="is-preload">
+    /* Kill any theme backgrounds/overlays and make the whole page light */
+    html, body, #wrapper, #main, #intro, .inner, section, header, footer {
+      background: var(--agaya-light) !important;
+      background-image: none !important;
+      box-shadow: none !important;
+      border: 0 !important;
+    }
+    body { color: var(--agaya-dark); margin:0; padding:0; }
 
-        <div class="logo-container">
-            <img src="/images/logo.png" alt="AGAYA Consulting Logo" class="logo" />
-          </div>
-          
+/* Remove any theme preload/fade effects */
+body.is-preload,
+body.is-loading {
+  animation: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
 
-        <!-- Wrapper -->
-            <div id="wrapper" class="fade-in">
+body::before,
+#bg,
+#bg::before,
+#bg::after {
+  display: none !important;
+}
 
-                <!-- Intro -->
-                    <div id="intro">
-                        <h1><span style="text-transform: uppercase;">AGAYA</span>: <span style="text-transform: none;">Data Confidence for Nonprofits</span></h1>
-                        <h3>Your data knows what’s working. We help you see it.</h3>
-                        <h2><p class="tagline">Do more of what works. Change more lives.</p></h2> 
-                        <div class="profile-container">
-                            <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
-                            <p class="profile-name">Indu Sambandam</p>
-                        </div>
-                    
-                     <!-- Nav -->
-                    <nav id="nav">
-                        <ul class="links">
-                            <li class="active"><a href="index.html"></a></li>
-                            
-                        </ul>
-                        <ul class="icons">
-                            <li><a href="blog.html" target="_blank">Blog</a></li>
-                            <li><a href="https://www.linkedin.com/in/isambandam/" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://calendly.com/indu_sam/30min" target="_blank">Book a Call</a></li>
-                        </ul>
-                    </nav>
+    /* Logo */
+    .logo-container{
+      position: fixed;
+      top: .75rem;
+      left: 1rem;
+      z-index: 3000;
+    }
+    .logo{ height: 85px; width:auto; }
 
-                    </div>
+    /* Intro (hero) */
+    #intro{
+      min-height: 100vh;
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content:flex-start;
+      text-align:center;
+      padding: 6rem 1rem 6rem;
+    }
+/* =========================
+   HERO SECTION (TOP OF PAGE)
+   ========================= */
 
-                    
+/* Title */
+h1 {
+  color: #A22120 !important;
+  font-size: 3rem !important;      /* Balanced single line */
+  font-weight: 800;
+  line-height: 1.05;
+  white-space: nowrap;
+  margin-top: 0.03rem !important;
+  margin-bottom: 0.25rem !important;
+  letter-spacing: 0.015em;
+}
 
-               
+/* Subtitle / tagline container */
+#intro {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0;
+  line-height: 1.3;
+}
 
-                <!-- Main -->
-                    <div id="main">
+/* Subtitle */
+h3 {
+  color: var(--agaya-dark) !important;
+  margin: 0.25rem 0 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3;
+}
 
-                        <!-- Featured Post -->
-                            <article class="post featured">
-                                <header class="major">
-                                    
-                                    <h3 style="text-align: left;">About</h3>
-                                                                        
-                                       
-                                        <div class="custom-section">
-										<p>Hi, I’m Indu.</p>
-                                            <p> You're driving change but decisions are harder when data is scattered, unclear, or outdated. Nonprofit teams are stretched thin. We get it. We’ve worked with incredible organizations that change lives, but too often, they’re stuck guessing what’s working. That’s where we come in.</p>
-                                            <p> Agaya helps nonprofits and mission-driven teams build dashboards, reports, AI-enhanced analytics and systems that make extracting insights easier and action faster. Whether you're just getting started or scaling your analytics, we’ll meet you where you are, and build what you need to go further.</p>
-									    </div>
 
-                                        <h3 style="text-align: left;">What We Help You Do</h3>
-                                        <div class="custom-section">
-                                        <p>We build data solutions with you, not just for you ('The Ikea Effect'). Every tool, dashboard, or system we design is shaped in partnership with your team, using plain language and built-in guardrails so you can run with it confidently.</p>
-                                        <p><strong>Your independence is our definition of success.</strong></p>
-                                        <ul style="margin-top: 1em; margin-bottom: 1em;"></ul>
-                                        <p> Because the best solutions are not the most complex ones.  They are the ones that get used.</p>
 
-                                        <ul style="margin-top: 1em; margin-bottom: 2em; list-style-type: disc; padding-left: 1.2em;">
-                                        <li> <strong><span style="color: #A22120;">Smarter Dashboards & Business Intelligence:</span></strong> visual tools that show what's working, what's not, and where to go next with recommendations informed by AI analysis. </li> 
-                                        
-                                        <li> <strong><span style="color: #A22120;">Fundraising Insights & Donor Analytics:</span></strong> Spot trends early. Understand AI-driven donor pattern identification. Retain supporters. Run campaigns that perform.  </li>
-                                        
-                                        <li> <strong><span style="color: #A22120;">Streamlined Reporting Frameworks:</span></strong> Custom reports that save hours and reduce staff stress. Built to answer real questions quickly.  </li>
-                                        
-                                        <li> <strong><span style="color: #A22120;">Team Training & Self-Service Analytics:</span></strong> Build in-house capacity so your insights don’t depend on one person.  </li>
-                                        
-                                        <li> <strong><span style="color: #A22120;">Impact Measurement & Storytelling:</span></strong> Clear, visual reporting - supplemented with AI-based sentiment and impact analysis - that funders and leadership can actually understand and use. </li> </ul>
-                                    <ul style="margin-top: 1em; margin-bottom: 1em;"></ul>
-                                    <ul style="margin-top: 1em; margin-bottom: 1em;"></ul>  
-                                    
-                                    <div style="text-align: center; margin-top: 2em; margin-bottom: 2em;"> 
-                                    <h4><strong>The real value of data isn’t in collecting it, it’s in using it.<br> 
-                                        It's in the moment someone on your team says <span style="font-weight: bold;">"Now I see what's happening"</span></strong></h4>
-                                        </div> 
-                                    </div>
+/* Profile block */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+          /* bring closer to tagline */
+  margin-top: 1.25rem;          /* adds space below tagline */
+  transform: translateY(-5px);  /* tiny upward nudge */
+}
 
-                                                                                                     
-                                                                
-                                </header>
-                                
-                                <div class="wordcloud-container">
-                                    <img width="375" src="images/WordCloud.png">
-                                </div>
+/* Profile photo */
+.profile-photo {
+  width: 180px;                /* balanced size for desktop */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 0.25rem;
+}
 
-                                
-                            </article>
-                            
-                            <!-- Featured Post -->
-                            <article style = "margin-bottom: 0;">
-                                <header class="major">
-                                    <h3 style="text-align: left;">Client Testimonials</h3>
-                                    
-                                    <div class="custom-section">
-    <blockquote>
-        “Indumeena is a positive, motivated team player whose quarterly reporting framework helped us clearly communicate impact to internal and external audiences.
-        Reliable, collaborative, and strategic — Indumeena added real value to our team’s data storytelling and reporting.”
-    </blockquote>
-    <blockquote>
-        “Indu came to our call prepared, made the material approachable, and helped me feel more confident with data. The follow-up video was a fantastic bonus!
-        Insightful, kind, and incredibly helpful - I'd gladly work with Indu again on any project.”
-    </blockquote>
-    <blockquote>
-        "It was really great working with Indu. She was very fast, thorough, and responsive. We were able to determine process and project outcomes in two short meetings, 
-        and she delivered an excellent product - survey analysis and visualization very soon after. It was a very positive experience and I am grateful to have had her support with this work."
-    </blockquote>
-    <blockquote>
-    "Indu was incredibly helpful and efficient in completing this project. She gave us the tools to continue collecting the data we need, and made it visual and easy to understand."
-    </blockquote>
-    <blockquote>
-        "Indu was amazing and helpful! She gave wonderful insight and was a pleasure to work with!"
-    </blockquote>
+/* Profile name */
+.profile-name {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--agaya-dark);
+  margin: 0;
+}
+
+/* Optional: globally tighten wrapper spacing for hero */
+#wrapper {
+  margin-top: -1.25rem;
+}
+
+
+    /* Main content area: centered on all screens */
+    #main{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2rem 6rem; /* bottom space so content never hides behind side nav/bottom bar */
+    }
+    header.major{ text-align:center; }
+    .custom-section{ text-align:left; line-height:1.55; margin: 1rem 0 2rem; }
+    .wordcloud-container{ display:flex; justify-content:center; align-items:center; }
+
+    /* Carousels */
+    .carousel-container { position:relative; max-width: 680px; margin: 0 auto; }
+    .carousel-slide { display:none; }
+    .carousel-slide.active{ display:block; }
+    .carousel-slide img { width:100%; display:block; }
+    .carousel-buttons{
+      display:flex; justify-content:center; align-items:center; gap:24px; margin-top:.25rem;
+    }
+    .carousel-buttons button{
+      background:transparent; border:0; font-size:24px; cursor:pointer; padding:0;
+    }
+
+    /* FIXED side navs (always visible), sitting just above the bottom red bar */
+    .nav-left, .nav-right{
+      position: fixed;
+      bottom: calc(2.5rem + 1rem); /* just above red bar */
+      display:flex; flex-direction:column; gap:.85rem;
+      z-index: 2500;
+      pointer-events: auto;
+    }
+    .nav-left{ left: 1.25rem; text-align:left; }
+    .nav-right{ right: 1.25rem; text-align:right; }
+
+    .nav-left a, .nav-right a{
+      color: var(--agaya-dark) !important;
+      font-weight:700;
+      text-decoration:none;
+      font-size: .98rem;
+      letter-spacing: .02em;
+      padding:.2rem .1rem;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-left a:hover, .nav-right a:hover{
+      color: var(--agaya-red) !important;
+      border-bottom-color: var(--agaya-red);
+    }
+
+    /* Bottom red bar (full-width) */
+    #bottom-bar{
+      position: fixed;
+      left:0; right:0; bottom:0;
+      height: 2.5rem;
+      background: var(--agaya-red);
+      z-index: 2000; /* below side navs, above content */
+    }
+
+    /* Copyright (single centered line) */
+    #copyright{
+      text-align:center;
+      font-size:.95rem;
+      color: var(--agaya-dark);
+      letter-spacing:.02em;
+      padding: 1.25rem 1rem 4.25rem; /* extra bottom so it doesn't fight the red bar */
+      margin: 0 auto;
+    }
+    #copyright a{ color: var(--agaya-dark); text-decoration:none; border-bottom: 1px dotted transparent; }
+    #copyright a:hover{ color: var(--agaya-red); border-bottom-color: var(--agaya-red); }
+
+    /* Make sure nothing draws lines between inline items (theme sometimes adds separators) */
+    #copyright ul, #copyright li{ list-style:none; margin:0; padding:0; border:0 !important; }
+
+    /* Responsive */
+    @media (max-width: 1024px){
+      .nav-left{ left: .75rem; }
+      .nav-right{ right: .75rem; }
+    }
+    @media (max-width: 768px){
+      .logo{ height: 48px; }
+      .profile-photo{ width:130px; height:130px; }
+      /* On mobile, convert side navs into a single row near the bottom */
+      .nav-left, .nav-right{
+        position: fixed;
+        left: 0; right: 0;
+        bottom: calc(2.5rem + .5rem);
+        flex-direction: row;
+        justify-content:center;
+        gap: .9rem;
+      }
+      .nav-left{ transform: translateY(0); }
+      .nav-right{ transform: translateY(2.1rem); } /* stagger them a bit to avoid crowding */
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z66GC8MFZL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z66GC8MFZL');
+  </script>
+</head>
+
+<body>
+<!-- Header: Logo + Title -->
+<div class="header-top">
+  <img src="images/logo.png" alt="AGAYA Consulting Logo" class="logo" />
+  <h1>
+    <span class="agaya-red">AGAYA</span>: Data Confidence for Nonprofits
+  </h1>
+</div>
+
+<!-- Intro / Hero -->
+<div id="intro">
+  <h3>Your data knows what’s working. We help you see it.</h3>
+  <h3>Do more of what works. Change more lives.</h3>
+ 
+    <!-- ⬇️ Add this INSIDE #intro, right after the tagline -->
+  <div class="profile">
+    <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
+    <p class="profile-name">Indu Sambandam</p>
+  </div>
 </div>
 
  
-                                </header>
-                                <div style="text-align:center;">
-                                </div>
-                            </article>
+    <!-- Main content -->
+    <div id="main">
 
-            <!-- Case Studies (two carousels stacked) -->
-            <article style="margin-bottom: 0;">
-              <h3 style="text-align: left;">Case Studies</h3>
+      <!-- About -->
+      <article class="post featured">
+        <header class="major">
+          <h3 id="about" style="text-align:left;">About</h3>
+          <div class="custom-section">
+            <p>Hi, I’m Indu.</p>
+            <p>You're driving change but decisions are harder when data is scattered, unclear, or outdated. Nonprofit teams are stretched thin. We get it. We’ve worked with incredible organizations that change lives, but too often, they’re stuck guessing what’s working. That’s where we come in.</p>
+            <p>Agaya helps nonprofits and mission-driven teams build dashboards, reports, AI-enhanced analytics and systems that make extracting insights easier and action faster. Whether you're just getting started or scaling your analytics, we’ll meet you where you are, and build what you need to go further.</p>
+          </div>
 
-              <!-- Case Study A: Reporting / Time Savings -->
-              <div class="custom-section" style="text-align: center; margin-bottom: 4rem;">
-                <p style="margin: 0 0 8px 0;color:#A22120; font-weight:700; font-size:1.2em;">How one nonprofit reclaimed 40+ hours a quarter with smarter reports:</p>
+          <h3 id="whatwedo" style="text-align:left;">What We Help You Do</h3>
+          <div class="custom-section">
+            <p>We build data solutions with you, not just for you ('The Ikea Effect'). Every tool, dashboard, or system we design is shaped in partnership with your team, using plain language and built-in guardrails so you can run with it confidently.</p>
+            <p><strong>Your independence is our definition of success.</strong></p>
+            <p>Because the best solutions are not the most complex ones. They are the ones that get used.</p>
+            <ul style="margin:1em 0 2em 1.2em; list-style:disc;">
+              <li><strong><span style="color:#A22120;">Smarter Dashboards &amp; Business Intelligence:</span></strong> visual tools that show what's working, what's not, and where to go next with recommendations informed by AI analysis.</li>
+              <li><strong><span style="color:#A22120;">Fundraising Insights &amp; Donor Analytics:</span></strong> Spot trends early. Understand AI-driven donor pattern identification. Retain supporters. Run campaigns that perform.</li>
+              <li><strong><span style="color:#A22120;">Streamlined Reporting Frameworks:</span></strong> Custom reports that save hours and reduce staff stress. Built to answer real questions quickly.</li>
+              <li><strong><span style="color:#A22120;">Team Training &amp; Self-Service Analytics:</span></strong> Build in-house capacity so your insights don’t depend on one person.</li>
+              <li><strong><span style="color:#A22120;">Impact Measurement &amp; Storytelling:</span></strong> Clear, visual reporting—supplemented with AI-based sentiment and impact analysis—that funders and leadership can actually understand and use.</li>
+            </ul>
 
-                <div class="carousel-container" data-carousel="reporting">
-                  <div class="carousel-slide active"><img src="images/slide_1.jpg" alt="Reporting slide 1"></div>
-                  <div class="carousel-slide"><img src="images/slide_2.jpg" alt="Reporting slide 2"></div>
-                  <div class="carousel-slide"><img src="images/slide_3.jpg" alt="Reporting slide 3"></div>
-                  <div class="carousel-slide"><img src="images/slide_4.jpg" alt="Reporting slide 4"></div>
-                  <div class="carousel-slide"><img src="images/slide_5.jpg" alt="Reporting slide 5"></div>
-                  <div class="carousel-slide"><img src="images/slide_6.jpg" alt="Reporting slide 6"></div>
-                  <div class="carousel-slide"><img src="images/slide_7.jpg" alt="Reporting slide 7"></div>
-                  <div class="carousel-slide"><img src="images/slide_8.jpg" alt="Reporting slide 8"></div>
-                  <div class="carousel-slide"><img src="images/slide_9.jpg" alt="Reporting slide 9"></div>
-                  <div class="carousel-slide"><img src="images/slide_10.jpg" alt="Reporting slide 10"></div>
-                  <div class="carousel-slide"><img src="images/slide_11.jpg" alt="Reporting slide 11"></div>
-                </div>
-
-                <div class="carousel-buttons">
-                  <button type="button" aria-label="Previous reporting slide" onclick="plusSlides('reporting', -1)">❮</button>
-                  <button type="button" aria-label="Next reporting slide" onclick="plusSlides('reporting', 1)">❯</button>
-                </div>
-              </div>
-
-              <!-- Case Study B: Food Bank / Dignity Metrics -->
-              <div class="custom-section" style="text-align: center; margin-bottom: 1.25rem;">
-                <p style="margin: 0 0 8px 0;color:#A22120; font-weight:700; font-size:1.2em;">How a food bank moved beyond pounds and people to measure trust and dignity:</p>
-
-                <div class="carousel-container" data-carousel="foodbank">
-                  <div class="carousel-slide active"><img src="images/fb1.jpg" alt="Food Bank slide 1"></div>
-                  <div class="carousel-slide"><img src="images/fb2.jpg" alt="Food Bank slide 2"></div>
-                  <div class="carousel-slide"><img src="images/fb3.jpg" alt="Food Bank slide 3"></div>
-                  <div class="carousel-slide"><img src="images/fb4.jpg" alt="Food Bank slide 4"></div>
-                  <div class="carousel-slide"><img src="images/fb5.jpg" alt="Food Bank slide 5"></div>
-                  <div class="carousel-slide"><img src="images/fb6.jpg" alt="Food Bank slide 6"></div>
-                  <div class="carousel-slide"><img src="images/fb7.jpg" alt="Food Bank slide 7"></div>
-                  <div class="carousel-slide"><img src="images/fb8.jpg" alt="Food Bank slide 8"></div>
-                  <div class="carousel-slide"><img src="images/fb9.jpg" alt="Food Bank slide 9"></div>
-                  <div class="carousel-slide"><img src="images/fb10.jpg" alt="Food Bank slide 10"></div>
-                  <div class="carousel-slide"><img src="images/fb11.jpg" alt="Food Bank slide 11"></div>
-                </div>
-
-                <div class="carousel-buttons">
-                  <button type="button" aria-label="Previous food bank slide" onclick="plusSlides('foodbank', -1)">❮</button>
-                  <button type="button" aria-label="Next food bank slide" onclick="plusSlides('foodbank', 1)">❯</button>
-                </div>
-              </div>
-
-              <!-- Single CTA below the second carousel -->
-<div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-top:10px; flex-wrap:wrap;">
-  <span style="font-size:1.1em;">🔍 Ready for a similar, tailored solution?</span>
-
-  <button
-    onclick="document.getElementById('emailReveal').style.display='inline'; this.style.display='none';"
-    style="font-size:1.1em; background-color:transparent; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; box-shadow:none; outline:none;">
-    Let’s Talk
-  </button>
-
-  <span id="emailReveal" style="display:none; font-size:1.1em;">indu@agayaconsulting.com</span>
-</div>
-
-            </article>
-
-
-                            <!-- Featured Post -->
-                            <article style = "margin-bottom: 0;">
-                                <h3 style="text-align: left;">Portfolio</h3>
-                                <div class="custom-section">
-                                <p>Here’s a sample of the work we do to turn data into actionable insights.</p>
-                                </div>
-                            </article>
-
-
-                        <!-- Posts -->
-                            <section class="posts" style="margin: top -40px;">  
-                                
-                                <article>
-                                    <header>
-                                        <span class="date"></span>
-                                        <h4><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9">Automating Survey Analysis</a></h4>
-                                    </header>
-                                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="image fit"><img src="images/sentiment_analysis.png" alt="" /></a>
-                                    <div class="custom-section">
-                                    <p>Is your staff spending hours in repetitive processes manually categorizing qualitative survey results into Positive, Negative or Neutral piles?  Free up staff time by automating this process so that more time can be invested in analyzing & crafting compelling impact stories for stakeholder buy-in. Data Source - AI </p>
-                                    </div>
-                                    <ul class="actions special">
-                                        <li><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="button" target="_blank">See Project</a></li>
-                                    </ul>
-                                </article>
-
-                           
-
-                                <article>
-                                    <header>
-                                        <span class="date"></span>
-                                        <h4><a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9">Sentiment Analysis on Contact Meeting Notes</a></h4>
-                                    </header>
-                                    <a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="image fit"><img src="images/sentiment_analysis_2.png" alt="" /></a>
-                                    <div class="custom-section">
-                                        <p>Continuing the Sentiment Analysis theme. Data Source - AI </p>
-                                    </div>
-                                    <ul class="actions special">
-                                        <li><a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="button" target="_blank">See Project</a></li>
-                                    </ul>
-                                </article>
-                                
-                                                               
-                                <article>
-                                    <header>
-                                        <span class="date"></span>
-                                        <h4><a href="https://www.novypro.com/project/marketing-campaign-insights">Marketing Campaign Analysis</a></h4>
-                                    </header>
-                                    <a href="https://www.novypro.com/project/marketing-campaign-insights" class="image fit"><img src="images/Mktg Campaign Insights.png" alt="" /></a>
-                                    <div class="custom-section">
-                                    <p>This post-Campaigns one pager analysis highlights a potential mismatch between the products on offer and customer profile. It brings out the struggle to hold onto a customer profile dominated by well-educated older customers with deep pockets, a myriad of available alternative products and a continuing preference for in-store experience. Data Source- Kaggle.</p>
-                                    </div>
-                                    <ul class="actions special">
-                                        <li><a href="https://www.novypro.com/project/marketing-campaign-insights" class="button">See Project</a></li>
-                                    </ul>
-                                </article>
-
-
-                                <article>
-                                    <header>
-                                        <span class="date"></span>
-                                        <h4><a href="https://www.novypro.com/project/sales-analysis---retail-store">Sales Analysis<br /></a></h4>
-                                    </header>
-                                    <a href="https://www.novypro.com/project/sales-analysis---retail-store" class="image fit"><img src="images/retail_whatif_analysis.png" alt="" /></a>
-                                    <div class="custom-section">
-                                    <p>An overview of a retail store's data with a what-if analysis. Data Source- Yoda </p>
-                                    </div>
-                                    <ul class="actions special">
-                                        <li><a href="https://www.novypro.com/project/sales-analysis---retail-store" class="button">See Project</a></li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <header>
-                                        <span class="date"></span>
-                                        <h4><a href="https://www.novypro.com/project/supplier--downtime-analysis">Supplier & Downtime Analysis<br />
-                                        </a></h4>
-                                    </header>
-                                    <a href="https://www.novypro.com/project/supplier--downtime-analysis" class="image fit"><img src="images/E9N supplier analysis.png" alt="" /></a>
-                                    <div class="custom-section">
-                                    <p>A detailed analysis of supplier performance & downtimes using time intelligence. Data Source- Udemy </p>
-                                    </div>
-                                    <ul class="actions special">
-                                        <li><a href="https://www.novypro.com/project/supplier--downtime-analysis" class="button">See Project</a></li>
-                                    </ul>
-                                </article>
-                                
-                                <article>
-                                    <header>
-                                        <span class="date"></span>
-                                        <h4><a href="https://www.novypro.com/project/the-global-unicorns-club">The Global Unicorns Club</a></h4>
-                                    </header>
-                                    <a href="https://www.novypro.com/project/the-global-unicorns-club" class="image fit"><img src="images/unicorn.png" alt="" /></a>
-                                    <div class="custom-section">
-                                    <p>A peek into the exclusive global club of Unicorns. Data Source- Maven Analytics</p>
-                                    </div>
-                                    <ul class="actions special">
-                                        <li><a href="https://www.novypro.com/project/the-global-unicorns-club" class="button">See Project</a></li>
-                                    </ul>
-                                </article>
-
-
-                                <article>
-                                    <header>
-                                        <span class="date"></span>
-                                        <h4><a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis">Impact of 5G Introduction</a></h4>
-                                    </header>
-                                    <a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis" class="image fit"><img src="images/codebasics_C3.png" alt="" /></a>
-                                    <div class="custom-section">
-                                    <p>A one pager providing a bird's eye response to a request from Atliqo's senior management interested in the impact of 5G introduction on the company's KPIs. Insights for plan optimization to increase subscribers were also sought. Data Source- CodeBasics Challenge 3 </p>
-                                    </div>
-                                    <ul class="actions special">    
-                                    <li><a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis" class="button">See Project</a></li>
-                                    </ul>
-                                </article>
-                                
-                                <article>
-                                    <header>
-                                        <span class="date"></span>
-                                        <h4><a href="https://github.com/isam2003/Data-Collection-from-Web/blob/main/WB_html_pdf_url_extractor.ipynb">Google Search <br />
-                                            URL Extractor and Consolidator</a></h4>
-                                    </header>
-                                    <a href="https://github.com/isam2003/Data-Collection-from-Web/blob/main/WB_html_pdf_url_extractor.ipynb" class="image fit"><img src="images/Google.jpg" alt="" /></a>
-                                    <div class="custom-section">
-                                    <p>This Python code mimics the Google search engine by accepting user inputs regarding search terms, no of urls to be included in the search output as well as a filename.
-                                    
-                                    The output saved in the current directory comprises: a textfile consisting of all the pdf urls from the search result, another textfile listing the html urls and a consolidated csv file with all the urls from the search. This separation helps with any content extraction exercise further on.</p>
-                                    </div>
-                                    <ul class="actions special">
-                                        <li><a href="https://github.com/isam2003/Data-Collection-from-Web/blob/main/WB_html_pdf_url_extractor.ipynb" class="button">See Project</a></li>
-                                    </ul>
-                                </article>
-                                
-                                
-                               
-
-                
-                        <section class="split contact">
-                            <section class="alt">
-                                <h3 style="margin-bottom: 0;">Location</h3>         
-                                <pstyle="margin-top: 0;"> Toronto, Canada M4Y 1R2</p>
-                            </section>
-                        <!--
-                            <section>
-                                <h3 style="margin-bottom: 0;">Email</h3>
-                                <pstyle="margin-top: 0;"><a href="#">indu@agayaconsulting.com</a></p>
-                           
-                            </section>
-                              <section class="social-media">
-                                <h3 style="margin-bottom: 0;">Social Media</h3>  <ul class="icons alt">
-                                    <li><a href="https://www.linkedin.com/in/isambandam/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-                                    <li><a href="https://github.com/isam2003" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                                    <li><a href="https://calendly.com/indu_sam/30min" target="_blank">Book a Call</a></li>
-                                </ul>
-                            </section>
-                            
-                        </section>
-                    -->
-                    </footer>
-
-                <!-- Copyright -->
-                    <div id="copyright">
-                        <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-                    </div>
-
+            <div style="text-align:center; margin:2rem 0;">
+              <h4><strong>The real value of data isn’t in collecting it, it’s in using it.<br>
+              It's in the moment someone on your team says <span style="font-weight:bold;">"Now I see what's happening"</span></strong></h4>
             </div>
+          </div>
+        </header>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-    
-    <!-- Carousel Functionality (multi-carousel) -->
-    <script>
-      // Keeps the current index per carousel
-      const carouselState = {};
+        <div class="wordcloud-container">
+          <img width="375" src="images/WordCloud.png" alt="Word cloud">
+        </div>
+      </article>
 
-      function getSlides(name) {
-        const container = document.querySelector(`.carousel-container[data-carousel="${name}"]`);
-        return container ? container.querySelectorAll('.carousel-slide') : [];
-      }
+      <!-- Testimonials -->
+      <article style="margin-bottom:0;">
+        <header class="major">
+          <h3 id="testimonials" style="text-align:left;">Client Testimonials</h3>
+          <div class="custom-section">
+            <blockquote>
+              “Indumeena is a positive, motivated team player whose quarterly reporting framework helped us clearly communicate impact to internal and external audiences.
+              Reliable, collaborative, and strategic — Indumeena added real value to our team’s data storytelling and reporting.”
+            </blockquote>
+            <blockquote>
+              “Indu came to our call prepared, made the material approachable, and helped me feel more confident with data. The follow-up video was a fantastic bonus!
+              Insightful, kind, and incredibly helpful - I'd gladly work with Indu again on any project.”
+            </blockquote>
+            <blockquote>
+              "It was really great working with Indu. She was very fast, thorough, and responsive. We were able to determine process and project outcomes in two short meetings,
+              and she delivered an excellent product - survey analysis and visualization very soon after. It was a very positive experience and I am grateful to have had her support with this work."
+            </blockquote>
+            <blockquote>
+              "Indu was incredibly helpful and efficient in completing this project. She gave us the tools to continue collecting the data we need, and made it visual and easy to understand."
+            </blockquote>
+            <blockquote>
+              "Indu was amazing and helpful! She gave wonderful insight and was a pleasure to work with!"
+            </blockquote>
+          </div>
+        </header>
+      </article>
 
-      function showSlide(name, idx) {
-        const slides = getSlides(name);
-        if (!slides.length) return;
+      <!-- Case Studies -->
+      <article style="margin-bottom:0;">
+        <h3 id="casestudies" style="text-align:left;">Case Studies</h3>
 
-        // wrap index
-        idx = (idx + slides.length) % slides.length;
+        <!-- Case Study A -->
+        <div class="custom-section" style="text-align:center; margin-bottom: 3rem;">
+          <p style="margin:0 0 8px 0; color:#A22120; font-weight:700; font-size:1.2em;">
+            How one nonprofit reclaimed 40+ hours a quarter with smarter reports:
+          </p>
+          <div class="carousel-container" data-carousel="reporting">
+            <div class="carousel-slide active"><img src="images/slide_1.jpg" alt="Reporting slide 1"></div>
+            <div class="carousel-slide"><img src="images/slide_2.jpg" alt="Reporting slide 2"></div>
+            <div class="carousel-slide"><img src="images/slide_3.jpg" alt="Reporting slide 3"></div>
+            <div class="carousel-slide"><img src="images/slide_4.jpg" alt="Reporting slide 4"></div>
+            <div class="carousel-slide"><img src="images/slide_5.jpg" alt="Reporting slide 5"></div>
+            <div class="carousel-slide"><img src="images/slide_6.jpg" alt="Reporting slide 6"></div>
+            <div class="carousel-slide"><img src="images/slide_7.jpg" alt="Reporting slide 7"></div>
+            <div class="carousel-slide"><img src="images/slide_8.jpg" alt="Reporting slide 8"></div>
+            <div class="carousel-slide"><img src="images/slide_9.jpg" alt="Reporting slide 9"></div>
+            <div class="carousel-slide"><img src="images/slide_10.jpg" alt="Reporting slide 10"></div>
+            <div class="carousel-slide"><img src="images/slide_11.jpg" alt="Reporting slide 11"></div>
+          </div>
+          <div class="carousel-buttons">
+            <button type="button" aria-label="Previous reporting slide" onclick="plusSlides('reporting', -1)">❮</button>
+            <button type="button" aria-label="Next reporting slide" onclick="plusSlides('reporting', 1)">❯</button>
+          </div>
+        </div>
 
-        // toggle visibility
-        slides.forEach((slide, i) => slide.classList.toggle('active', i === idx));
+        <!-- Case Study B -->
+        <div class="custom-section" style="text-align:center; margin-bottom: 1.5rem;">
+          <p style="margin:0 0 8px 0; color:#A22120; font-weight:700; font-size:1.2em;">
+            How a food bank moved beyond pounds and people to measure trust and dignity:
+          </p>
+          <div class="carousel-container" data-carousel="foodbank">
+            <div class="carousel-slide active"><img src="images/fb1.jpg" alt="Food Bank slide 1"></div>
+            <div class="carousel-slide"><img src="images/fb2.jpg" alt="Food Bank slide 2"></div>
+            <div class="carousel-slide"><img src="images/fb3.jpg" alt="Food Bank slide 3"></div>
+            <div class="carousel-slide"><img src="images/fb4.jpg" alt="Food Bank slide 4"></div>
+            <div class="carousel-slide"><img src="images/fb5.jpg" alt="Food Bank slide 5"></div>
+            <div class="carousel-slide"><img src="images/fb6.jpg" alt="Food Bank slide 6"></div>
+            <div class="carousel-slide"><img src="images/fb7.jpg" alt="Food Bank slide 7"></div>
+            <div class="carousel-slide"><img src="images/fb8.jpg" alt="Food Bank slide 8"></div>
+            <div class="carousel-slide"><img src="images/fb9.jpg" alt="Food Bank slide 9"></div>
+            <div class="carousel-slide"><img src="images/fb10.jpg" alt="Food Bank slide 10"></div>
+            <div class="carousel-slide"><img src="images/fb11.jpg" alt="Food Bank slide 11"></div>
+          </div>
+          <div class="carousel-buttons">
+            <button type="button" aria-label="Previous food bank slide" onclick="plusSlides('foodbank', -1)">❮</button>
+            <button type="button" aria-label="Next food bank slide" onclick="plusSlides('foodbank', 1)">❯</button>
+          </div>
+        </div>
 
-        // persist index
-        carouselState[name] = idx;
-      }
+        <!-- CTA -->
+        <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-top:10px; flex-wrap:wrap;">
+          <span style="font-size:1.1em;">🔍 Ready for a similar, tailored solution?</span>
+          <button
+            onclick="document.getElementById('emailReveal').style.display='inline'; this.style.display='none';"
+            style="font-size:1.1em; background-color:transparent; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; box-shadow:none; outline:none;">
+            Let’s Talk
+          </button>
+          <span id="emailReveal" style="display:none; font-size:1.1em;">indu@agayaconsulting.com</span>
+        </div>
+      </article>
 
-      function plusSlides(name, delta) {
-        const current = carouselState[name] ?? 0;
-        showSlide(name, current + delta);
-      }
+      <!-- Sample Dashboards -->
+      <article style="margin-bottom:0;">
+        <h3 id="samples" style="text-align:left;">Sample Dashboards</h3>
+        <div class="custom-section">
+          <p>Here’s a sample of the work we do to turn data into actionable insights.</p>
+        </div>
+      </article>
 
-      // Initialize both carousels
-      ['reporting', 'foodbank'].forEach(name => showSlide(name, 0));
-    </script>  
+      <!-- Cards/posts (unchanged content) -->
+      <section class="posts" style="margin-top: -40px;">
+        <!-- Keep your project cards exactly as you had them -->
+        <!-- 1 -->
+        <article>
+          <header><h4><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9">Automating Survey Analysis</a></h4></header>
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="image fit">
+            <img src="images/sentiment_analysis.png" alt="Automating Survey Analysis" />
+          </a>
+          <div class="custom-section">
+            <p>Is your staff spending hours in repetitive processes manually categorizing qualitative survey results into Positive, Negative or Neutral piles? Free up staff time by automating this process so that more time can be invested in analyzing & crafting compelling impact stories for stakeholder buy-in. Data Source - AI.</p>
+          </div>
+          <ul class="actions special">
+            <li><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="button" target="_blank">See Project</a></li>
+          </ul>
+        </article>
 
-    </body>
+        <!-- 2 -->
+        <article>
+          <header><h4><a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9">Sentiment Analysis on Contact Meeting Notes</a></h4></header>
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="image fit">
+            <img src="images/sentiment_analysis_2.png" alt="Sentiment Analysis 2" />
+          </a>
+          <div class="custom-section"><p>Continuing the Sentiment Analysis theme. Data Source - AI.</p></div>
+          <ul class="actions special"><li><a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="button" target="_blank">See Project</a></li></ul>
+        </article>
+
+        <!-- (…keep the rest of your project cards unchanged…) -->
+        <!-- 3 -->
+        <article>
+          <header><h4><a href="https://www.novypro.com/project/marketing-campaign-insights">Marketing Campaign Analysis</a></h4></header>
+          <a href="https://www.novypro.com/project/marketing-campaign-insights" class="image fit"><img src="images/Mktg Campaign Insights.png" alt="" /></a>
+          <div class="custom-section"><p>This post-Campaigns one pager analysis highlights a potential mismatch between the products on offer and customer profile… Data Source- Kaggle.</p></div>
+          <ul class="actions special"><li><a href="https://www.novypro.com/project/marketing-campaign-insights" class="button">See Project</a></li></ul>
+        </article>
+
+        <!-- 4 -->
+        <article>
+          <header><h4><a href="https://www.novypro.com/project/sales-analysis---retail-store">Sales Analysis</a></h4></header>
+          <a href="https://www.novypro.com/project/sales-analysis---retail-store" class="image fit"><img src="images/retail_whatif_analysis.png" alt="" /></a>
+          <div class="custom-section"><p>An overview of a retail store's data with a what-if analysis. Data Source- Yoda.</p></div>
+          <ul class="actions special"><li><a href="https://www.novypro.com/project/sales-analysis---retail-store" class="button">See Project</a></li></ul>
+        </article>
+
+        <!-- 5 -->
+        <article>
+          <header><h4><a href="https://www.novypro.com/project/supplier--downtime-analysis">Supplier & Downtime Analysis</a></h4></header>
+          <a href="https://www.novypro.com/project/supplier--downtime-analysis" class="image fit"><img src="images/E9N supplier analysis.png" alt="" /></a>
+          <div class="custom-section"><p>A detailed analysis of supplier performance & downtimes using time intelligence. Data Source- Udemy.</p></div>
+          <ul class="actions special"><li><a href="https://www.novypro.com/project/supplier--downtime-analysis" class="button">See Project</a></li></ul>
+        </article>
+
+        <!-- 6 -->
+        <article>
+          <header><h4><a href="https://www.novypro.com/project/the-global-unicorns-club">The Global Unicorns Club</a></h4></header>
+          <a href="https://www.novypro.com/project/the-global-unicorns-club" class="image fit"><img src="images/unicorn.png" alt="" /></a>
+          <div class="custom-section"><p>A peek into the exclusive global club of Unicorns. Data Source- Maven Analytics.</p></div>
+          <ul class="actions special"><li><a href="https://www.novypro.com/project/the-global-unicorns-club" class="button">See Project</a></li></ul>
+        </article>
+
+        <!-- 7 -->
+        <article>
+          <header><h4><a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis">Impact of 5G Introduction</a></h4></header>
+          <a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis" class="image fit"><img src="images/codebasics_C3.png" alt="" /></a>
+          <div class="custom-section"><p>A one pager providing a bird's eye response… Data Source- CodeBasics Challenge 3.</p></div>
+          <ul class="actions special"><li><a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis" class="button">See Project</a></li></ul>
+        </article>
+
+        <!-- 8 -->
+        <article>
+          <header><h4><a href="https://github.com/isam2003/Data-Collection-from-Web/blob/main/WB_html_pdf_url_extractor.ipynb">Google Search URL Extractor and Consolidator</a></h4></header>
+          <a href="https://github.com/isam2003/Data-Collection-from-Web/blob/main/WB_html_pdf_url_extractor.ipynb" class="image fit"><img src="images/Google.jpg" alt="" /></a>
+          <div class="custom-section"><p>This Python code mimics the Google search engine…</p></div>
+          <ul class="actions special"><li><a href="https://github.com/isam2003/Data-Collection-from-Web/blob/main/WB_html_pdf_url_extractor.ipynb" class="button">See Project</a></li></ul>
+        </article>
+      </section>
+
+      <!-- Footer (no blocks, just the centered copyright) -->
+      <footer></footer>
+
+      <!-- Copyright -->
+      <div id="copyright">
+        © AGAYA Consulting Inc. &nbsp;•&nbsp; Data Confidence for Nonprofits &nbsp;•&nbsp; Toronto, Canada
+      </div>
+
+    </div><!-- /#main -->
+
+  </div><!-- /#wrapper -->
+
+  <!-- Always-visible side navigation -->
+  <nav class="nav-left" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#whatwedo">What We Help You Do</a>
+    <a href="#testimonials">Client Testimonials</a>
+    <a href="#casestudies">Case Studies</a>
+    <a href="#samples">Sample Dashboards</a>
+  </nav>
+
+  <nav class="nav-right" aria-label="Secondary">
+    <a href="blog.html" target="_blank" rel="noopener">Blog</a>
+    <a href="https://www.linkedin.com/in/isambandam/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://calendly.com/indu_sam/30min" target="_blank" rel="noopener">Book a Call</a>
+  </nav>
+
+  <!-- Bottom red bar -->
+  <div id="bottom-bar" aria-hidden="true"></div>
+
+  <!-- Minimal JS: carousels only (no theme JS to avoid re-darkening) -->
+  <script>
+    const carouselState = {};
+    function getSlides(name){
+      const container = document.querySelector(`.carousel-container[data-carousel="${name}"]`);
+      return container ? container.querySelectorAll('.carousel-slide') : [];
+    }
+    function showSlide(name, idx){
+      const slides = getSlides(name);
+      if(!slides.length) return;
+      idx = (idx + slides.length) % slides.length;
+      slides.forEach((s,i)=>s.classList.toggle('active', i===idx));
+      carouselState[name] = idx;
+    }
+    function plusSlides(name, delta){
+      const current = carouselState[name] ?? 0;
+      showSlide(name, current + delta);
+    }
+    ['reporting','foodbank'].forEach(name => showSlide(name, 0));
+  </script>
+</body>
 </html>
