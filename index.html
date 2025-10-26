@@ -254,6 +254,75 @@ h3 {
       .nav-left{ transform: translateY(0); }
       .nav-right{ transform: translateY(2.1rem); } /* stagger them a bit to avoid crowding */
     }
+
+  /* ================================
+   MOBILE RESPONSIVE FIXES
+   ================================ */
+@media screen and (max-width: 768px) {
+
+  /* --- Hero Section --- */
+  .header-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+    gap: 0.25rem;
+  }
+
+  .logo {
+    width: 4rem;
+    margin-bottom: 0.25rem;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  h3, .tagline {
+    font-size: 0.85rem !important;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0.3rem auto 0.5rem;
+  }
+
+  /* --- Profile photo + name --- */
+  .profile-container {
+    margin-top: 0.5rem;
+  }
+
+  .profile-container img {
+    width: 6rem;
+  }
+
+  .profile-container p {
+    font-size: 0.85rem;
+  }
+
+  /* --- Bottom nav --- */
+  .nav-left, .nav-right {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-left a, .nav-right a {
+    display: block;
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+
+  #bottom-bar {
+    height: 1.5rem;
+  }
+
+  /* Prevent title and logo from being clipped on small screens */
+  #intro {
+    padding-top: 1.5rem;
+  }
+}
+
   </style>
 
   <!-- Google tag (gtag.js) -->
