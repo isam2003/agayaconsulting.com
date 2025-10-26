@@ -186,6 +186,7 @@ h3 {
     }
 
     /* FIXED side navs (always visible), sitting just above the bottom red bar */
+   @media screen and (min-width: 769px) { 
     .nav-left, .nav-right{
       position: fixed;
       bottom: calc(2.5rem + 1rem); /* just above red bar */
@@ -193,6 +194,8 @@ h3 {
       z-index: 2500;
       pointer-events: auto;
     }
+  }
+  
     .nav-left{ left: 1.25rem; text-align:left; }
     .nav-right{ right: 1.25rem; text-align:right; }
 
