@@ -243,303 +243,102 @@ h3 {
       .nav-right{ right: .75rem; }
     }
     
-
-  /* ======== Final mobile fix for AGAYA (≤768px) ======== */
-@media screen and (max-width: 768px) {
-
-  html, body {
-    overflow-x: visible !important; /* allow normal scroll */
-    overflow-y: auto !important;
-  }
-
-  /* Header layout */
-  .header-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-  }
-
-  .logo {
-    height: 42px;
-    width: auto;
-    margin-bottom: 0.3rem;
-  }
-
-  /* Title — smaller and wrapped safely */
-  h1 {
-    font-size: 5.2vw !important;    /* smaller scaling */
-    line-height: 1.1;
-    white-space: normal !important; /* allow wrapping */
-    overflow-wrap: break-word;      /* wrap if needed */
-    text-align: center;
-    margin: 0.5rem auto 0.25rem;
-    padding: 0 0.75rem;
-  }
-
-  /* Subheading + tagline unified style */
-  #intro h3,
-  .tagline {
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #2B2A2A !important;
-    margin: 0.25rem 0 0.75rem;
-    text-align: center;
-  }
-
-  /* Profile photo + name */
-  .profile-container,
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0.75rem;
-  }
-
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  .profile-name {
-    font-size: 0.9rem;
-    color: #2B2A2A;
-    margin-top: 0.4rem;
-  }
-
-  /* Side nav becomes normal rows */
-  .nav-left,
-  .nav-right {
-    position: static !important;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0.75rem 0 1rem;
-    padding: 0;
-    background: transparent !important;
-    z-index: 10;
-  }
-
-  .nav-left a,
-  .nav-right a {
-    color: #2B2A2A;
-    font-size: 0.95rem;
-    text-decoration: none;
-    padding: 0.25rem 0.4rem;
-    font-weight: 600;
-  }
-
-  /* Ensure content below hero is visible */
-  #wrapper,
-  #main,
-  .inner,
-  section {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    overflow: visible !important;
-    display: block;
-  }
-
-  /* Red bar shortened for mobile */
-  #bottom-bar {
-    height: 1.25rem;
-  }
-}
-
-/* --- Final title-only fix (safe for desktop layout) --- */
-#intro h1 {
-  font-size: clamp(1.6rem, 4.8vw, 2.6rem) !important; /* scales smoothly */
-  line-height: 1.1;
-  white-space: normal !important;   /* allows wrap if needed */
-  overflow-wrap: break-word;
-  text-align: center;
-  margin: 0.25rem auto 0.5rem;
-  color: #A22120;
-  padding: 0 1rem; /* small breathing room for mobile edge cutoffs */
-}
-
-/* ===== MOBILE-ONLY FIX (keeps desktop intact) ===== */
-/* ======= AGAYA FINAL MOBILE POLISH (≤768px) ======= */
-@media screen and (max-width: 768px) {
-
-  /* Remove overflow issues */
-  html, body {
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-  }
-
-  /* Header & logo */
-  .header-top {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 0.5rem;
-    text-align: center;
-  }
-
-  .header-top .logo {
-    width: 58px;
-    height: auto;
-    margin-bottom: 0.25rem;
-  }
-
-  .header-top h1 {
-    font-size: clamp(1.25rem, 5vw, 1.7rem);
-    text-align: center;
-    line-height: 1.15;
-    white-space: normal !important;
-    padding: 0 1rem;
-  }
-
-  /* Hero section tweaks */
-  #intro {
-    padding: 2.5rem 1rem 2rem;
-  }
-  #intro h3 {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin: 0.25rem 0 0.6rem;
-  }
-
-  /* Profile image sizing */
-  .profile-photo {
-    width: 130px;
-    height: 130px;
-  }
-  .profile-name {
-    font-size: 0.9rem;
-    margin-top: 0.3rem;
-  }
-
-  /* Reflow the fixed navs */
-  .nav-left, .nav-right {
-    position: static !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-    margin: 1rem 0 0.75rem;
-  }
-
-  .nav-left a, .nav-right a {
-    font-size: 0.9rem;
-    padding: 0.25rem 0.35rem;
-    font-weight: 600;
-  }
-
-  /* Shrink bottom red bar */
-  #bottom-bar {
-    height: 1.1rem;
-  }
-
-  /* Avoid tight edge padding */
-  #main {
-    padding: 1rem 1rem 3rem !important;
-  }
-
-  /* Ensure carousels fit */
-  .carousel-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-}
-
-/* === MOBILE HOTFIX: keep navs visible, not at page bottom === */
-@media screen and (max-width: 768px) {
-
-  /* Put both navs back in the viewport, centered, above red bar */
-  .nav-left,
-  .nav-right {
-    position: fixed !important;     /* override earlier 'static' */
-    left: 0;
-    right: 0;
-    bottom: calc(1.25rem + 8px);    /* just above your red bar (1.25rem) */
-    display: flex !important;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-    margin: 0 !important;
-    background: transparent !important;
-    z-index: 2500;
-  }
-
-  /* Stack them as two rows: left group sits slightly higher */
-  .nav-left { transform: translateY(-32px); }
-  .nav-right { transform: translateY(0); }
-
-  /* Make sure content can't hide behind the fixed navs */
-  #main { padding-bottom: 6rem !important; }
-
-  /* Optional: slightly smaller link size on phones */
-  .nav-left a,
-  .nav-right a {
-    font-size: 0.9rem !important;
-    font-weight: 600 !important;
-    padding: 0.25rem 0.35rem !important;
-    color: var(--agaya-dark) !important;
-    text-decoration: none !important;
-  }
-}
-
 /* ================================================= */
-/* 🚀 MOBILE POLISH PATCH (max-width: 768px) 🚀      */
-/* Fixes 1, 2, 3 requested tweaks without breaking desktop. */
+/* 🚀 MOBILE LAYOUT CONSOLIDATED FIX (≤768px) 🚀      */
+/* Incorporates all necessary mobile tweaks and ensures the nav is inline. */
 /* ================================================= */
 @media screen and (max-width: 768px) {
 
-    /* 1. Reduce size of subtitle/tagline and move them up */
-    #intro {
-        padding-top: 2rem !important; /* Reduced top padding to move everything up */
-        padding-bottom: 1rem !important; /* Reduced bottom padding */
+    /* Reset / Base Overrides */
+    html, body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
     }
-    #intro h3 {
-        font-size: 0.95rem !important; /* Smaller size for subtitle/tagline */
-        margin-top: 0.1rem !important; /* Move text up */
-        margin-bottom: 0.4rem !important; /* Move text up */
+    #main {
+        padding: 1rem 1rem 4rem !important; /* Ensure content is visible above the bottom bar */
     }
 
-    /* 2. Move photo and name up as well (tighter margin after text) */
-    .profile {
-        margin-top: 0.5rem !important; /* Reduced space after tagline */
+    /* Header & Logo */
+    .header-top {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    .header-top .logo {
+        width: 58px;
+        height: auto;
+        margin-bottom: 0.25rem;
+    }
+    .header-top h1 {
+        font-size: clamp(1.25rem, 5vw, 1.7rem);
+        text-align: center;
+        line-height: 1.15;
+        white-space: normal !important;
+        padding: 0 1rem;
     }
     
-    /* 3. Within photo, adjust so that the top of my hairline is not cut off */
+    /* Hero Section Positioning (Tighter & Higher) */
+    #intro {
+        padding: 1.5rem 1rem 1rem !important; /* Move content higher up the page */
+        min-height: auto;
+    }
+    
+    /* Subtitle/Tagline Tweaks */
+    #intro h3, .tagline {
+        font-size: 0.95rem !important; /* Smaller size */
+        line-height: 1.4;
+        margin: 0.1rem 0 0.4rem !important; /* Move text up */
+    }
+
+    /* Profile Photo Tweaks */
+    .profile {
+        margin-top: 0.5rem !important; /* Move photo/name up */
+    }
     .profile-photo {
-        width: 130px !important; /* Consistent mobile size */
+        width: 130px !important;
         height: 130px !important;
-        /* Fix Hairline: Change object-fit and add internal padding */
+        /* Hairline Fix: Ensure image fits and has top padding */
         object-fit: contain !important; 
         padding-top: 5px !important; 
     }
+    .profile-name {
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+    }
 
-    /* Additional Mobile Polish for consistency */
+    /* Navigation Reflow (Static/Inline below photo) */
     .nav-left, .nav-right {
-        /* Ensure navs are placed below the photo and centered */
-        position: static !important;
+        position: static !important; /* CRITICAL: Must be static for inline flow */
         display: flex !important;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 0.6rem;
         margin: 1rem 0 0.75rem !important;
+        background: transparent !important;
+        z-index: 10;
     }
+
+    /* Mobile Link Appearance */
     .nav-left a, .nav-right a {
+        color: var(--agaya-dark) !important;
         font-size: 0.9rem !important;
+        text-decoration: none !important;
         padding: 0.25rem 0.35rem !important;
         font-weight: 600 !important;
+        border-bottom: 2px solid transparent; /* Ensure link underline style is kept */
     }
-    #bottom-bar { 
-        height: 1.1rem !important; 
+
+    /* Bottom Bar */
+    #bottom-bar {
+        height: 1.1rem !important;
     }
 }
 
-  </style>
+</style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z66GC8MFZL"></script>
