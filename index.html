@@ -450,6 +450,43 @@ h3 {
   }
 }
 
+/* === MOBILE HOTFIX: keep navs visible, not at page bottom === */
+@media screen and (max-width: 768px) {
+
+  /* Put both navs back in the viewport, centered, above red bar */
+  .nav-left,
+  .nav-right {
+    position: fixed !important;     /* override earlier 'static' */
+    left: 0;
+    right: 0;
+    bottom: calc(1.25rem + 8px);    /* just above your red bar (1.25rem) */
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 0 !important;
+    background: transparent !important;
+    z-index: 2500;
+  }
+
+  /* Stack them as two rows: left group sits slightly higher */
+  .nav-left { transform: translateY(-32px); }
+  .nav-right { transform: translateY(0); }
+
+  /* Make sure content can't hide behind the fixed navs */
+  #main { padding-bottom: 6rem !important; }
+
+  /* Optional: slightly smaller link size on phones */
+  .nav-left a,
+  .nav-right a {
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    padding: 0.25rem 0.35rem !important;
+    color: var(--agaya-dark) !important;
+    text-decoration: none !important;
+  }
+}
+
 
   </style>
 
