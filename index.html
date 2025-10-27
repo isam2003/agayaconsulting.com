@@ -487,56 +487,57 @@ h3 {
   }
 }
 
-/* === MOBILE NAV LAYOUT (after moving navs inside #intro) === */
+/* ================================================= */
+/* 🚀 MOBILE POLISH PATCH (max-width: 768px) 🚀      */
+/* Fixes 1, 2, 3 requested tweaks without breaking desktop. */
+/* ================================================= */
 @media screen and (max-width: 768px) {
 
-  /* Spacing below profile photo */
-  .profile {
-    margin-bottom: 1.2rem !important;
-  }
+    /* 1. Reduce size of subtitle/tagline and move them up */
+    #intro {
+        padding-top: 2rem !important; /* Reduced top padding to move everything up */
+        padding-bottom: 1rem !important; /* Reduced bottom padding */
+    }
+    #intro h3 {
+        font-size: 0.95rem !important; /* Smaller size for subtitle/tagline */
+        margin-top: 0.1rem !important; /* Move text up */
+        margin-bottom: 0.4rem !important; /* Move text up */
+    }
 
-  /* Unified mobile nav appearance */
-  #intro nav.nav-left,
-  #intro nav.nav-right {
-    position: static !important;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.65rem 0.6rem; /* row-gap col-gap */
-    margin: 0 0 1.25rem;
-    background: transparent;
-  }
+    /* 2. Move photo and name up as well (tighter margin after text) */
+    .profile {
+        margin-top: 0.5rem !important; /* Reduced space after tagline */
+    }
+    
+    /* 3. Within photo, adjust so that the top of my hairline is not cut off */
+    .profile-photo {
+        width: 130px !important; /* Consistent mobile size */
+        height: 130px !important;
+        /* Fix Hairline: Change object-fit and add internal padding */
+        object-fit: contain !important; 
+        padding-top: 5px !important; 
+    }
 
-  /* Ensure both navs look like one block */
-  #intro nav.nav-left {
-    margin-bottom: 0.4rem;
-  }
-
-  #intro nav a,
-  #intro nav a:visited {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--agaya-dark);
-    text-decoration: none;
-    padding: 0.25rem 0.4rem;
-  }
-
-  #intro nav a:hover {
-    color: var(--agaya-red);
-  }
-
-  /* Make sure hero text and profile breathe */
-  #intro h1,
-  #intro h3 {
-    margin-bottom: 0.4rem;
-  }
-
-  /* Lightly tighten bottom padding of hero */
-  #intro {
-    padding-bottom: 1rem;
-  }
+    /* Additional Mobile Polish for consistency */
+    .nav-left, .nav-right {
+        /* Ensure navs are placed below the photo and centered */
+        position: static !important;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+        margin: 1rem 0 0.75rem !important;
+    }
+    .nav-left a, .nav-right a {
+        font-size: 0.9rem !important;
+        padding: 0.25rem 0.35rem !important;
+        font-weight: 600 !important;
+    }
+    #bottom-bar { 
+        height: 1.1rem !important; 
+    }
 }
-
 
   </style>
 
