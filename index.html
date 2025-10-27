@@ -487,41 +487,53 @@ h3 {
   }
 }
 
-/* === MOBILE NAV SPACING + BEHAVIOR FIX === */
+/* === MOBILE NAV LAYOUT (after moving navs inside #intro) === */
 @media screen and (max-width: 768px) {
 
-  /* Give breathing room below the profile photo/name */
+  /* Spacing below profile photo */
   .profile {
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 1.2rem !important;
   }
 
-  /* Stack all nav links into a single centered block that scrolls normally */
-  .nav-left,
-  .nav-right {
-    position: static !important;        /* remove fixed positioning */
-    display: flex !important;
+  /* Unified mobile nav appearance */
+  #intro nav.nav-left,
+  #intro nav.nav-right {
+    position: static !important;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.45rem !important;            /* tighter horizontal gap */
-    row-gap: 0.25rem !important;        /* balanced vertical gap */
-    margin: 1rem 0 1.25rem !important;  /* space above + below navs */
-    background: transparent !important;
+    gap: 0.65rem 0.6rem; /* row-gap col-gap */
+    margin: 0 0 1.25rem;
+    background: transparent;
   }
 
-  /* Normalize link style */
-  .nav-left a,
-  .nav-right a {
-    font-size: 0.9rem !important;
-    font-weight: 600 !important;
-    padding: 0.25rem 0.4rem !important;
-    text-decoration: none !important;
-    color: var(--agaya-dark) !important;
+  /* Ensure both navs look like one block */
+  #intro nav.nav-left {
+    margin-bottom: 0.4rem;
   }
 
-  /* Adjust main content so nothing collides visually */
-  #main {
-    padding-top: 0.5rem !important;
-    padding-bottom: 2.5rem !important;
+  #intro nav a,
+  #intro nav a:visited {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--agaya-dark);
+    text-decoration: none;
+    padding: 0.25rem 0.4rem;
+  }
+
+  #intro nav a:hover {
+    color: var(--agaya-red);
+  }
+
+  /* Make sure hero text and profile breathe */
+  #intro h1,
+  #intro h3 {
+    margin-bottom: 0.4rem;
+  }
+
+  /* Lightly tighten bottom padding of hero */
+  #intro {
+    padding-bottom: 1rem;
   }
 }
 
@@ -557,6 +569,21 @@ h3 {
     <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
     <p class="profile-name">Indu Sambandam</p>
   </div>
+
+  <!-- Always-visible side navigation -->
+  <nav class="nav-left" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#whatwedo">How We Help You</a>
+    <a href="#testimonials">Client Testimonials</a>
+    <a href="#casestudies">Case Studies</a>
+    <a href="#samples">Sample Dashboards</a>
+  </nav>
+
+  <nav class="nav-right" aria-label="Secondary">
+    <a href="blog.html" target="_blank" rel="noopener">Blog</a>
+    <a href="https://www.linkedin.com/in/isambandam/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://calendly.com/indu_sam/30min" target="_blank" rel="noopener">Book a Call</a>
+  </nav>
 </div>
 
  
@@ -786,20 +813,7 @@ h3 {
 
   </div><!-- /#wrapper -->
 
-  <!-- Always-visible side navigation -->
-  <nav class="nav-left" aria-label="Primary">
-    <a href="#about">About</a>
-    <a href="#whatwedo">How We Help You</a>
-    <a href="#testimonials">Client Testimonials</a>
-    <a href="#casestudies">Case Studies</a>
-    <a href="#samples">Sample Dashboards</a>
-  </nav>
 
-  <nav class="nav-right" aria-label="Secondary">
-    <a href="blog.html" target="_blank" rel="noopener">Blog</a>
-    <a href="https://www.linkedin.com/in/isambandam/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://calendly.com/indu_sam/30min" target="_blank" rel="noopener">Book a Call</a>
-  </nav>
 
   <!-- Bottom red bar -->
   <div id="bottom-bar" aria-hidden="true"></div>
