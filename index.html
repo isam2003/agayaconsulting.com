@@ -487,6 +487,44 @@ h3 {
   }
 }
 
+/* === MOBILE NAV SPACING + BEHAVIOR FIX === */
+@media screen and (max-width: 768px) {
+
+  /* Give breathing room below the profile photo/name */
+  .profile {
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Stack all nav links into a single centered block that scrolls normally */
+  .nav-left,
+  .nav-right {
+    position: static !important;        /* remove fixed positioning */
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.45rem !important;            /* tighter horizontal gap */
+    row-gap: 0.25rem !important;        /* balanced vertical gap */
+    margin: 1rem 0 1.25rem !important;  /* space above + below navs */
+    background: transparent !important;
+  }
+
+  /* Normalize link style */
+  .nav-left a,
+  .nav-right a {
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    padding: 0.25rem 0.4rem !important;
+    text-decoration: none !important;
+    color: var(--agaya-dark) !important;
+  }
+
+  /* Adjust main content so nothing collides visually */
+  #main {
+    padding-top: 0.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+}
+
 
   </style>
 
