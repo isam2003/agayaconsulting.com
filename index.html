@@ -18,296 +18,198 @@
 
   <!-- Brand-safe, conflict-killing CSS -->
 <style>
-    :root {
-        --agaya-red:#A22120;
-        --agaya-dark:#2B2A2A;
-        --agaya-light:#DEDEDA;
-    }
+/* =========================================================
+   1. BASE STYLES — shared identity only
+   ========================================================= */
+:root {
+  --agaya-red:#A22120;
+  --agaya-dark:#2B2A2A;
+  --agaya-light:#DEDEDA;
+}
 
-    /* Core Layout & Reset */
-    html, body {
-        margin:0;
-        padding:0;
-        color: var(--agaya-dark);
-        /* 🔴 FIX: Prevent horizontal scroll by default */
-        overflow-x: hidden; 
-        overflow-y: auto;
-    }
-    
-    /* Kill any theme backgrounds/overlays and make the whole page light */
-    html, body, #wrapper, #main, #intro, .inner, section, header, footer {
-        background: var(--agaya-light) !important;
-        background-image: none !important;
-        box-shadow: none !important;
-        border: 0 !important;
-    }
+html, body {
+  margin:0;
+  padding:0;
+  background:var(--agaya-light);
+  color:var(--agaya-dark);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  overflow-x:hidden;
+}
+body.is-preload, body.is-loading {
+  animation:none!important; opacity:1!important; transition:none!important;
+}
+body::before,#bg,#bg::before,#bg::after{display:none!important;}
+a{color:var(--agaya-dark);text-decoration:none;}
+a:hover{color:var(--agaya-red);}
 
-    /* Remove any theme preload/fade effects */
-    body.is-preload,
-    body.is-loading {
-        animation: none !important;
-        opacity: 1 !important;
-        transition: none !important;
-    }
-    
-    body::before,
-    #bg,
-    #bg::before,
-    #bg::after {
-        display: none !important;
-    }
+/* =========================================================
+   2. DESKTOP ≥1025px — full layout, fixed side navs
+   ========================================================= */
+@media screen and (min-width:1025px) {
 
-    /* Header & Logo (Mobile-first stack) */
-    .header-top {
-        display: flex;
-        flex-direction: column; /* Stack logo and title on small screens */
-        align-items: center;
-        justify-content: center;
-        gap: 0.4rem; /* Reduced gap for mobile */
-        margin-top: 0.5rem; /* Adjusted top margin */
-        text-align: center;
-        padding: 0 1rem;
-    }
-    .logo {
-        width: 58px; /* Mobile logo size */
-        height: auto;
-        margin-bottom: 0.25rem;
-    }
-    .header-top h1 {
-        /* Mobile-safe font size using clamp for smooth scaling */
-        font-size: clamp(1.25rem, 5vw, 1.7rem); 
-        color: var(--agaya-dark);
-        font-weight: 800;
-        margin: 0;
-        white-space: normal !important; /* Allow wrapping */
-        line-height: 1.15;
-    }
-    .header-top .agaya-red {
-        color: #A22120;
-    }
+  .header-top {
+    display:flex; align-items:center; justify-content:center;
+    gap:1rem; margin-top:1rem;
+  }
+  .logo {width:70px; height:auto;}
+  .header-top h1 {
+    font-size:1.1rem; font-weight:800; margin:0;
+    color:var(--agaya-dark); white-space:nowrap;
+  }
+  .header-top .agaya-red{color:var(--agaya-red);}
 
-    /* Intro (hero) - Mobile-first padding */
-    #intro{
-        min-height: auto; /* Remove 100vh on mobile */
-        display:flex;
-        flex-direction: column;
-        align-items:center;
-        justify-content:flex-start;
-        text-align:center;
-        padding: 2.5rem 1rem 2rem;
-    }
-    
-    /* Title (Overridden by .header-top h1 on mobile, kept for desktop) */
-    h1 {
-        color: #A22120 !important;
-        font-size: 3rem !important; 
-        font-weight: 800;
-        line-height: 1.05;
-        white-space: nowrap;
-        margin-top: 0.03rem !important;
-        margin-bottom: 0.25rem !important;
-        letter-spacing: 0.015em;
-    }
-    
-    /* Subtitle */
-    h3 {
-        color: var(--agaya-dark) !important;
-        margin: 0.25rem 0 0.5rem;
-        font-weight: 700;
-        font-size: 1rem;
-        line-height: 1.3;
-        text-align: center;
-    }
+  /* Hero */
+  #intro {
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+    text-align:center; min-height:100vh; padding:4.5rem 1rem 5rem;
+  }
+  #intro h1 {
+    color:var(--agaya-red); font-size:3rem; font-weight:800;
+    line-height:1.05; white-space:nowrap; margin-bottom:.25rem;
+  }
+  #intro h3 {
+    font-size:1rem; line-height:1.3; font-weight:700; margin:.25rem 0 .5rem;
+  }
 
-    /* Profile block */
-    .profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 0.75rem; 
-        transform: translateY(-5px); 
-    }
-    
-    /* Profile photo */
-    .profile-photo {
-        width: 130px; /* Mobile size */
-        height: 130px;
-        border-radius: 50%;
-        margin-bottom: 0.25rem;
-        object-fit: cover;
-    }
-    
-    /* Profile name */
-    .profile-name {
-        font-weight: 400;
-        font-style: italic;
-        color: var(--agaya-dark);
-        margin: 0;
-        font-size: 0.9rem;
-        margin-top: 0.3rem;
-    }
-    
-    /* Main content area: centered on all screens */
-    #main{
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 1rem 1rem 3rem !important; /* Mobile padding */
-    }
-    header.major{ text-align:center; }
-    .custom-section{ text-align:left; line-height:1.55; margin: 1rem 0 2rem; }
-    .wordcloud-container{ display:flex; justify-content:center; align-items:center; }
+  /* Profile */
+  .profile {
+    display:flex; flex-direction:column; align-items:center;
+    margin-top:1.25rem; transform:translateY(-5px);
+  }
+  .profile-photo{width:180px;border-radius:50%;margin-bottom:.25rem;}
+  .profile-name{font-style:italic;font-weight:400;color:var(--agaya-dark);}
 
-    /* Carousels */
-    .carousel-container { position:relative; max-width: 680px; margin: 0 auto; }
-    .carousel-slide { display:none; }
-    .carousel-slide.active{ display:block; }
-    .carousel-slide img { 
-        width:100%; 
-        display:block;
-        height: auto;
-        border-radius: 8px;
-    }
-    .carousel-buttons{
-        display:flex; justify-content:center; align-items:center; gap:24px; margin-top:.25rem;
-    }
-    .carousel-buttons button{
-        background:transparent; border:0; font-size:24px; cursor:pointer; padding:0;
-    }
+  /* Main content */
+  #main{max-width:1100px;margin:0 auto;padding:2rem 2rem 6rem;}
+  header.major{text-align:center;}
+  .custom-section{text-align:left;line-height:1.55;margin:1rem 0 2rem;}
+  .wordcloud-container{display:flex;justify-content:center;align-items:center;}
 
-    /* Side Navs (Mobile-first: Static and centered) */
-    .nav-left, .nav-right{
-        position: static; /* Start as static */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.6rem;
-        margin: 1rem 0 0.75rem;
-        padding: 0;
-        z-index: 10;
-        pointer-events: auto;
-        text-align: center;
-    }
+  /* Side navs fixed */
+  .nav-left,.nav-right{
+    position:fixed;bottom:calc(2.5rem + 1rem);
+    display:flex;flex-direction:column;gap:.85rem;
+    z-index:2500;pointer-events:auto;
+  }
+  .nav-left{left:1.25rem;text-align:left;}
+  .nav-right{right:1.25rem;text-align:right;}
+  .nav-left a,.nav-right a{
+    color:var(--agaya-dark);font-weight:700;font-size:.98rem;
+    letter-spacing:.02em;border-bottom:2px solid transparent;padding:.2rem .1rem;
+  }
+  .nav-left a:hover,.nav-right a:hover{
+    color:var(--agaya-red);border-bottom-color:var(--agaya-red);
+  }
 
-    .nav-left a, .nav-right a{
-        color: var(--agaya-dark) !important;
-        font-weight:600; /* Less bold for mobile */
-        text-decoration:none;
-        font-size: 0.9rem; /* Mobile font size */
-        letter-spacing: .02em;
-        padding:.25rem .35rem; /* Mobile padding */
-        border-bottom: 2px solid transparent;
-    }
-    .nav-left a:hover, .nav-right a:hover{
-        color: var(--agaya-red) !important;
-        border-bottom-color: var(--agaya-red);
-    }
-    .nav-left { left: auto; }
-    .nav-right { right: auto; }
+  #bottom-bar{
+    position:fixed;left:0;right:0;bottom:0;height:2.5rem;
+    background:var(--agaya-red);z-index:2000;
+  }
+  #copyright{
+    text-align:center;font-size:.95rem;letter-spacing:.02em;
+    padding:1.25rem 1rem 4.25rem;margin:0 auto;color:var(--agaya-dark);
+  }
+}
 
-    /* Bottom red bar */
-    #bottom-bar{
-        position: fixed;
-        left:0; right:0; bottom:0;
-        height: 1.1rem; /* Smaller for mobile */
-        background: var(--agaya-red);
-        z-index: 2000;
-    }
+/* =========================================================
+   3. TABLET 769–1024px — medium layout
+   ========================================================= */
+@media screen and (max-width:1024px) and (min-width:769px){
 
-    /* Copyright */
-    #copyright{
-        text-align:center;
-        font-size:.95rem;
-        color: var(--agaya-dark);
-        letter-spacing:.02em;
-        padding: 1.25rem 1rem 3.25rem; /* Adjusted for smaller bottom bar */
-        margin: 0 auto;
-    }
-    #copyright a{ color: var(--agaya-dark); text-decoration:none; border-bottom: 1px dotted transparent; }
-    #copyright a:hover{ color: var(--agaya-red); border-bottom-color: var(--agaya-red); }
-    #copyright ul, #copyright li{ list-style:none; margin:0; padding:0; border:0 !important; }
+  .header-top{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:0 2rem;margin-top:.75rem;
+  }
+  .logo{width:60px;}
+  .header-top h1{
+    font-size:1rem;font-weight:800;color:var(--agaya-dark);
+    white-space:normal;text-align:center;flex:1;
+  }
 
+  #intro{
+    min-height:auto; padding:3rem 2rem 4rem; text-align:center;
+  }
+  #intro h1{
+    font-size:2.4rem; line-height:1.1; color:var(--agaya-red);
+    margin-bottom:.25rem;
+  }
+  #intro h3{
+    font-size:1rem; line-height:1.35; margin:.25rem 0 .5rem;
+  }
 
-    /* ========================================= */
-    /* DESKTOP/TABLET (min-width: 769px) ONLY RULES */
-    /* ========================================= */
+  .profile-photo{width:150px;border-radius:50%;}
+  .profile-name{font-style:italic;}
 
-    @media screen and (min-width: 769px) { 
-        
-        /* Header & Logo: Desktop Layout */
-        .header-top {
-            flex-direction: row; /* Horizontal on desktop */
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 0.75rem;
-        }
-        .header-top .logo {
-            width: 70px;
-            margin-bottom: 0;
-        }
-        .header-top h1 {
-            font-size: 1.1rem;
-            white-space: nowrap;
-        }
+  /* Navs appear as centered row */
+  .nav-left,.nav-right{
+    position:static;display:flex;flex-wrap:wrap;justify-content:center;
+    gap:.75rem;margin:1rem 0;background:transparent;
+  }
+  .nav-left a,.nav-right a{
+    font-size:.95rem;padding:.3rem .4rem;font-weight:600;
+    color:var(--agaya-dark);
+  }
 
-        /* Hero */
-        #intro{
-            min-height: 100vh; /* Restore 100vh on desktop */
-            padding: 4.5rem 1rem 5rem;
-        }
-        
-        /* Title (Overriding the mobile-safe clamp) */
-        h1 {
-            font-size: 3rem !important; 
-            white-space: nowrap !important; 
-        }
+  #main{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem;}
+  #bottom-bar{height:1.75rem;}
+  #copyright{padding:1rem 1rem 3rem;}
+}
 
-        /* Profile Photo: Desktop Size */
-        .profile-photo {
-            width: 180px; 
-            height: auto;
-        }
-        .profile-name {
-            font-size: 1rem;
-        }
+/* =========================================================
+   4. MOBILE ≤768px — compact single-column layout
+   ========================================================= */
+@media screen and (max-width:768px){
 
-        /* Navs: Fixed on Desktop */
-        .nav-left, .nav-right{
-            position: fixed; /* Fixed on desktop */
-            bottom: calc(2.5rem + 1rem); /* Just above red bar */
-            display:flex; 
-            flex-direction:column; 
-            gap:.85rem;
-            z-index: 2500;
-            text-align: left; /* Left nav */
-        }
-        .nav-left{ left: 1.25rem; }
-        .nav-right{ right: 1.25rem; text-align:right; } /* Right nav */
-        
-        .nav-left a, .nav-right a{
-            font-size: .98rem;
-            font-weight: 700;
-            padding:.2rem .1rem;
-        }
+  html,body{overflow-x:hidden!important;overflow-y:auto!important;}
 
-        /* Bottom Bar: Desktop Height */
-        #bottom-bar{
-            height: 2.5rem;
-        }
+  /* Header */
+  .header-top{
+    flex-direction:column;align-items:center;gap:.4rem;
+    text-align:center;margin-top:.75rem;
+  }
+  .logo{width:55px;height:auto;margin-bottom:.25rem;}
+  .header-top h1{
+    font-size:clamp(1.25rem,5vw,1.7rem);line-height:1.2;
+    white-space:normal;color:var(--agaya-red);padding:0 1rem;
+  }
 
-        /* Main Content Padding: Desktop */
-        #main{
-            padding: 2rem 2rem 6rem;
-        }
-    }
-    
-    /* Small screen adjustment for side nav proximity */
-    @media (min-width: 769px) and (max-width: 1024px){
-        .nav-left{ left: .75rem; }
-        .nav-right{ right: .75rem; }
-    }
+  /* Hero */
+  #intro{
+    padding:2rem 1rem;text-align:center;
+  }
+  #intro h1{
+    font-size:clamp(1.4rem,6vw,2.2rem);
+    line-height:1.15;margin-bottom:.4rem;color:var(--agaya-red);
+  }
+  #intro h3{
+    font-size:1rem;line-height:1.4;margin:.25rem 0 .6rem;color:var(--agaya-dark);
+  }
 
+  /* Profile */
+  .profile-photo{width:130px;height:130px;border-radius:50%;}
+  .profile-name{font-size:.9rem;margin-top:.3rem;}
+
+  /* Nav unified */
+  .nav-left,.nav-right{
+    position:static!important;display:flex;flex-wrap:wrap;
+    justify-content:center;gap:.6rem;margin:.9rem 0 .75rem;
+  }
+  .nav-left a,.nav-right a{
+    color:var(--agaya-dark);font-size:.9rem;font-weight:600;
+    padding:.25rem .4rem;
+  }
+
+  /* Main content */
+  #main{padding:1rem 1rem 3rem!important;}
+
+  /* Carousel images */
+  .carousel-container img{width:100%;height:auto;border-radius:8px;}
+
+  #bottom-bar{height:1.1rem;}
+  #copyright{padding:1rem 1rem 2.5rem;}
+}
 </style>
+
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z66GC8MFZL"></script>
@@ -338,22 +240,6 @@
     <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
     <p class="profile-name">Indu Sambandam</p>
   </div>
-
-  <!-- Always-visible side navigation -->
-  <nav class="nav-left" aria-label="Primary">
-    <a href="#about">About</a>
-    <a href="#whatwedo">What We Help You Do</a>
-    <a href="#testimonials">Client Testimonials</a>
-    <a href="#casestudies">Case Studies</a>
-    <a href="#samples">Sample Dashboards</a>
-  </nav>
-
-  <nav class="nav-right" aria-label="Secondary">
-    <a href="blog.html" target="_blank" rel="noopener">Blog</a>
-    <a href="https://www.linkedin.com/in/isambandam/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://calendly.com/indu_sam/30min" target="_blank" rel="noopener">Book a Call</a>
-  </nav>
-
 </div>
 
  
@@ -583,7 +469,21 @@
 
   </div><!-- /#wrapper -->
 
-  
+  <!-- Always-visible side navigation -->
+  <nav class="nav-left" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#whatwedo">What We Help You Do</a>
+    <a href="#testimonials">Client Testimonials</a>
+    <a href="#casestudies">Case Studies</a>
+    <a href="#samples">Sample Dashboards</a>
+  </nav>
+
+  <nav class="nav-right" aria-label="Secondary">
+    <a href="blog.html" target="_blank" rel="noopener">Blog</a>
+    <a href="https://www.linkedin.com/in/isambandam/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://calendly.com/indu_sam/30min" target="_blank" rel="noopener">Book a Call</a>
+  </nav>
+
   <!-- Bottom red bar -->
   <div id="bottom-bar" aria-hidden="true"></div>
 
