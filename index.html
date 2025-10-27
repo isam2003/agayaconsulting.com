@@ -17,157 +17,141 @@
   <meta name="keywords" content="nonprofit data analytics, fundraising dashboards, impact reporting, donor analytics, dashboard, BI for nonprofits, nonprofit reporting systems, self-service analytics" />
 
   <!-- Brand-safe, conflict-killing CSS -->
-  <style>
-
+<style>
     :root {
-      --agaya-red:#A22120;
-      --agaya-dark:#2B2A2A;
-      --agaya-light:#DEDEDA;
+        --agaya-red:#A22120;
+        --agaya-dark:#2B2A2A;
+        --agaya-light:#DEDEDA;
     }
 
-    .header-top {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* change to flex-start if you want logo + text aligned to left */
-  gap: 1rem;
-  margin-top: 0.75rem;
-}
-
-.logo {
-  width: 70px; /* adjust if you want it smaller/larger */
-  height: auto;
-}
-
-.header-top h1 {
-  font-size: 1.1rem;
-  color: var(--agaya-dark);
-  font-weight: 800;
-  margin: 0;
-  white-space: nowrap;
-  line-height: 1.2;
-}
-
-.header-top .agaya-red {
-  color: #A22120;
-}
-
-
+    /* Core Layout & Reset */
+    html, body {
+        margin:0;
+        padding:0;
+        color: var(--agaya-dark);
+        /* 🔴 FIX: Prevent horizontal scroll by default */
+        overflow-x: hidden; 
+        overflow-y: auto;
+    }
+    
     /* Kill any theme backgrounds/overlays and make the whole page light */
     html, body, #wrapper, #main, #intro, .inner, section, header, footer {
-      background: var(--agaya-light) !important;
-      background-image: none !important;
-      box-shadow: none !important;
-      border: 0 !important;
+        background: var(--agaya-light) !important;
+        background-image: none !important;
+        box-shadow: none !important;
+        border: 0 !important;
     }
-    body { color: var(--agaya-dark); margin:0; padding:0; }
 
-/* Remove any theme preload/fade effects */
-body.is-preload,
-body.is-loading {
-  animation: none !important;
-  opacity: 1 !important;
-  transition: none !important;
-}
-
-body::before,
-#bg,
-#bg::before,
-#bg::after {
-  display: none !important;
-}
-
-    /* Logo */
-    .logo-container{
-      position: fixed;
-      top: .75rem;
-      left: 1rem;
-      z-index: 3000;
+    /* Remove any theme preload/fade effects */
+    body.is-preload,
+    body.is-loading {
+        animation: none !important;
+        opacity: 1 !important;
+        transition: none !important;
     }
-    .logo{ height: 85px; width:auto; }
+    
+    body::before,
+    #bg,
+    #bg::before,
+    #bg::after {
+        display: none !important;
+    }
 
-    /* Intro (hero) */
+    /* Header & Logo (Mobile-first stack) */
+    .header-top {
+        display: flex;
+        flex-direction: column; /* Stack logo and title on small screens */
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem; /* Reduced gap for mobile */
+        margin-top: 0.5rem; /* Adjusted top margin */
+        text-align: center;
+        padding: 0 1rem;
+    }
+    .logo {
+        width: 58px; /* Mobile logo size */
+        height: auto;
+        margin-bottom: 0.25rem;
+    }
+    .header-top h1 {
+        /* Mobile-safe font size using clamp for smooth scaling */
+        font-size: clamp(1.25rem, 5vw, 1.7rem); 
+        color: var(--agaya-dark);
+        font-weight: 800;
+        margin: 0;
+        white-space: normal !important; /* Allow wrapping */
+        line-height: 1.15;
+    }
+    .header-top .agaya-red {
+        color: #A22120;
+    }
+
+    /* Intro (hero) - Mobile-first padding */
     #intro{
-      min-height: 100vh;
-      display:flex;
-      flex-direction: column;
-      align-items:center;
-      justify-content:flex-start;
-      text-align:center;
-      padding: 4.5rem 1rem 5rem;
+        min-height: auto; /* Remove 100vh on mobile */
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:flex-start;
+        text-align:center;
+        padding: 2.5rem 1rem 2rem;
     }
-/* =========================
-   HERO SECTION (TOP OF PAGE)
-   ========================= */
+    
+    /* Title (Overridden by .header-top h1 on mobile, kept for desktop) */
+    h1 {
+        color: #A22120 !important;
+        font-size: 3rem !important; 
+        font-weight: 800;
+        line-height: 1.05;
+        white-space: nowrap;
+        margin-top: 0.03rem !important;
+        margin-bottom: 0.25rem !important;
+        letter-spacing: 0.015em;
+    }
+    
+    /* Subtitle */
+    h3 {
+        color: var(--agaya-dark) !important;
+        margin: 0.25rem 0 0.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.3;
+        text-align: center;
+    }
 
-/* Title */
-h1 {
-  color: #A22120 !important;
-  font-size: 3rem !important;      /* Balanced single line */
-  font-weight: 800;
-  line-height: 1.05;
-  white-space: nowrap;
-  margin-top: 0.03rem !important;
-  margin-bottom: 0.25rem !important;
-  letter-spacing: 0.015em;
-}
-
-/* Subtitle / tagline container */
-#intro {
-  text-align: center;
-  margin-top: 0;
-  padding-top: 0.25rem;
-  padding-bottom: 0;
-  line-height: 1.3;
-}
-
-/* Subtitle */
-h3 {
-  color: var(--agaya-dark) !important;
-  margin: 0.25rem 0 0.5rem;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.3;
-}
-
-
-
-/* Profile block */
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-          /* bring closer to tagline */
-  margin-top: 1.25rem;          /* adds space below tagline */
-  transform: translateY(-5px);  /* tiny upward nudge */
-}
-
-/* Profile photo */
-.profile-photo {
-  width: 180px;                /* balanced size for desktop */
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 0.25rem;
-}
-
-/* Profile name */
-.profile-name {
-  font-weight: 400;
-  font-style: italic;
-  color: var(--agaya-dark);
-  margin: 0;
-}
-
-/* Optional: globally tighten wrapper spacing for hero */
-#wrapper {
-  margin-top: -1.25rem;
-}
-
-
+    /* Profile block */
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0.75rem; 
+        transform: translateY(-5px); 
+    }
+    
+    /* Profile photo */
+    .profile-photo {
+        width: 130px; /* Mobile size */
+        height: 130px;
+        border-radius: 50%;
+        margin-bottom: 0.25rem;
+        object-fit: cover;
+    }
+    
+    /* Profile name */
+    .profile-name {
+        font-weight: 400;
+        font-style: italic;
+        color: var(--agaya-dark);
+        margin: 0;
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+    }
+    
     /* Main content area: centered on all screens */
     #main{
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 2rem 6rem; /* bottom space so content never hides behind side nav/bottom bar */
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem 1rem 3rem !important; /* Mobile padding */
     }
     header.major{ text-align:center; }
     .custom-section{ text-align:left; line-height:1.55; margin: 1rem 0 2rem; }
@@ -177,281 +161,153 @@ h3 {
     .carousel-container { position:relative; max-width: 680px; margin: 0 auto; }
     .carousel-slide { display:none; }
     .carousel-slide.active{ display:block; }
-    .carousel-slide img { width:100%; display:block; }
+    .carousel-slide img { 
+        width:100%; 
+        display:block;
+        height: auto;
+        border-radius: 8px;
+    }
     .carousel-buttons{
-      display:flex; justify-content:center; align-items:center; gap:24px; margin-top:.25rem;
+        display:flex; justify-content:center; align-items:center; gap:24px; margin-top:.25rem;
     }
     .carousel-buttons button{
-      background:transparent; border:0; font-size:24px; cursor:pointer; padding:0;
+        background:transparent; border:0; font-size:24px; cursor:pointer; padding:0;
     }
 
-    /* FIXED side navs (always visible), sitting just above the bottom red bar */
-   @media screen and (min-width: 769px) { 
+    /* Side Navs (Mobile-first: Static and centered) */
     .nav-left, .nav-right{
-      position: fixed;
-      bottom: calc(2.5rem + 1rem); /* just above red bar */
-      display:flex; flex-direction:column; gap:.85rem;
-      z-index: 2500;
-      pointer-events: auto;
+        position: static; /* Start as static */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+        margin: 1rem 0 0.75rem;
+        padding: 0;
+        z-index: 10;
+        pointer-events: auto;
+        text-align: center;
     }
-  }
-  
-    .nav-left{ left: 1.25rem; text-align:left; }
-    .nav-right{ right: 1.25rem; text-align:right; }
 
     .nav-left a, .nav-right a{
-      color: var(--agaya-dark) !important;
-      font-weight:700;
-      text-decoration:none;
-      font-size: .98rem;
-      letter-spacing: .02em;
-      padding:.2rem .1rem;
-      border-bottom: 2px solid transparent;
+        color: var(--agaya-dark) !important;
+        font-weight:600; /* Less bold for mobile */
+        text-decoration:none;
+        font-size: 0.9rem; /* Mobile font size */
+        letter-spacing: .02em;
+        padding:.25rem .35rem; /* Mobile padding */
+        border-bottom: 2px solid transparent;
     }
     .nav-left a:hover, .nav-right a:hover{
-      color: var(--agaya-red) !important;
-      border-bottom-color: var(--agaya-red);
+        color: var(--agaya-red) !important;
+        border-bottom-color: var(--agaya-red);
     }
+    .nav-left { left: auto; }
+    .nav-right { right: auto; }
 
-    /* Bottom red bar (full-width) */
+    /* Bottom red bar */
     #bottom-bar{
-      position: fixed;
-      left:0; right:0; bottom:0;
-      height: 2.5rem;
-      background: var(--agaya-red);
-      z-index: 2000; /* below side navs, above content */
+        position: fixed;
+        left:0; right:0; bottom:0;
+        height: 1.1rem; /* Smaller for mobile */
+        background: var(--agaya-red);
+        z-index: 2000;
     }
 
-    /* Copyright (single centered line) */
+    /* Copyright */
     #copyright{
-      text-align:center;
-      font-size:.95rem;
-      color: var(--agaya-dark);
-      letter-spacing:.02em;
-      padding: 1.25rem 1rem 4.25rem; /* extra bottom so it doesn't fight the red bar */
-      margin: 0 auto;
+        text-align:center;
+        font-size:.95rem;
+        color: var(--agaya-dark);
+        letter-spacing:.02em;
+        padding: 1.25rem 1rem 3.25rem; /* Adjusted for smaller bottom bar */
+        margin: 0 auto;
     }
     #copyright a{ color: var(--agaya-dark); text-decoration:none; border-bottom: 1px dotted transparent; }
     #copyright a:hover{ color: var(--agaya-red); border-bottom-color: var(--agaya-red); }
-
-    /* Make sure nothing draws lines between inline items (theme sometimes adds separators) */
     #copyright ul, #copyright li{ list-style:none; margin:0; padding:0; border:0 !important; }
 
-    /* Responsive */
-    @media (max-width: 1024px){
-      .nav-left{ left: .75rem; }
-      .nav-right{ right: .75rem; }
+
+    /* ========================================= */
+    /* DESKTOP/TABLET (min-width: 769px) ONLY RULES */
+    /* ========================================= */
+
+    @media screen and (min-width: 769px) { 
+        
+        /* Header & Logo: Desktop Layout */
+        .header-top {
+            flex-direction: row; /* Horizontal on desktop */
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+        .header-top .logo {
+            width: 70px;
+            margin-bottom: 0;
+        }
+        .header-top h1 {
+            font-size: 1.1rem;
+            white-space: nowrap;
+        }
+
+        /* Hero */
+        #intro{
+            min-height: 100vh; /* Restore 100vh on desktop */
+            padding: 4.5rem 1rem 5rem;
+        }
+        
+        /* Title (Overriding the mobile-safe clamp) */
+        h1 {
+            font-size: 3rem !important; 
+            white-space: nowrap !important; 
+        }
+
+        /* Profile Photo: Desktop Size */
+        .profile-photo {
+            width: 180px; 
+            height: auto;
+        }
+        .profile-name {
+            font-size: 1rem;
+        }
+
+        /* Navs: Fixed on Desktop */
+        .nav-left, .nav-right{
+            position: fixed; /* Fixed on desktop */
+            bottom: calc(2.5rem + 1rem); /* Just above red bar */
+            display:flex; 
+            flex-direction:column; 
+            gap:.85rem;
+            z-index: 2500;
+            text-align: left; /* Left nav */
+        }
+        .nav-left{ left: 1.25rem; }
+        .nav-right{ right: 1.25rem; text-align:right; } /* Right nav */
+        
+        .nav-left a, .nav-right a{
+            font-size: .98rem;
+            font-weight: 700;
+            padding:.2rem .1rem;
+        }
+
+        /* Bottom Bar: Desktop Height */
+        #bottom-bar{
+            height: 2.5rem;
+        }
+
+        /* Main Content Padding: Desktop */
+        #main{
+            padding: 2rem 2rem 6rem;
+        }
     }
     
+    /* Small screen adjustment for side nav proximity */
+    @media (min-width: 769px) and (max-width: 1024px){
+        .nav-left{ left: .75rem; }
+        .nav-right{ right: .75rem; }
+    }
 
-  /* ======== Final mobile fix for AGAYA (≤768px) ======== */
-@media screen and (max-width: 768px) {
-
-  html, body {
-    overflow-x: visible !important; /* allow normal scroll */
-    overflow-y: auto !important;
-  }
-
-  /* Header layout */
-  .header-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-  }
-
-  .logo {
-    height: 42px;
-    width: auto;
-    margin-bottom: 0.3rem;
-  }
-
-  /* Title — smaller and wrapped safely */
-  h1 {
-    font-size: 5.2vw !important;    /* smaller scaling */
-    line-height: 1.1;
-    white-space: normal !important; /* allow wrapping */
-    overflow-wrap: break-word;      /* wrap if needed */
-    text-align: center;
-    margin: 0.5rem auto 0.25rem;
-    padding: 0 0.75rem;
-  }
-
-  /* Subheading + tagline unified style */
-  #intro h3,
-  .tagline {
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #2B2A2A !important;
-    margin: 0.25rem 0 0.75rem;
-    text-align: center;
-  }
-
-  /* Profile photo + name */
-  .profile-container,
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0.75rem;
-  }
-
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  .profile-name {
-    font-size: 0.9rem;
-    color: #2B2A2A;
-    margin-top: 0.4rem;
-  }
-
-  /* Side nav becomes normal rows */
-  .nav-left,
-  .nav-right {
-    position: static !important;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0.75rem 0 1rem;
-    padding: 0;
-    background: transparent !important;
-    z-index: 10;
-  }
-
-  .nav-left a,
-  .nav-right a {
-    color: #2B2A2A;
-    font-size: 0.95rem;
-    text-decoration: none;
-    padding: 0.25rem 0.4rem;
-    font-weight: 600;
-  }
-
-  /* Ensure content below hero is visible */
-  #wrapper,
-  #main,
-  .inner,
-  section {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    overflow: visible !important;
-    display: block;
-  }
-
-  /* Red bar shortened for mobile */
-  #bottom-bar {
-    height: 1.25rem;
-  }
-}
-
-/* --- Final title-only fix (safe for desktop layout) --- */
-#intro h1 {
-  font-size: clamp(1.6rem, 4.8vw, 2.6rem) !important; /* scales smoothly */
-  line-height: 1.1;
-  white-space: normal !important;   /* allows wrap if needed */
-  overflow-wrap: break-word;
-  text-align: center;
-  margin: 0.25rem auto 0.5rem;
-  color: #A22120;
-  padding: 0 1rem; /* small breathing room for mobile edge cutoffs */
-}
-
-/* ===== MOBILE-ONLY FIX (keeps desktop intact) ===== */
-/* ======= AGAYA FINAL MOBILE POLISH (≤768px) ======= */
-@media screen and (max-width: 768px) {
-
-  /* Remove overflow issues */
-  html, body {
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-  }
-
-  /* Header & logo */
-  .header-top {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 0.5rem;
-    text-align: center;
-  }
-
-  .header-top .logo {
-    width: 58px;
-    height: auto;
-    margin-bottom: 0.25rem;
-  }
-
-  .header-top h1 {
-    font-size: clamp(1.25rem, 5vw, 1.7rem);
-    text-align: center;
-    line-height: 1.15;
-    white-space: normal !important;
-    padding: 0 1rem;
-  }
-
-  /* Hero section tweaks */
-  #intro {
-    padding: 2.5rem 1rem 2rem;
-  }
-  #intro h3 {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin: 0.25rem 0 0.6rem;
-  }
-
-  /* Profile image sizing */
-  .profile-photo {
-    width: 130px;
-    height: 130px;
-  }
-  .profile-name {
-    font-size: 0.9rem;
-    margin-top: 0.3rem;
-  }
-
-  /* Reflow the fixed navs */
-  .nav-left, .nav-right {
-    position: static !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-    margin: 1rem 0 0.75rem;
-  }
-
-  .nav-left a, .nav-right a {
-    font-size: 0.9rem;
-    padding: 0.25rem 0.35rem;
-    font-weight: 600;
-  }
-
-  /* Shrink bottom red bar */
-  #bottom-bar {
-    height: 1.1rem;
-  }
-
-  /* Avoid tight edge padding */
-  #main {
-    padding: 1rem 1rem 3rem !important;
-  }
-
-  /* Ensure carousels fit */
-  .carousel-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-}
-
-
-  </style>
+</style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z66GC8MFZL"></script>
