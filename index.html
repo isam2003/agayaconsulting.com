@@ -168,6 +168,7 @@ h3 {
       max-width: 1100px;
       margin: 0 auto;
       padding: 2rem 2rem 6rem; /* bottom space so content never hides behind side nav/bottom bar */
+      z-index: 10; /* <--- ADDED: Sets content below fixed elements */
     }
     header.major{ text-align:center; }
     .custom-section{ text-align:left; line-height:1.55; margin: 1rem 0 2rem; }
@@ -191,8 +192,9 @@ h3 {
       position: fixed;
       bottom: calc(2.5rem + 1rem); /* just above red bar */
       display:flex; flex-direction:column; gap:.85rem;
-      z-index: 2500;
+      z-index: 9999;
       pointer-events: auto;
+      will-change: transform;
     }
   }
   
@@ -362,7 +364,7 @@ h3 {
 <!-- Intro / Hero -->
 <div id="intro">
   <h3>Your data knows what’s working. We help you see it.</h3>
-  <h3>Do more of what works. Change more lives.</h3>
+  <h3>Do more of what matters. Change more lives.</h3>
  
     <!-- ⬇️ Add this INSIDE #intro, right after the tagline -->
   <div class="profile">
