@@ -275,7 +275,7 @@ h3 {
         margin-bottom: 0.25rem;
     }
     .header-top h1 {
-        font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+        font-size: clamp(1rem, 4.0vw, 1.5rem);
         text-align: center;
         line-height: 1.15;
         white-space: normal !important;
@@ -339,6 +339,31 @@ h3 {
         height: 1.1rem !important;
     }
 }
+
+/* === FIX: allow navs to scroll on mid-sized screens (laptops) === */
+@media screen and (max-width:1300px) and (min-width:769px) {
+
+  /* make the fixed navs vertically scrollable if too tall */
+  .nav-left,
+  .nav-right {
+    max-height: calc(100vh - 4rem);   /* 4rem keeps clear of top+bottom bars */
+    overflow-y: auto;                 /* enable internal scroll */
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;            /* subtle scrollbar for Firefox */
+  }
+
+  /* optional aesthetic: fade scrollbar for WebKit browsers */
+  .nav-left::-webkit-scrollbar,
+  .nav-right::-webkit-scrollbar {
+    width: 6px;
+  }
+  .nav-left::-webkit-scrollbar-thumb,
+  .nav-right::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.25);
+    border-radius: 3px;
+  }
+}
+
 
 </style>
 
