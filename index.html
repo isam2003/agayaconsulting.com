@@ -449,16 +449,18 @@
       }
 
       #main {
-        max-width: 800px; /* FIXED: Narrower content to avoid nav overlap */
-        padding: 2rem 1.5rem 6rem; /* FIXED: More content space */
+        max-width: 700px; /* FIXED: Even narrower content */
+        padding: 2rem 2rem 6rem; /* FIXED: More side padding */
+        margin-left: 180px; /* FIXED: Push content away from left nav */
       }
     }
 
     /* FIXED: Additional breakpoint for medium laptops */
     @media screen and (min-width: 1025px) and (max-width: 1300px) {
       #main {
-        max-width: 900px; /* FIXED: Slightly narrower to keep clear of nav */
+        max-width: 850px; /* FIXED: Narrower content */
         padding: 2rem 2rem 6rem;
+        margin-left: 160px; /* FIXED: Push content away from left nav */
       }
     }
 
