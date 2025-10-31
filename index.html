@@ -499,7 +499,7 @@
       /* IMPROVED: Make the red banner BIGGER on mobile - this is the title */
       .header-top h1 {
         display: block !important;
-        font-size: 1.85rem !important;
+        font-size: 1.75rem !important;
         line-height: 1.25 !important;
         font-weight: 800 !important;
         padding: 0 1rem !important;
@@ -673,6 +673,19 @@
       }
     }
 
+    /* === MOBILE: reduce supporting statement size to match tagline === */
+@media screen and (max-width: 768px) {
+  #intro h3 {
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+    margin: 0.3rem 0 0.6rem !important;
+    text-transform: none !important;
+  }
+}
+   
+</style>
+
           <!-- Google tag(gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z66GC8MFZL"></script>
         <script>
@@ -681,8 +694,7 @@
             gtag('js', new Date());
             gtag('config', 'G-Z66GC8MFZL');
         </script>
-    
-  </style>
+
 </head>
 
 <body>
