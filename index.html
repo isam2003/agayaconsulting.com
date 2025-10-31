@@ -124,6 +124,16 @@
       word-wrap: break-word;
     }
 
+    /* ADD THIS BLOCK: Corrects the size of the large Subtitle (most likely an h2) */
+#intro h2 {
+    /* Use the same sizing as your desired h3: 0.9rem to 1rem */
+    font-size: clamp(0.9rem, 2vw, 1rem) !important;
+    line-height: 1.3;
+    font-weight: 700; /* Match the h3 weight */
+    color: var(--agaya-dark) !important;
+    margin: 0.25rem 0 0.5rem !important; /* Adjust margins to keep spacing tight */
+}
+
     /* Subtitle */
     h3 {
       color: var(--agaya-dark) !important;
@@ -489,7 +499,7 @@
       /* IMPROVED: Make the red banner BIGGER on mobile - this is the title */
       .header-top h1 {
         display: block !important;
-        font-size: 1.75rem !important;
+        font-size: 1.85rem !important;
         line-height: 1.25 !important;
         font-weight: 800 !important;
         padding: 0 1rem !important;
