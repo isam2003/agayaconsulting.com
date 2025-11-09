@@ -112,7 +112,7 @@
     }
 
     /* Hero Title */
-    h1 {
+ #intro h1 {
       color: #A22120 !important;
       font-size: clamp(2rem, 4vw, 3rem) !important;
       font-weight: 800;
@@ -123,6 +123,22 @@
       max-width: 100%;
       word-wrap: break-word;
     }
+
+    /* Restore original header-top title style */
+.header-top h1 {
+  color: var(--agaya-red) !important;
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.header-top .agaya-red {
+  color: var(--agaya-red);
+}
+
 
     /* ADD THIS BLOCK: Corrects the size of the large Subtitle (most likely an h2) */
 #intro h2 {
@@ -701,6 +717,125 @@
   #intro {
     padding-bottom: 1.75rem !important;
   }
+}
+
+/* ===== HEADER-TOP TITLE: FORCE THE BIG RED DESKTOP SIZE ===== */
+
+/* Large desktop */
+@media (min-width: 1301px) {
+  .header-top h1{
+    color: var(--agaya-red) !important;
+    font-size: 2.4rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+  }
+}
+
+/* Laptops / small desktop */
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .header-top h1{
+    color: var(--agaya-red) !important;
+    font-size: 2.1rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-top h1{
+    color: var(--agaya-red) !important;
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+  }
+}
+
+/* Phones (keep smaller) */
+@media (max-width: 768px) {
+  .header-top h1{
+    color: var(--agaya-red) !important;
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+}
+
+/* ==== BLOG INDEX / LIST TYPOGRAPHY (scoped) ==== */
+/* Catches common wrappers you’ve used: .posts (list), #main .posts, #post-list */
+#main .posts h2,
+#main .posts h2 a,
+#post-list h2,
+#post-list h2 a {
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  color: var(--agaya-dark) !important;
+  text-decoration: underline !important;   /* matches your list look */
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin: 0 0 0.65rem !important;
+}
+
+#main .posts h3,
+#main .posts h3 a,
+#post-list h3,
+#post-list h3 a {
+  font-size: clamp(1.1rem, 2vw, 1.35rem) !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  color: var(--agaya-dark) !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin: 0.5rem 0 0.5rem !important;
+}
+
+/* Normalize paragraph text in the list (snippets/excerpts) */
+#main .posts p,
+#post-list p {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: var(--agaya-dark) !important;
+  margin: 0 0 0.75rem !important;
+}
+
+/* Remove any accidental hero styles leaking in */
+#main .posts h1,
+#post-list h1 {
+  all: unset;
+  display: block;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem) !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  color: var(--agaya-dark) !important;
+  text-decoration: underline !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin: 0 0 0.65rem !important;
+}
+
+/* Links inside items: keep brand color, only underline titles */
+#main .posts a:not(h2 a):not(h1 a),
+#post-list a:not(h2 a):not(h1 a) {
+  color: var(--agaya-dark) !important;
+  text-decoration: none !important;
+}
+#main .posts a:not(h2 a):hover,
+#post-list a:not(h2 a):hover {
+  color: var(--agaya-red) !important;
 }
 
 </style>
