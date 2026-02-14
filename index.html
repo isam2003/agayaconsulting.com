@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>AGAYA Consulting Inc.| Nonprofit Analytics & Strategy</title>
+  <title>AGAYA Consulting Inc.| Fractional Reporting Partnership for Nonprofit Executive Directors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
   <!-- Favicon -->
@@ -122,25 +122,42 @@
 
     /* Hero Title */
     #intro h1 {
-      color: #A22120 !important;
-      font-size: clamp(2rem, 4vw, 3rem) !important;
-      font-weight: 800;
-      line-height: 1.05;
-      margin-top: 0.03rem !important;
-      margin-bottom: 0.25rem !important;
-      letter-spacing: 0.015em;
-      max-width: 100%;
-      word-wrap: break-word;
+    color: var(--agaya-dark) !important;
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem) !important;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.35rem !important;
+    letter-spacing: 0.03em;
+    max-width: 100%;
+    word-wrap: break-word;
     }
 
     /* ADD THIS BLOCK: Corrects the size of the large Subtitle (most likely an h2) */
 #intro h2 {
-    /* Use the same sizing as your desired h3: 0.9rem to 1rem */
-    font-size: clamp(0.9rem, 2vw, 1rem) !important;
-    line-height: 1.3;
-    font-weight: 700; /* Match the h3 weight */
-    color: var(--agaya-dark) !important;
-    margin: 0.25rem 0 0.5rem !important; /* Adjust margins to keep spacing tight */
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem) !important;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--agaya-red) !important;
+  margin: 0.1rem 0 0.35rem !important;
+}
+
+/* ADD THIS HERE */
+.intro-lead {
+  margin: 0.75rem 0 0.25rem;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 600;
+  color: var(--agaya-dark) !important;
+  font-style: normal !important;
+}
+
+.intro-subline {
+  margin: 0.5rem 0 0;
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  font-weight: 400;
+  color: rgba(43, 42, 42, 0.82) !important;
+  font-style: normal !important;
+  max-width: 900px;
 }
 
     /* Subtitle */
@@ -194,8 +211,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 1.25rem;
-      transform: translateY(-5px);
+      margin-top: 6.75rem;
+      transform: none;
     }
 
     .profile-photo {
@@ -653,6 +670,21 @@
         padding-bottom: 3rem !important;
         font-size: 0.85rem !important;
       }
+      
+  /* === HERO LEAD + SUBLINE (MOBILE REFINEMENT) === */
+  .intro-lead {
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+    margin: 0.75rem 0 0.25rem !important;
+  }
+
+  .intro-subline {
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+    margin-top: 0.5rem !important;
+    padding: 0 0.5rem;
+  }
+
     }
 
     /* ===================================
@@ -712,6 +744,25 @@
   }
 }
 
+.cta-section {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.cta-section h3 {
+  border-top: none !important;
+}
+
+.wordcloud-container {
+  margin-top: 6rem;
+}
+
+#intro header h1,
+#intro .inner h1,
+#intro h1 {
+  color: var(--agaya-dark) !important;
+}
 </style>
 
           <!-- Google tag(gtag.js) -->
@@ -730,15 +781,17 @@
   <div class="header-top">
     <img src="images/logo.png" alt="AGAYA Consulting Logo" class="logo" />
     <h1>
-      <span class="agaya-red">AGAYA: Data Confidence for Nonprofits </span>
+      <span class="--agaya-dark">AGAYA: Data Confidence for Nonprofits </span>
     </h1>
   </div>
 
   <!-- Intro / Hero -->
-  <div id="intro">
-    <h3>Your data knows what's working. We help you see it.</h3>
-    <h3>Do more of what matters. Change more lives.</h3>
-   
+<div id="intro">
+  <h2>Fractional Reporting Partnership for Nonprofit Executive Directors</h2>
+
+  <p class="intro-lead">Helping nonprofit Executive Directors make decisions they can stand behind.</p>
+
+
     <!-- Profile -->
     <div class="profile">
       <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
@@ -748,7 +801,7 @@
     <!-- Navigation -->
     <nav class="nav-left" aria-label="Primary">
       <a href="#about">About</a>
-      <a href="#whatwedo">How We Help You</a>
+      <a href="#whatwedo">How I Work</a>
       <a href="#testimonials">Client Testimonials</a>
       <a href="#casestudies">Case Studies</a>
       <a href="#samples">Sample Dashboards</a>
@@ -756,8 +809,8 @@
 
     <nav class="nav-right" aria-label="Secondary">
       <a href="blog.html" target="_blank" rel="noopener">Blog</a>
-      <a href="https://www.linkedin.com/in/isambandam/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://calendly.com/indu_sam/30min" target="_blank" rel="noopener">Book a Call</a>
+      <a href="https://www.linkedin.com/in/indu-sambandam/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://calendly.com/indu_sam/30min" target="_blank" rel="noopener">Start a Conversation</a>
     </nav>
   </div>
 
@@ -768,30 +821,45 @@
       <header class="major">
         <h3 id="about" style="text-align:left;">About</h3>
         <div class="custom-section">
+          <p>You have reports. You have dashboards.<br>
+            But when it's time to decide—about budgets, program growth, or staffing—the clarity isn't there. </p>
+            <p>Finance says one thing. Fundraising shows another. Programs tell a third story.</p>
+            <p>You're accountable for decisions shaped by information that doesn't fully align. </p>
+            <b>And you're carrying that uncertainty alone.</b></p>
           <p>Hi, I'm Indu.</p>
-          <p>You're driving change but decisions are harder when data is scattered, unclear, or outdated. Nonprofit teams are stretched thin. We get it. We've worked with incredible organizations that change lives, but too often, they're stuck guessing what's working. That's where we come in.</p>
-          <p>Agaya helps nonprofits and mission-driven teams build dashboards, reports, AI-enhanced analytics and systems that make extracting insights easier and action faster. Whether you're just getting started or scaling your analytics, we'll meet you where you are, and build what you need to go further.</p>
+          <p>For over 20 years, I've worked at the intersection of data and decision-making. More than 15 of those years were on the funder and investment side, where assumptions are tested and weak reasoning shows up later.</p>
+          <p>That discipline shapes how I work with nonprofit leaders today.</p>
+          <p>In practice, that means designing dashboards and reporting systems that support decisions across finance, fundraising, and programs.</p>
+          <p>I partner with Executive Directors—typically at $2–5M organizations—to align reporting so leaders can stand behind the decisions they make.</p>
+          <p>Dashboards are tools.<br>
+          <b>Clarity is what matters.</b></p>
         </div>
 
-        <h3 id="whatwedo" style="text-align:left;">How We Help You</h3>
+        <h3 id="whatwedo" style="text-align:left;">How I Work</h3>
         <div class="custom-section">
-          <p>We build data solutions with you, not just for you ('The Ikea Effect'). Every tool, dashboard, or system we design is shaped in partnership with your team, using plain language and built-in guardrails so you can run with it confidently.</p>
-          <p><strong>Your independence is our definition of success.</strong></p>
-          <p>Because the best solutions are not the most complex ones. They are the ones that get used.</p>
-          <ul style="margin:1em 0 2em 1.2em; list-style:disc;">
-            <li style="margin-bottom: 1rem;"><strong><span style="color:#A22120;">Smarter Dashboards &amp; Business Intelligence:</span></strong> visual tools that show what's working, what's not, and where to go next with recommendations informed by AI analysis.</li>
-            <li style="margin-bottom: 1rem;"><strong><span style="color:#A22120;">Fundraising Insights &amp; Donor Analytics:</span></strong> Spot trends early. Understand AI-driven donor pattern identification. Retain supporters. Run campaigns that perform.</li>
-            <li style="margin-bottom: 1rem;"><strong><span style="color:#A22120;">Streamlined Reporting Frameworks:</span></strong> Custom reports that save hours and reduce staff stress. Built to answer real questions quickly.</li>
-            <li style="margin-bottom: 1rem;"><strong><span style="color:#A22120;">Team Training &amp; Self-Service Analytics:</span></strong> Build in-house capacity so your insights don't depend on one person.</li>
-            <li><strong><span style="color:#A22120;">Impact Measurement &amp; Storytelling:</span></strong> Clear, visual reporting—supplemented with AI-based sentiment and impact analysis—that funders and leadership can actually understand and use.</li>
-          </ul>
+          <li style="margin-bottom: 1rem;"><strong><span style="color:#A22120;">Why Fractional?</span></strong>
+          <p>This work doesn't fit a project timeline.</p>
+          <p>Board cycles repeat. Funding shifts. New questions surface every quarter. And data doesn't stay aligned on its own.</p>
+          <p>Without ongoing attention, reports drift away from the decisions they're meant to support.</p>
+          <p>Most $2–5M nonprofits don't need a full-time senior data leader. But decision risk doesn't pause between projects.</p>
+          <p>That's why I work fractionally — embedded enough to shape decisions as they happen, structured to fit the realities of a lean organization.</p>
 
-          <div style="text-align:center; margin:2rem 0;">
-            <h4><strong>The real value of data isn't in collecting it, it's in using it.<br>
-            It's in the moment someone on your team says <span style="font-weight:bold;">"Now I see what's happening"</span></strong></h4>
-          </div>
+          <li style="margin-bottom: 1rem;"><strong><span style="color:#A22120;">Fractional Reporting Partnership</span></strong>
+          <p>Ongoing oversight aligning reporting with leadership decisions.</p>
+          <p>This includes cross-functional metric alignment, board reporting refinement, oversight of dashboards and analytics, and clarifying assumptions before they create risk.</p>
+          <p>Clarity requires maintenance, not a one-time build.</p>
+          
+          <li style="margin-bottom: 1rem;"><strong><span style="color:#A22120;">Dashboard & Reporting Projects</span></strong>
+          <p>Focused engagements to redesign dashboards, streamline reporting frameworks, or build performance analytics systems.</p>
+          <p>For organizations that need structural clarity before moving into longer-term support.</p>
+        
         </div>
       </header>
+
+<div class="cta-section">
+  <h3>Book a call</h3>
+  <p>Let's look at the decisions you're facing and whether your current reporting supports them. If fractional partnership makes sense, we'll outline what working together looks like. If it doesn't, you'll leave clearer than you arrived.</p>
+</div>
 
       <div class="wordcloud-container">
         <img width="375" src="images/WordCloud.png" alt="Word cloud">
