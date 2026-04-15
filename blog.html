@@ -16,82 +16,49 @@
 
 <body>
 
-<div style="max-width: 1100px; margin: 0 auto; padding: 20px;">
+<div style="width: 100%; padding: 10px 10px; box-sizing: border-box;">
 
-  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+   <div style="display: flex; flex-wrap: nowrap; gap: 40px; align-items: flex-start;">
 
-  <!-- LEFT: Title -->
-  <h1 style="color: #A22120; font-size: 2.55rem; margin: 0;">
-    Indu's Blog
-  </h1>
+  <!-- LEFT -->
+ <div style="flex: 3; min-width: 0px;">
 
-  <!-- RIGHT: CTA -->
-<div style="max-width: 420px; border: 1px solid #DEDEDA; padding: 12px 16px; border-radius: 6px;">
+      <h1 style="color: #A22120; font-size: 2.55rem; margin: 0 0 10px 0;">
+      Indu's Blog
+      </h1>
 
-  <div style="font-size: 0.95em; margin-bottom: 8px; color: #2B2A2A;">
-    <strong>Prefer not to rely on LinkedIn to stay updated?</strong>
-  </div>
+      <a href="index.html" style="color: #2B2A2A; font-size: 0.95em;">
+      Back to Home
+      </a>
 
-  <form action="https://gmail.us7.list-manage.com/subscribe/post?u=333a997654da7b9955f73fcdd&amp;id=93f1a960ed&amp;f_id=0049a4e4f0"
-        method="post"
-        target="_blank"
-        style="display: flex; gap: 8px;">
+    <!-- FILTER -->
+      <div style="margin-top: 1.5em; margin-bottom: 1.5em;">
+        <label for="topicDropdown" style="font-size: 1.8em;">
+          <strong>Filter by Topic:</strong>
+        </label><br>
 
-    <input
-      type="email"
-      name="EMAIL"
-      placeholder="Your email"
-      required
-      style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"
-    >
-
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-      <input type="text" name="b_333a997654da7b9955f73fcdd_93f1a960ed" tabindex="-1" value="">
-    </div>
-
-    <button
-      type="submit"
-      style="padding: 8px 12px; background-color: #A22120; color: white; border: none; border-radius: 4px; cursor: pointer;">
-      Get Weekly Email
-    </button>
-
-  </form>
-
-  <div style="font-size: 0.75em; margin-top: 6px; color: #777;">
-    One email a week. No spam.
-  </div>
-
-</div>
-</div>
-
-
-  <a href="index.html" style="color: #2B2A2A;">Back to Home</a>
-  
-<div style="margin-top: 1em; margin-bottom: 1.5em;">
-  <label for="topicDropdown" style="font-size: 1.8em;"><strong>Filter by Topic:</strong></label><br>
-  <select id="topicDropdown" onchange="filterPosts()" 
+        <select id="topicDropdown" onchange="filterPosts()" 
           style="margin-top: 0.8em; width: 100%; max-width: 400px; font-size: 1.3em; padding: 0.7em;">
-    <option value="all">All Topics</option>
-    <option value="ai">Analytics & AI Adoption</option>
-    <option value="donor">Donor Analytics & Behavior</option>
-    <option value="strategy">Data Foundations & Quality</option>
-    <option value="impact">Impact, Storytelling & Reporting</option>
-    <option value="fundraising">Fundraising Tactics & Ethics</option>
-    <option value="systems">Systems & Vendor Management</option>
-    <option value="clarity">Decision Clarity</option>
-    <option value="sector">Leadership & Sector Realities</option>
-    <option value="volun">Volunteerism</option>
-    <option value="case">Case Studies</option>
-    <option value="random">Practice NotesRandom Musings</option>
-  </select>
-</div>
 
-<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+          <option value="all">All Topics</option>
+          <option value="ai">Analytics & AI Adoption</option>
+          <option value="donor">Donor Analytics & Behavior</option>
+          <option value="strategy">Data Foundations & Quality</option>
+          <option value="impact">Impact, Storytelling & Reporting</option>
+          <option value="fundraising">Fundraising Tactics & Ethics</option>
+          <option value="systems">Systems & Vendor Management</option>
+          <option value="clarity">Decision Clarity</option>
+          <option value="sector">Leadership & Sector Realities</option>
+          <option value="volun">Volunteerism</option>
+          <option value="case">Case Studies</option>
+          <option value="random">Random Musings</option>
 
-  <!-- LEFT: Blog content -->
-  <div style="flex: 3;">
+        </select>
+      </div>
 
-  <!-- Blog posts here -->
+
+ 
+ <!-- Blog posts here -->
 <div class="post" data-topic="sector systems strategy">  
   <h2>
     <a href="https://www.linkedin.com/posts/indu-sambandam_%F0%9D%97%9C%F0%9D%97%B3-%F0%9D%97%BC%F0%9D%97%BB%F0%9D%97%B9%F0%9D%98%86-%F0%9D%97%BC%F0%9D%97%BB%F0%9D%97%B2-%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%BF%F0%9D%98%80%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%B6%F0%9D%97%BB-%F0%9D%98%86-activity-7449807073565036546-ZoLZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAB8yOIBtUQHmC1ALx61_T7TTJA_rt18VHk">If Only One Person In your Org Can Pull Data From Your CRM (Apr 2026)</a></h2>
@@ -463,11 +430,57 @@
   <div class="post" data-topic="ai impact">
   <h2><a href="https://medium.com/@iamsam2003/power-bi-mastering-the-art-of-logical-thinking-prior-to-mastering-dax-50e96f570429" target="_blank">Power BI: Mastering the Art of Logical Thinking Prior to Mastering DAX (Aug 2023)</a></h2>
   </div>
+
+   </div>
   
-  <a href="index.html" style="color: #2B2A2A;">Back to Home</a>
+    <!-- RIGHT: CTA (UNCHANGED) -->
+    <div style="flex: 1; min-width: 280px;">
 
-  </div>
+      <div style="max-width: 420px; border: 1px solid #DEDEDA; padding: 12px 16px; border-radius: 6px;">
 
+        <div style="font-size: 0.95em; margin-bottom: 8px; color: #2B2A2A;">
+          <strong>Prefer not to rely on LinkedIn to stay updated? Get Posts in your inbox</strong>
+        </div>
+
+        <form action="https://gmail.us7.list-manage.com/subscribe/post?u=333a997654da7b9955f73fcdd&amp;id=93f1a960ed&amp;f_id=0049a4e4f0"
+              method="post"
+              target="_blank"
+              style="display: flex; gap: 8px;">
+
+          <input
+            type="email"
+            name="EMAIL"
+            placeholder="Your email"
+            required
+            style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"
+          >
+
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_333a997654da7b9955f73fcdd_93f1a960ed" tabindex="-1" value="">
+          </div>
+
+          <button
+            type="submit"
+           style="padding: 6px 10px; font-size: 0.9em; height: 34px; background-color: #A22120; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            Submit
+          </button>
+
+        </form>
+
+        <div style="margin-top: 10px; font-size: 0.85em; color: #555;">
+          One email a week. No spam.
+        </div>
+
+        <div style="margin-top: 8px; font-size: 0.8em;">
+          <a href="/privacy.html" style="color: #2B2A2A; text-decoration: underline;">
+            Privacy Policy
+          </a>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
    
 <!-- Filtering logic script -->
 <script>
@@ -488,10 +501,6 @@
     }
   }
 </script>
-
-<footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #2B2A2A;">
-  <p><a href="/privacy.html">Privacy Policy</a></p>
-</footer>
 
 </body>
 </html>
