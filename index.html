@@ -47,12 +47,11 @@
       border: 0 !important;
     }
 
-    body {
-      color: var(--agaya-dark);
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden; /* Prevent horizontal scroll on all devices */
-    }
+ body {
+  color: var(--agaya-dark);
+  margin: 0;
+  padding: 0;
+}
 
     /* Remove any theme preload/fade effects */
     body.is-preload,
@@ -253,6 +252,7 @@
         max-height: calc(100vh - 4rem);
         overflow-y: auto;
         scrollbar-width: thin;
+        width: 240px;
       }
 
       .nav-left {
@@ -366,17 +366,6 @@
       clear: both;
     }
 
-    /* Ensure Sample Dashboards section has breathing room */
-    #samples {
-      margin-bottom: 2rem !important;
-      padding-bottom: 1rem !important;
-    }
-
-    .wordcloud-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
     
     /* ===================================
@@ -795,6 +784,24 @@
 .profile {
   margin-top: 2.5rem !important;
 }
+
+
+#main {
+  margin-left: 260px;
+  margin-right: 260px;
+}
+
+.nav-right a {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+}
+
+.nav-left a {
+  margin-right: auto;
+}
 </style>
 
           <!-- Google tag(gtag.js) -->
@@ -840,7 +847,7 @@
     <nav class="nav-right" aria-label="Secondary">
       <a href="blog.html" target="_blank" rel="noopener">Blog</a>
       <a href="https://www.linkedin.com/in/indu-sambandam/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://calendly.com/indusam/30min" target="_blank" rel="noopener">Start a Conversation</a>
+      <a href="https://calendly.com/indusam/30min" target="_blank" rel="noopener">Book a Call</a>
     </nav>
   </div>
 
