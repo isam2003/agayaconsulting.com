@@ -458,7 +458,22 @@
         margin-bottom: 0.5rem;
         text-align: center;
         padding: 0 1rem;
-      }
+         }
+
+      .nav-left,
+  .nav-right {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .nav-left a,
+  .nav-right a {
+    display: block !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
 
       .header-top .logo {
         width: 85px !important;
@@ -542,7 +557,7 @@
       /* IMPROVED: Primary nav as clear buttons */
       .nav-left a {
         display: block !important;
-        width: 100% !important;
+        width: fit-content !important;
         text-align: center !important;
         color: var(--agaya-dark) !important;
         font-size: 1rem !important;
@@ -550,7 +565,7 @@
         padding: 0.75rem 1.5rem !important;
         font-weight: 700 !important;
         background: transparent !important;
-        border: none !important;
+        border-bottom: 2px solid rgba(255,255,255,0.4) !important;
         border-radius: 4px !important;
         transition: all 0.2s ease !important;
       }
@@ -786,22 +801,74 @@
 }
 
 
-#main {
-  margin-left: 260px;
-  margin-right: 260px;
+
+/* DESKTOP BEHAVIOR (default) */
+.nav-left a {
+  display: block;
+  width: fit-content;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .nav-right a {
   display: block;
   width: fit-content;
   margin-left: auto;
+  margin-right: 0;
   padding-bottom: 2px;
   border-bottom: 2px solid rgba(255,255,255,0.4);
 }
 
-.nav-left a {
-  margin-right: auto;
+/* Default (mobile-first) */
+#main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 6rem;
 }
+
+/* Tablet / small laptop */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #main {
+    max-width: 700px;
+    margin-left: 200px;
+    margin-right: 1.5rem;
+  }
+}
+
+/* Larger laptop */
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+  #main {
+    max-width: 850px;
+    margin-left: 260px;
+    margin-right: 2rem;
+  }
+}
+
+/* Mobile override (important safety reset) */
+@media screen and (max-width: 768px) {
+  #main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 2rem 1.5rem 5rem !important;
+  }
+
+  #main p,
+  #main li {
+    text-align: left !important;
+  }
+}
+
+/* Book a Call - global styling */
+.nav-left a[href*="calendly"],
+.nav-right a[href*="calendly"] {
+  background: var(--agaya-red);
+  color: white !important;
+  border-bottom: none !important;
+  font-weight: 800;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+}
+
 </style>
 
           <!-- Google tag(gtag.js) -->
@@ -888,7 +955,7 @@
           <div class="subhead">Focused Reporting &amp; Data Projects</div>
           <p>For organizations with a specific reporting or analytics problem to solve.</p>
           <p>This may involve redesigning a dashboard, clarifying KPIs, fixing inconsistencies across reports, or building a performance tool that the team can actually use in practice.</p>
-          <p>These engagements are scoped and deliverable-focused, but still grounded in the underlying data (not just surface-level fixes or presentation changes.</p>
+          <p>These engagements are scoped and deliverable-focused, but still grounded in the underlying data (not just surface-level fixes or presentation changes.)</p>
           <p>The emphasis is on making reporting usable for decisions, not just technically correct.</p>
           <p>In some cases, this work stands on its own. In others, it creates the conditions for more consistent decision support over time.</p>
           <p><strong>Best fit for:</strong> organizations with a clearly defined reporting, dashboard, or analytics need.</p>
