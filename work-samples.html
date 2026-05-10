@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>AGAYA Consulting Inc.| Fractional Data &amp; Decision Partner for Nonprofit Leaders</title>
+  <title>AGAYA Consulting Inc. | Work Samples and Case Studies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/logo.png" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://agayaconsulting.com/" />
+  <link rel="canonical" href="https://agayaconsulting.com/work-samples.html" />
 
   <!-- (Optional) Base theme CSS for typography/icons; we override everything critical below -->
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <!-- Meta -->
-  <meta name="description" content="Most reporting was not built for the decisions nonprofit leaders are accountable for. I work with Executive Directors to change that." />
+  <meta name="description" content="Sample dashboards and case studies showing how AGAYA Consulting turns nonprofit data into usable reporting, decision support, and clearer impact evidence." />
   <meta name="author" content="Indu Sambandam - Agaya Consulting Inc." />
   <meta name="keywords" content="nonprofit data analytics, fundraising dashboards, impact reporting, donor analytics, dashboard, BI for nonprofits, nonprofit reporting systems, self-service analytics" />
 
   <!-- Open Graph Tags (for LinkedIn, Facebook) -->
-  <meta property="og:title" content="AGAYA: Data Confidence for Nonprofit Leaders" />
-  <meta property="og:description" content="Most reporting was not built for the decisions nonprofit leaders are accountable for. I work with Executive Directors to change that." />
+  <meta property="og:title" content="AGAYA Work Samples and Case Studies" />
+  <meta property="og:description" content="Sample dashboards and case studies showing how AGAYA Consulting turns nonprofit data into usable reporting, decision support, and clearer impact evidence." />
   <meta property="og:url" content="https://agayaconsulting.com/" />
   <meta property="og:type" content="website" />
 
@@ -869,6 +869,152 @@
   border-radius: 4px;
 }
 
+
+
+/* ===================================
+   WORK SAMPLES PAGE
+   =================================== */
+
+.work-intro {
+  max-width: 760px;
+  margin: 0 auto 2rem auto;
+  text-align: left;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 0.25rem;
+}
+
+.carousel-buttons button {
+  background: transparent;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+  color: var(--agaya-dark);
+  box-shadow: none;
+}
+
+.carousel-buttons button:hover {
+  transform: scale(1.2);
+  color: var(--agaya-red);
+}
+
+#samples {
+  margin-bottom: 2rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.posts article {
+  border-top: 1px solid rgba(43, 42, 42, 0.15) !important;
+  padding-top: 1.5rem;
+}
+
+.posts article h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.posts article h4 a {
+  color: var(--agaya-dark) !important;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.posts article h4 a:hover {
+  color: var(--agaya-red) !important;
+  border-bottom-color: var(--agaya-red);
+}
+
+.image.fit {
+  display: block;
+  width: 100%;
+  margin: 0 0 1rem 0;
+  border: 0;
+}
+
+.image.fit img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+.actions.special {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0 0;
+  text-align: left;
+}
+
+.actions.special li {
+  list-style: none;
+  margin: 0;
+}
+
+.button {
+  display: inline-block;
+  background: var(--agaya-red);
+  color: white !important;
+  padding: 0.55rem 0.85rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 800;
+  border-bottom: none !important;
+}
+
+.button:hover {
+  background: #8a1c1b;
+  color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .carousel-container {
+    max-width: 100%;
+  }
+}
+#casestudies {
+  margin-bottom: 5rem !important;
+}
+
+#samples {
+  margin-top: 5rem !important;
+}
 </style>
 
           <!-- Google tag(gtag.js) -->
@@ -883,111 +1029,157 @@
 </head>
 
 <body>
-  <!-- Header: Logo + Title -->
-  <div class="header-top">
-    <img src="images/logo.png" alt="AGAYA Consulting Logo" class="logo" />
-    <h1>
-      <span class="--agaya-dark">AGAYA Consulting: Data Confidence for Nonprofit Leaders</span>
-    </h1>
-  </div>
-
-  <!-- Intro / Hero -->
-<div id="intro">
-  <h2>Most reporting wasn&#39;t built for the decisions you&#39;re accountable for.</h2>
-
-  <p class="intro-lead">I work with Executive Directors to change that.</p>
   
 
-    <!-- Profile -->
-    <div class="profile">
-      <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
-      <p class="profile-name">Indu Sambandam</p>
-    </div>
+  <!-- Intro / Hero -->
+  <div id="intro">
+   <img src="images/logo.png" 
+     alt="AGAYA Consulting Logo" 
+     class="logo"
+     style="width:110px; margin-bottom:1.5rem;"> 
 
-    <!-- Navigation -->
-    <nav class="nav-left" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#whatwedo">How I Work</a>
-      <a href="#includes">What This Work Includes</a>
-    </nav>
+    <h2>Client Case Studies & Sample Dashboards</h2>
 
-    <nav class="nav-right" aria-label="Secondary">
-      <a href="blog.html" target="_blank" rel="noopener">Blog</a>
-      <a href="https://www.linkedin.com/in/indu-sambandam/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://calendly.com/indusam/30min" target="_blank" rel="noopener">Book a Call</a>
-    </nav>
   </div>
 
   <!-- Main content -->
   <div id="main">
-    <!-- About -->
-    <article class="post featured">
-      
-        <h3 id="about" style="text-align:left;">About</h3>
-        <div class="custom-section">
-          <p>Hi, I&#39;m Indu.</p>
-          <p>For over twenty years, I worked in infrastructure finance, recommending investments of $50 million to $350 million and then sitting in the room to defend those recommendations to people whose job was to find the holes in my reasoning.</p>
-          <p>When something went wrong, I was the one explaining what happened, why, and what was being done about it.  That is what fiduciary accountability looks like, and it shapes how I approach this work today.</p>
-          <p>I moved into nonprofit work to be more connected with my community. What I found was the same pressure showing up, just with smaller numbers and much higher personal credibility at stake for the person carrying it.</p>
-          <p>What I kept seeing was this: the issue wasn’t a lack of data. It was that the reporting had been built to satisfy funders and auditors, not to support the person responsible for the next decision. The Executive Director was rarely the one the reporting infrastructure was designed for.</p>
-          <p>In my nonprofit project work, I often saw the same pattern. The reporting would look solid at delivery. The gaps showed up later, when decisions had to be made and questions started coming in.</p>
-          <p>As I wrapped up projects, I could see the risks and questions likely to come up down the line. But the scope of the work didn’t extend to that.</p>
-          <p>That’s what led me to build a fractional model, staying alongside organizations past the point where most project engagements end. This work is designed for organizations typically between $3–10M, large enough to have real complexity across finance, fundraising, and programs, but not yet large enough to have dedicated data support.</p>
-          <p>The focus is straightforward: build reporting that supports the decisions Executive Directors are actually accountable for.</p>
+
+
+    <!-- Case Studies -->
+    <article style="margin-bottom:0;">
+      <h3 id="casestudies" style="text-align:left;">Case Studies</h3>
+
+      <!-- Case Study A -->
+      <div class="custom-section" style="text-align:center; margin-bottom: 3rem;">
+        <p style="margin:0 0 8px 0; color:#A22120; font-weight:700; font-size:1.2em;">
+          <strong>A. How one nonprofit reclaimed 40+ hours a quarter with smarter reports. Use arrows to scroll:</strong>
+        </p>
+        <div class="carousel-container" data-carousel="reporting">
+          <div class="carousel-slide active"><img src="images/slide_1.jpg" alt="Reporting slide 1"></div>
+          <div class="carousel-slide"><img src="images/slide_2.jpg" alt="Reporting slide 2"></div>
+          <div class="carousel-slide"><img src="images/slide_3.jpg" alt="Reporting slide 3"></div>
+          <div class="carousel-slide"><img src="images/slide_4.jpg" alt="Reporting slide 4"></div>
+          <div class="carousel-slide"><img src="images/slide_5.jpg" alt="Reporting slide 5"></div>
+          <div class="carousel-slide"><img src="images/slide_6.jpg" alt="Reporting slide 6"></div>
+          <div class="carousel-slide"><img src="images/slide_7.jpg" alt="Reporting slide 7"></div>
+          <div class="carousel-slide"><img src="images/slide_8.jpg" alt="Reporting slide 8"></div>
+          <div class="carousel-slide"><img src="images/slide_9.jpg" alt="Reporting slide 9"></div>
+          <div class="carousel-slide"><img src="images/slide_10.jpg" alt="Reporting slide 10"></div>
+          <div class="carousel-slide"><img src="images/slide_11.jpg" alt="Reporting slide 11"></div>
         </div>
+        <div class="carousel-buttons">
+          <button type="button" aria-label="Previous reporting slide" onclick="plusSlides('reporting', -1)">◄</button>
+          <button type="button" aria-label="Next reporting slide" onclick="plusSlides('reporting', 1)">►</button>
+        </div>
+      </div>
 
-        <h3 id="whatwedo" style="text-align:left;">How I Work</h3>
-        <div class="custom-section">
-            <p>Some organizations come in with a specific reporting or data problem. Others are trying to make decisions without fully trusting what sits underneath them.</p>  
-            <p>The starting point isn’t the delivery model. It’s the decision you need to make and how well your current reporting supports it.</p>
-            <p>From there, the work can begin in different ways.</p>
-            <p>In some cases, it’s a focused piece of work to fix something specific. In others, it involves stepping back to understand where the reporting breaks down and what needs to change underneath.</p>
-            <p>That may look like a short engagement to resolve a defined issue, or ongoing support to build a system that holds up over time.</p>
-         
-           <div class="subhead">Ongoing Decision Support</div>
-          <p>For organizations where leaders are regularly having to explain or reconcile the numbers behind their decisions.</p>
-          <p>This involves working alongside leadership to identify where decisions are being slowed down or weakened by fragmented reporting and inconsistent definitions.</p>
-          <p>The work typically starts with a plan built around the decisions you are currently responsible for and what sits underneath them. From there, the focus turns to implementation — inside the numbers, in board preparation, and in the conversations that happen before high-stakes decisions are made.</p>
-          <p>The goal is not just better reports. It is a system that holds up when questions get asked. That’s the standard the work is built to meet.</p>
-          <p>I am not reviewing reports from a distance. The work happens directly in the data, where those decisions are actually being shaped.</p>
-          <p>The aim is not to create ongoing dependence. It is to leave behind clear definitions, working processes, and reporting structures the team can manage and stand behind independently.</p>
-          
-          <p><strong>Best fit for:</strong> organizations that need consistent decision support but do not have dedicated internal capacity.</p>
+      <!-- Case Study B -->
+      <div class="custom-section" style="text-align:center; margin-bottom: 1.5rem;">
+        <p style="margin:0 0 8px 0; color:#A22120; font-weight:700; font-size:1.2em;">
+          <br>
+          <br>
+          <strong>B. How a food bank moved beyond pounds and people to measure trust and dignity. Use arrows to scroll:</strong>
+        </p>
+        <div class="carousel-container" data-carousel="foodbank">
+          <div class="carousel-slide active"><img src="images/fb1.jpg" alt="Food Bank slide 1"></div>
+          <div class="carousel-slide"><img src="images/fb2.jpg" alt="Food Bank slide 2"></div>
+          <div class="carousel-slide"><img src="images/fb3.jpg" alt="Food Bank slide 3"></div>
+          <div class="carousel-slide"><img src="images/fb4.jpg" alt="Food Bank slide 4"></div>
+          <div class="carousel-slide"><img src="images/fb5.jpg" alt="Food Bank slide 5"></div>
+          <div class="carousel-slide"><img src="images/fb6.jpg" alt="Food Bank slide 6"></div>
+          <div class="carousel-slide"><img src="images/fb7.jpg" alt="Food Bank slide 7"></div>
+          <div class="carousel-slide"><img src="images/fb8.jpg" alt="Food Bank slide 8"></div>
+          <div class="carousel-slide"><img src="images/fb9.jpg" alt="Food Bank slide 9"></div>
+          <div class="carousel-slide"><img src="images/fb10.jpg" alt="Food Bank slide 10"></div>
+          <div class="carousel-slide"><img src="images/fb11.jpg" alt="Food Bank slide 11"></div>
+        </div>
+        <div class="carousel-buttons">
+          <button type="button" aria-label="Previous food bank slide" onclick="plusSlides('foodbank', -1)">◄</button>
+          <button type="button" aria-label="Next food bank slide" onclick="plusSlides('foodbank', 1)">►</button>
+        </div>
+      </div>
 
-          <div class="subhead">Focused Reporting &amp; Data Projects</div>
-          <p>For organizations with a specific reporting or analytics problem to solve.</p>
-          <p>This may involve redesigning a dashboard, clarifying KPIs, fixing inconsistencies across reports, or building a performance tool that the team can actually use in practice.</p>
-          <p>These engagements are scoped and deliverable-focused, but still grounded in the underlying data (not just surface-level fixes or presentation changes.)</p>
-          <p>The emphasis is on making reporting usable for decisions, not just technically correct.</p>
-          <p>In some cases, this work stands on its own. In others, it creates the conditions for more consistent decision support over time.</p>
-          <p><strong>Best fit for:</strong> organizations with a clearly defined reporting, dashboard, or analytics need.</p>
-  <p>
-  <a href="work-samples.html" 
-     style="color:#A22120; font-weight:700; text-decoration:none; border-bottom:2px solid #A22120;">
-     See sample dashboards and case studies →
-  </a>
-</p>       
-</div>
+      <!-- CTA -->
+  
 
-   <h3 id="includes">WHAT THIS WORK INCLUDES</h3>
-<ul>
-  <li>Aligning reporting across finance, fundraising, and programs</li>
-  <li>Redesigning reporting frameworks for board and funder communication</li>
-  <li>Introducing dashboards that support timely operational decisions</li>
-  <li>Removing reporting bottlenecks and single points of failure</li>
-  <li>Structuring qualitative and survey data into consistent, usable evidence</li>
-</ul>
-
-<h3 id="connect" style="text-align:left;">Connect With Me</h3>
-<p>Let's look at the decisions you're facing and whether your current reporting supports them.
-  If there’s a clear way to strengthen it, we’ll outline what that could look like. If not, you’ll leave clearer than you arrived.</p>
-       
-</div>
-
+    <!-- Sample Dashboards -->
+    <article style="margin-bottom:0;">
+      <h3 id="samples" style="text-align:left;">Sample Dashboards</h3>
+      <div class="custom-section" style="margin-bottom: 1rem;">
+        
       </div>
     </article>
 
+    <!-- Cards/posts -->
+    <section class="posts" style="margin-top: 1rem !important; position: relative; z-index: 1; clear: both;">
+      <!-- 1 -->
+      <article>
+        <header><h4><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9">Survey Analysis</a></h4></header>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="image fit">
+          <img src="images/sentiment_analysis.png" alt="Survey Analysis" />
+        </a>
+        <div class="custom-section">
+          <p>Data Source - AI.</p>
+        </div>
+        <ul class="actions special">
+          <li><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="button" target="_blank">See Project</a></li>
+        </ul>
+      </article>
 
+      <!-- 2 -->
+      <article>
+        <header><h4><a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9">Sentiment Analysis on Contact Meeting Notes</a></h4></header>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="image fit">
+          <img src="images/sentiment_analysis_2.png" alt="Sentiment Analysis 2" />
+        </a>
+        <div class="custom-section"><p>Data Source - AI.</p></div>
+        <ul class="actions special"><li><a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="button" target="_blank">See Project</a></li></ul>
+      </article>
+
+      <!-- 3 -->
+      <article>
+        <header><h4><a href="https://www.novypro.com/project/marketing-campaign-insights">Marketing Campaign Analysis</a></h4></header>
+        <a href="https://www.novypro.com/project/marketing-campaign-insights" class="image fit"><img src="images/Mktg Campaign Insights.png" alt="" /></a>
+        <div class="custom-section"><p>Data Source- Kaggle.</p></div>
+        <ul class="actions special"><li><a href="https://www.novypro.com/project/marketing-campaign-insights" class="button">See Project</a></li></ul>
+      </article>
+
+      <!-- 4 -->
+      <article>
+        <header><h4><a href="https://www.novypro.com/project/sales-analysis---retail-store">Sales Analysis</a></h4></header>
+        <a href="https://www.novypro.com/project/sales-analysis---retail-store" class="image fit"><img src="images/retail_whatif_analysis.png" alt="" /></a>
+        <div class="custom-section"><p>Data Source - Yoda.</p></div>
+        <ul class="actions special"><li><a href="https://www.novypro.com/project/sales-analysis---retail-store" class="button">See Project</a></li></ul>
+      </article>
+
+      <!-- 5 -->
+      <article>
+        <header><h4><a href="https://www.novypro.com/project/supplier--downtime-analysis">Supplier & Downtime Analysis</a></h4></header>
+        <a href="https://www.novypro.com/project/supplier--downtime-analysis" class="image fit"><img src="images/E9N supplier analysis.png" alt="" /></a>
+        <div class="custom-section"><p>Data Source- Udemy.</p></div>
+        <ul class="actions special"><li><a href="https://www.novypro.com/project/supplier--downtime-analysis" class="button">See Project</a></li></ul>
+      </article>
+
+      <!-- 6 -->
+      <article>
+        <header><h4><a href="https://www.novypro.com/project/the-global-unicorns-club">The Global Unicorns Club</a></h4></header>
+        <a href="https://www.novypro.com/project/the-global-unicorns-club" class="image fit"><img src="images/unicorn.png" alt="" /></a>
+        <div class="custom-section"><p>Data Source- Maven Analytics.</p></div>
+        <ul class="actions special"><li><a href="https://www.novypro.com/project/the-global-unicorns-club" class="button">See Project</a></li></ul>
+      </article>
+
+      <!-- 7 -->
+      <article>
+        <header><h4><a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis">Impact of 5G Introduction</a></h4></header>
+        <a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis" class="image fit"><img src="images/codebasics_C3.png" alt="" /></a>
+        <div class="custom-section"><p>Data Source- CodeBasics Challenge 3.</p></div>
+        <ul class="actions special"><li><a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis" class="button">See Project</a></li></ul>
+      </article>
+
+      <!-- 8 -->
+   
+    </section>
 
     <!-- Footer 
     <footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #2B2A2A;">
@@ -1006,6 +1198,30 @@
   <div id="bottom-bar" aria-hidden="true"></div>
 
 
+  <!-- Carousel JavaScript -->
+  <script>
+    const carouselState = {};
+    
+    function getSlides(name) {
+      const container = document.querySelector(`.carousel-container[data-carousel="${name}"]`);
+      return container ? container.querySelectorAll('.carousel-slide') : [];
+    }
+    
+    function showSlide(name, idx) {
+      const slides = getSlides(name);
+      if (!slides.length) return;
+      idx = (idx + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      carouselState[name] = idx;
+    }
+    
+    function plusSlides(name, delta) {
+      const current = carouselState[name] ?? 0;
+      showSlide(name, current + delta);
+    }
+    
+    // Initialize carousels
+    ['reporting', 'foodbank'].forEach(name => showSlide(name, 0));
   </script>
 </body>
 </html>
