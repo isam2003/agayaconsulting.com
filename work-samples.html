@@ -134,7 +134,7 @@
 
     /* ADD THIS BLOCK: Corrects the size of the large Subtitle (most likely an h2) */
 #intro h2 {
-  font-size: clamp(1.25rem, 2.5vw, 1.6rem) !important;
+  font-size: clamp(2.5em, 4vw, 2.5rem) !important;
   line-height: 1.25;
   font-weight: 700;
   color: var(--agaya-red) !important;
@@ -366,7 +366,12 @@
       clear: both;
     }
 
-
+<p style="margin-bottom: 2rem;">
+  <a href="index.html"
+     style="color:#A22120; font-weight:700; text-decoration:none; border-bottom:2px solid #A22120;">
+     ← Back to Home
+  </a>
+</p>
     
     /* ===================================
        BOTTOM BAR & COPYRIGHT
@@ -387,7 +392,7 @@
       font-size: 0.95rem;
       color: var(--agaya-dark);
       letter-spacing: 0.02em;
-      padding: 1.25rem 1rem 4.25rem;
+      padding: 5rem 1rem 4.25rem;
       margin: 0 auto;
     }
 
@@ -883,7 +888,7 @@
 
 .carousel-container {
   position: relative;
-  max-width: 450px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
@@ -998,6 +1003,25 @@
   color: white !important;
 }
 
+/* Enlarge dashboard cards only, without affecting the rest of the page */
+.posts {
+  width: min(1000px, calc(100vw - 4rem)) !important;
+  max-width: none !important;
+  margin-left: 50% !important;
+  transform: translateX(-50%) !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 3rem !important;
+}
+
+.posts article {
+  width: 100% !important;
+}
+
+.image.fit img {
+  width: 100% !important;
+  height: auto !important;
+}
+
 @media screen and (max-width: 768px) {
   .posts {
     grid-template-columns: 1fr;
@@ -1015,6 +1039,71 @@
 #samples {
   margin-top: 5rem !important;
 }
+
+
+#main p.case-study-title,
+#main .custom-section p.case-study-title {
+  margin: 0 0 1rem 0 !important;
+  color: #A22120 !important;
+  font-weight: 800 !important;
+  font-size: 1.6rem !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+}
+
+.hero-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-logo {
+  width: 135px;
+  height: auto;
+}
+
+.top-home-link {
+  text-align: center;
+  margin: 0 0 2rem 0 !important;
+}
+
+.top-home-link a {
+  color: #000 !important;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+  font-size: 1.1rem;
+}
+
+.section-nav {
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--agaya-red);
+}
+
+.section-nav a {
+  color: var(--agaya-red) !important;
+  text-decoration: none;
+  border-bottom: 3px solid var(--agaya-red);
+  padding-bottom: 2px;
+  margin: 0 1rem;
+}
+
+.section-nav span {
+  color: var(--agaya-dark);
+}
+
+#casestudies {
+  display: block;
+  height: 6rem;
+}
+
+
 </style>
 
           <!-- Google tag(gtag.js) -->
@@ -1032,15 +1121,29 @@
   
 
   <!-- Intro / Hero -->
-  <div id="intro">
-   <img src="images/logo.png" 
-     alt="AGAYA Consulting Logo" 
-     class="logo"
-     style="width:110px; margin-bottom:1.5rem;"> 
+<div id="intro">
 
-    <h2>Client Case Studies & Sample Dashboards</h2>
+  <div class="hero-title-row">
+    <img src="images/logo.png"
+         alt="AGAYA Consulting Logo"
+         class="hero-logo">
 
+    <h2>Client Case Studies &amp; Sample Dashboards</h2>
   </div>
+
+  <p class="top-home-link">
+    <a href="index.html">← Back to Home</a>
+  </p>
+
+  <div class="section-nav">
+    <a href="#casestudies">Client Case Studies</a>
+    <span>|</span>
+    <a href="#samples">Sample Dashboards</a>
+  </div>
+
+</div>
+
+
 
   <!-- Main content -->
   <div id="main">
@@ -1048,12 +1151,11 @@
 
     <!-- Case Studies -->
     <article style="margin-bottom:0;">
-      <h3 id="casestudies" style="text-align:left;">Case Studies</h3>
-
+      <div id="casestudies"></div>
       <!-- Case Study A -->
       <div class="custom-section" style="text-align:center; margin-bottom: 3rem;">
-        <p style="margin:0 0 8px 0; color:#A22120; font-weight:700; font-size:1.2em;">
-          <strong>A. How one nonprofit reclaimed 40+ hours a quarter with smarter reports. Use arrows to scroll:</strong>
+        <p class="case-study-title">
+          <strong>A.  How one nonprofit reclaimed 40+ hours a quarter with smarter reports. Use arrows to scroll:</strong>
         </p>
         <div class="carousel-container" data-carousel="reporting">
           <div class="carousel-slide active"><img src="images/slide_1.jpg" alt="Reporting slide 1"></div>
@@ -1076,7 +1178,7 @@
 
       <!-- Case Study B -->
       <div class="custom-section" style="text-align:center; margin-bottom: 1.5rem;">
-        <p style="margin:0 0 8px 0; color:#A22120; font-weight:700; font-size:1.2em;">
+          <p class="case-study-title">
           <br>
           <br>
           <strong>B. How a food bank moved beyond pounds and people to measure trust and dignity. Use arrows to scroll:</strong>
@@ -1105,7 +1207,7 @@
 
     <!-- Sample Dashboards -->
     <article style="margin-bottom:0;">
-      <h3 id="samples" style="text-align:left;">Sample Dashboards</h3>
+       <div id="samples"></div>
       <div class="custom-section" style="margin-bottom: 1rem;">
         
       </div>
@@ -1184,6 +1286,20 @@
     <!-- Footer 
     <footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #2B2A2A;">
   <a href="/privacy.html">Privacy Policy</a></footer> -->
+
+  <div style="text-align:center; margin-top:4rem; margin-bottom:1rem;">
+  <a href="#intro"
+     style="color:#A22120; font-weight:700; text-decoration:none; border-bottom:2px solid #A22120;">
+     ↑ Back to Top
+  </a>
+</div>
+
+  <div style="text-align:center; margin-top:4rem;">
+  <a href="index.html"
+     style="color:#A22120; font-weight:700; text-decoration:none; border-bottom:2px solid #A22120;">
+     ← Back to Home
+  </a>
+</div>
 
     <!-- Copyright -->
     <div id="copyright">
