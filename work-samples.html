@@ -14,6 +14,19 @@
   <!-- (Optional) Base theme CSS for typography/icons; we override everything critical below -->
   <link rel="stylesheet" href="assets/css/main.css" />
 
+  <style>
+  .work-samples-intro {
+    min-height: 70vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .project-links,
+  .actions {
+    display: none !important;
+  }
+</style>
+
   <!-- Meta -->
   <meta name="description" content="Sample dashboards and case studies showing how AGAYA Consulting turns nonprofit data into usable reporting, decision support, and clearer impact evidence." />
   <meta name="author" content="Indu Sambandam - Agaya Consulting Inc." />
@@ -1097,6 +1110,23 @@
   height: 6rem;
 }
 
+.agaya-red {
+  color: #A22120;
+  font-weight: 700;
+}
+
+.work-samples-posts {
+  margin-top: 18rem !important;
+  position: relative;
+  z-index: 1;
+  clear: both;
+}
+
+@media screen and (max-width: 736px) {
+  .work-samples-posts {
+    margin-top: 8rem !important;
+  }
+}
 
 </style>
 
@@ -1207,75 +1237,87 @@
       </div>
     </article>
 
-    <!-- Cards/posts -->
-    <section class="posts" style="margin-top: 1rem !important; position: relative; z-index: 1; clear: both;">
-      <!-- 1 -->
-      <article>
-        <header><h4><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9">Survey Analysis</a></h4></header>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="image fit">
-          <img src="images/sentiment_analysis.png" alt="Survey Analysis" />
-        </a>
-        <div class="custom-section">
-          <p>Data Source - AI.</p>
-        </div>
-        <ul class="actions special">
-          <li><a href="https://app.powerbi.com/view?r=eyJrIjoiMzBmNzU0MTctMTI4MC00MDE1LTg0M2QtMjFhMDliMTU1ZTc2IiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="button" target="_blank">See Project</a></li>
-        </ul>
-      </article>
+<!-- Cards/posts -->
+<section class="posts work-samples-posts">
+  <!-- 1 -->
+  <article>
+    <header><h4>Survey Analysis</h4></header>
+    <div class="image fit">
+      <img src="images/sentiment_analysis.png" alt="Survey Analysis" />
+    </div>
+    <div class="custom-section">
+      <p>Data Source - AI.</p>
+    </div>
+  </article>
 
-      <!-- 2 -->
-      <article>
-        <header><h4><a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9">Sentiment Analysis on Contact Meeting Notes</a></h4></header>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="image fit">
-          <img src="images/sentiment_analysis_2.png" alt="Sentiment Analysis 2" />
-        </a>
-        <div class="custom-section"><p>Data Source - AI.</p></div>
-        <ul class="actions special"><li><a href="https://app.powerbi.com/view?r=eyJrIjoiY2RkZjIzYWItNmIwYS00YTY0LTlkMjUtNTMxYzg3NTkyZjEzIiwidCI6ImY4MWE2NGQxLTU4ZGUtNGVhNi1iZDI0LWI0NmRhMzg5OWQ3ZCJ9" class="button" target="_blank">See Project</a></li></ul>
-      </article>
+  <!-- 2 -->
+  <article>
+    <header><h4>Sentiment Analysis on Contact Meeting Notes</h4></header>
+    <div class="image fit">
+      <img src="images/sentiment_analysis_2.png" alt="Sentiment Analysis 2" />
+    </div>
+    <div class="custom-section">
+      <p>Data Source - AI.</p>
+    </div>
+  </article>
 
-      <!-- 3 -->
-      <article>
-        <header><h4><a href="https://www.novypro.com/project/marketing-campaign-insights">Marketing Campaign Analysis</a></h4></header>
-        <a href="https://www.novypro.com/project/marketing-campaign-insights" class="image fit"><img src="images/Mktg Campaign Insights.png" alt="" /></a>
-        <div class="custom-section"><p>Data Source- Kaggle.</p></div>
-        <ul class="actions special"><li><a href="https://www.novypro.com/project/marketing-campaign-insights" class="button">See Project</a></li></ul>
-      </article>
+  <!-- 3 -->
+  <article>
+    <header><h4>Marketing Campaign Analysis</h4></header>
+    <div class="image fit">
+      <img src="images/Mktg Campaign Insights.png" alt="Marketing Campaign Analysis" />
+    </div>
+    <div class="custom-section">
+      <p>Data Source - Kaggle.</p>
+    </div>
+  </article>
 
-      <!-- 4 -->
-      <article>
-        <header><h4><a href="https://www.novypro.com/project/sales-analysis---retail-store">Sales Analysis</a></h4></header>
-        <a href="https://www.novypro.com/project/sales-analysis---retail-store" class="image fit"><img src="images/retail_whatif_analysis.png" alt="" /></a>
-        <div class="custom-section"><p>Data Source - Yoda.</p></div>
-        <ul class="actions special"><li><a href="https://www.novypro.com/project/sales-analysis---retail-store" class="button">See Project</a></li></ul>
-      </article>
+  <!-- 4 -->
+  <article>
+    <header><h4>Sales Analysis</h4></header>
+    <div class="image fit">
+      <img src="images/retail_whatif_analysis.png" alt="Sales Analysis" />
+    </div>
+    <div class="custom-section">
+      <p>Data Source - Yoda.</p>
+    </div>
+  </article>
 
-      <!-- 5 -->
-      <article>
-        <header><h4><a href="https://www.novypro.com/project/supplier--downtime-analysis">Supplier & Downtime Analysis</a></h4></header>
-        <a href="https://www.novypro.com/project/supplier--downtime-analysis" class="image fit"><img src="images/E9N supplier analysis.png" alt="" /></a>
-        <div class="custom-section"><p>Data Source- Udemy.</p></div>
-        <ul class="actions special"><li><a href="https://www.novypro.com/project/supplier--downtime-analysis" class="button">See Project</a></li></ul>
-      </article>
+  <!-- 5 -->
+  <article>
+    <header><h4>Supplier &amp; Downtime Analysis</h4></header>
+    <div class="image fit">
+      <img src="images/E9N supplier analysis.png" alt="Supplier and Downtime Analysis" />
+    </div>
+    <div class="custom-section">
+      <p>Data Source - Udemy.</p>
+    </div>
+  </article>
 
-      <!-- 6 -->
-      <article>
-        <header><h4><a href="https://www.novypro.com/project/the-global-unicorns-club">The Global Unicorns Club</a></h4></header>
-        <a href="https://www.novypro.com/project/the-global-unicorns-club" class="image fit"><img src="images/unicorn.png" alt="" /></a>
-        <div class="custom-section"><p>Data Source- Maven Analytics.</p></div>
-        <ul class="actions special"><li><a href="https://www.novypro.com/project/the-global-unicorns-club" class="button">See Project</a></li></ul>
-      </article>
+  <!-- 6 -->
+  <article>
+    <header><h4>The Global Unicorns Club</h4></header>
+    <div class="image fit">
+      <img src="images/unicorn.png" alt="The Global Unicorns Club" />
+    </div>
+    <div class="custom-section">
+      <p>Data Source - Maven Analytics.</p>
+    </div>
+  </article>
 
-      <!-- 7 -->
-      <article>
-        <header><h4><a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis">Impact of 5G Introduction</a></h4></header>
-        <a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis" class="image fit"><img src="images/codebasics_C3.png" alt="" /></a>
-        <div class="custom-section"><p>Data Source- CodeBasics Challenge 3.</p></div>
-        <ul class="actions special"><li><a href="https://www.novypro.com/project/impact-of-5g---introduction-on-kpis" class="button">See Project</a></li></ul>
-      </article>
-
-      <!-- 8 -->
+  <!-- 7 -->
+  <article>
+    <header><h4>Impact of 5G Introduction</h4></header>
+    <div class="image fit">
+      <img src="images/codebasics_C3.png" alt="Impact of 5G Introduction" />
+    </div>
+    <div class="custom-section">
+      <p>Data Source - CodeBasics Challenge 3.</p>
+    </div>
+  </article>
+</section>
    
-    </section>
+
 
     <!-- Footer 
     <footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #2B2A2A;">
