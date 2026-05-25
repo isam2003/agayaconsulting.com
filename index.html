@@ -888,6 +888,72 @@
   text-decoration: none;
   border-bottom: 2px solid #A22120;
 }
+
+.engagement-tiers {
+  margin-top: 2.5rem;
+}
+
+.engagement-intro {
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.75rem !important;
+  color: var(--agaya-dark) !important;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.tier-card {
+  border: 1px solid rgba(43, 42, 42, 0.18);
+  border-radius: 12px;
+  padding: 1.75rem 1.6rem;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.tier-duration {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--agaya-red);
+  margin-bottom: 0.75rem;
+}
+
+.tier-card h4 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0 0 1.25rem 0;
+  color: var(--agaya-dark);
+  font-weight: 800;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(43, 42, 42, 0.16);
+}
+
+.tier-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.tier-card li {
+  margin-bottom: 0.7rem;
+  line-height: 1.35;
+  color: var(--agaya-dark);
+}
+
+.tier-card li::marker {
+  color: var(--agaya-red);
+}
+
+@media screen and (max-width: 900px) {
+  .tier-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 
           <!-- Google tag(gtag.js) -->
@@ -1014,7 +1080,48 @@
   <p>From there, we identify where information is being slowed down or weakened by fragmented systems, inconsistent definitions, unclear assumptions, or missing context.</p>
 
   <p>This may include aligning reporting across functions, clarifying definitions behind key metrics, reconciling conflicting reports, surfacing caveats before they reach the board deck, and building reporting rhythms that hold up over time.</p>
+  <p>
+    Engagements are structured around the decisions currently on your desk. 
+  </p>
+<p><strong>Example structure only:</strong>  The tiers below show one way this work can be structured. Final scope, timing, and focus are shaped around the decisions, reporting gaps, and organizational context we identify together.</p>
+ <div class="engagement-tiers">
+    <div class="tier-grid">
 
+    <div class="tier-card">
+      <div class="tier-duration">3 Months</div>
+      <h4>Decision Risk<br>Stabilization</h4>
+      <ul>
+        <li>Clarify key metrics</li>
+        <li>Resolve reporting conflicts</li>
+        <li>Support one major decision</li>
+      </ul>
+    </div>
+
+    <div class="tier-card">
+      <div class="tier-duration">6 Months</div>
+      <h4>Decision<br>Infrastructure</h4>
+      <ul>
+        <li>Stabilize reporting workflows</li>
+        <li>Align definitions across functions</li>
+        <li>Improve board readiness</li>
+        <li>Build forward-looking scenarios</li>
+      </ul>
+    </div>
+
+    <div class="tier-card">
+      <div class="tier-duration">9 Months</div>
+      <h4>Proactive Decision<br>Infrastructure</h4>
+      <ul>
+        <li>Pre-decision frameworks</li>
+        <li>Early warning indicators</li>
+        <li>Funder prep systems</li>
+        <li>Documentation that survives staff transitions</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<p></p>
   <p><strong>Best fit for:</strong> EDs and senior leaders who want the numbers ready before the conversation, not explained after it.</p>
 
   <h4 style="color:#A22120;">Focused Reporting &amp; Data Projects</h4>
@@ -1048,7 +1155,7 @@
 
   <p>Finance, Fundraising, and Programs are not left holding separate versions of the story.</p>
 
-  <p style="color:#A22120; font-weight:700;">The ED is not left translating the gaps alone.</p>
+  <p style="color:#2B2A2A; font-weight:700;">The ED is not left translating the gaps alone.</p>
 
   <p>And the organization is better prepared before a number is questioned in a meeting, a board package, or a funding conversation.</p>
 
