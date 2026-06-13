@@ -512,7 +512,7 @@
         line-height: 1.1 !important;
         margin: 0 0 1.5rem !important;
         font-weight: 500 !important;
-        color: var(--agaya-dark) !important;
+        color: a1c1b !important;
       }
 
       /* IMPROVED: Profile spacing */
@@ -643,11 +643,7 @@
     margin-top: 0.5rem !important;
     padding: 0 0.5rem;
   }
-  /* FIX: Mobile vh causing bottom bar look thick */
-  #intro {
-    min-height: 100dvh !important;
-  }
-    }
+}  /* closes the @media screen and (max-width: 768px) block */
 
     /* ===================================
        RESPONSIVE: VERY SMALL MOBILE
@@ -746,6 +742,11 @@
   text-align: left !important;
 }
 
+#ways-to-work .subhead,
+#ways-to-work h4 {
+  text-align: left !important;
+}
+
 #connect {
   margin-top: 3rem;
   padding-top: 2rem;
@@ -784,20 +785,69 @@
 }
 
 #intro {
-  padding: 2rem 1rem 2.5rem !important;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3.5rem;
   min-height: auto !important;
+  display: block;
 }
 
 #intro h2 {
-  margin: 0.25rem 0 0.2rem !important;
+  font-size: 1.45rem;
+  line-height: 1.35;
+  letter-spacing: 0.10em;
+  max-width: 1400px;
+  margin: 0 auto 2.25rem;
+  white-space: nowrap;
+  color: var(--agaya-red) !important;
+  font-weight: 700;
+}
+
+.intro-copy {
+  margin-top: 0;
 }
 
 .intro-lead {
-  margin: 0.1rem 0 0 !important;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-weight: 500;
+  color: var(--agaya-dark) !important;
+  font-style: normal !important;
+}
+
+.intro-support {
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 900px;
+  margin: 0.45rem auto 0;
+  color: var(--agaya-red);
+  font-style: normal;
+  font-weight: 500;
 }
 
 .profile {
-  margin-top: 2.5rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3.5rem auto 0;
+  transform: none;
+}
+
+.profile-photo {
+  width: 180px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 0.25rem;
+}
+
+.profile-name {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--agaya-dark);
+  margin: 0;
 }
 
 
@@ -883,10 +933,10 @@
 }
 
 .section-link a {
-  color: #A22120;
-  font-weight: 700;
+  color: #2B2A2A !important;
+  font-weight: 400 !important;
   text-decoration: none;
-  border-bottom: 2px solid #A22120;
+  border-bottom: 1px solid #2B2A2A;
 }
 
 .engagement-tiers {
@@ -954,6 +1004,271 @@
   }
 }
 
+@media (max-width: 768px) {
+  #intro h2 {
+    font-size: 1.15rem;
+    letter-spacing: 0.06em;
+    max-width: 92%;
+    white-space: normal;
+  }
+
+  .intro-lead {
+    font-size: 1.05rem;
+    max-width: 92%;
+  }
+
+  .intro-support {
+    font-size: 0.98rem;
+    max-width: 92%;
+  }
+}
+
+/* === HERO EMERGENCY RESET === */
+
+#intro {
+  min-height: auto !important;
+  display: block !important;
+  text-align: center !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 3rem 1rem 2rem !important;
+}
+
+#intro h2 {
+  color: var(--agaya-red) !important;
+  font-size: 1.45rem !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.10em !important;
+  font-weight: 800 !important;
+  max-width: 1400px !important;
+  margin: 0 auto 2rem !important;
+  white-space: nowrap !important;
+}
+
+#intro .intro-lead {
+  color: var(--agaya-dark) !important;
+  font-size: 1.12rem !important;
+  line-height: 1.45 !important;
+  font-weight: 600 !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  font-style: normal !important;
+}
+
+#intro .intro-support {
+  color: var(--agaya-red) !important;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  max-width: 900px !important;
+  margin: 0.5rem auto 0 !important;
+}
+
+#intro .profile {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin: 3.25rem auto 0 !important;
+  max-width: none !important;
+  color: var(--agaya-dark) !important;
+  font-style: normal !important;
+}
+
+#intro .profile-photo {
+  width: 180px !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 50% !important;
+  margin: 0 0 0.5rem !important;
+}
+
+#intro .profile-name {
+  color: var(--agaya-dark) !important;
+  font-size: 1rem !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  #intro {
+    padding: 2rem 1.25rem 2rem !important;
+  }
+
+  #intro h2 {
+    white-space: normal !important;
+    font-size: 1.15rem !important;
+    letter-spacing: 0.06em !important;
+    max-width: 92% !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #intro .intro-lead {
+    font-size: 1.05rem !important;
+    max-width: 92% !important;
+  }
+
+  #intro .intro-support {
+    font-size: 0.98rem !important;
+    max-width: 92% !important;
+  }
+
+  #intro .profile {
+    margin-top: 2rem !important;
+  }
+}
+
+/* === AGAYA CLEAN HERO OVERRIDE === */
+
+.agaya-hero {
+  text-align: center !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 4rem 1rem 2rem !important;
+  min-height: auto !important;
+}
+
+.agaya-hero-kicker {
+  color: #A22120 !important;
+  font-size: 1.45rem !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.10em !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  margin: 0 auto 2.5rem !important;
+  white-space: nowrap !important;
+}
+
+.agaya-hero-main {
+  color: #2B2A2A !important;
+  font-size: 1.18rem !important;
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  max-width: 1100px !important;
+}
+
+.agaya-hero-main span {
+  display: block !important;
+  text-align: center !important;
+}
+
+.agaya-hero-support {
+  color: #A22120 !important;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+   text-align: center !important;
+  margin: 0.5rem auto 0 !important;
+  max-width: 900px !important;
+}
+
+.agaya-profile {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin: 3.75rem auto 0 !important;
+}
+
+.agaya-profile-photo {
+  width: 180px !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 50% !important;
+  margin: 0 0 0.5rem !important;
+  display: block !important;
+}
+
+.agaya-profile-name {
+  color: #2B2A2A !important;
+  font-size: 1rem !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .agaya-hero {
+    padding: 2rem 1.25rem 2rem !important;
+  }
+
+  .agaya-hero-kicker {
+    white-space: normal !important;
+    font-size: 1.15rem !important;
+    letter-spacing: 0.06em !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .agaya-hero-main {
+    font-size: 1.05rem !important;
+    max-width: 92% !important;
+  }
+
+  .agaya-hero-main span {
+    display: inline !important;
+  }
+
+  .agaya-hero-support {
+    font-size: 0.98rem !important;
+    max-width: 92% !important;
+  }
+
+  .agaya-profile {
+    margin-top: 2.5rem !important;
+  }
+
+  .agaya-profile-photo {
+    width: 140px !important;
+    height: 140px !important;
+  }
+}
+
+#ways-to-work h4,
+#ways-to-work .subhead,
+#ways-to-work .custom-section h4,
+#ways-to-work .custom-section .subhead {
+  display: block !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
+
+#ways-to-work p {
+  margin-top: 0 !important;
+  margin-bottom: 0.65rem !important;
+}
+
+#ways-to-work h4 {
+  margin-bottom: 1rem !important;
+}
+
+#ways-to-work h4 + p {
+  margin-top: 0 !important;
+}
+
+.tier-card ul {
+  text-align: left !important;
+  padding-left: 1.25rem !important;
+  margin-left: 0 !important;
+}
+
+.tier-card li {
+  text-align: left !important;
+  margin-bottom: 0.7rem;
+}
+
+#main h3#what-changes {
+  margin-top: 3rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid rgba(43, 42, 42, 0.25) !important;
+}
 </style>
 
           <!-- Google tag(gtag.js) -->
@@ -968,26 +1283,37 @@
 </head>
 
 <body>
-  <!-- Header: Logo + Title -->
-  <div class="header-top">
-    <img src="images/logo.png" alt="AGAYA Consulting Logo" class="logo" />
-    <h1>
-      <span class="--agaya-dark">AGAYA Consulting: Data Confidence for Nonprofit Leaders</span>
-    </h1>
-  </div>
-
-  <!-- Intro / Hero -->
-<div id="intro">
-  <h2>Most reporting is accurate.  Not all of it is decision-ready.</h2>
-
-  <p class="intro-lead">I help nonprofit Executive Directors turn scattered reporting into decisions they can defend.</p>
   
+ <!-- Header: Logo + Title -->
+<div class="header-top">
+  <img src="images/logo.png" alt="AGAYA Consulting Logo" class="logo" />
+  <h1>
+    <span class="--agaya-dark">AGAYA Consulting: Data Confidence for Nonprofit Leaders</span>
+  </h1>
+</div>
 
-    <!-- Profile -->
-    <div class="profile">
-      <img src="images/Indu3.jpg" alt="Indu Sambandam" class="profile-photo" />
-      <p class="profile-name">Indu Sambandam</p>
-    </div>
+<!-- Intro / Hero -->
+<div class="agaya-hero">
+  <h2 class="agaya-hero-kicker">
+    Most reporting is accurate. Not all of it is decision-ready.
+  </h2>
+
+  <p class="agaya-hero-main">
+    <p class="agaya-hero-main">
+  <span>I help nonprofit Executive Directors pressure-test the numbers and assumptions</span>
+  <span>behind high-stakes decisions before they reach the board or a funder.</span>
+</p>
+ 
+
+  <p class="agaya-hero-support">
+    So the hard questions are answered before the meeting, not after.
+  </p>
+
+  <div class="agaya-profile">
+    <img src="images/Indu2.png" alt="" class="agaya-profile-photo" />
+    <p class="agaya-profile-name">Indu Sambandam</p>
+  </div>
+</div>
 
     <!-- Navigation -->
     <nav class="nav-left" aria-label="Primary">
@@ -1069,11 +1395,36 @@
     <h3 id="ways-to-work" style="text-align:left;">Ways to Work Together</h3>
 <div class="custom-section">
 
-  <h4 style="color:#A22120;">Ongoing Decision &amp; Data Support</h4>
+  <h4 class="subhead">Focused Reporting &amp; Data Projects</h4>
+ 
+  <p>For organizations with a defined reporting, dashboard, or analytics issue to resolve.</p>
+
+  <p>This may involve redesigning a dashboard, clarifying KPIs, reconciling inconsistent reports, or building a performance view leadership can actually use in practice.</p>
+
+  <p>These engagements are scoped and deliverable-focused, but still grounded in decision use.</p>
+
+  <p>The question is not only whether the report is technically correct.</p>
+
+  <p>The question is whether the information is clear enough, aligned enough, and contextualized enough to support action.</p>
+
+<p class="no-bottom-margin"><strong>Best fit for:</strong> organizations with a specific reporting problem to solve, especially when a board decision, funder conversation, budget choice, program review, or impact claim depends on numbers that need to be clear, aligned, and defensible.</p>
+
+<p class="section-link">
+  <a href="work-samples.html">
+    See Client Sample Dashboards and Case Studies →
+  </a>
+</p>
+
+
+<h4 class="subhead">Ongoing Decision &amp; Data Support</h4>
 
   <p>For nonprofit leadership teams that regularly have to explain, reconcile, or defend the numbers behind decisions.</p>
 
   <p>This work is designed for organizations managing reporting across multiple functions with no single person who owns the full picture.</p>
+
+  <p><strong>This work is often best approached after a focused project</strong>, so both sides can gauge fit, working style, organizational readiness, and the level of support needed.</p>
+
+  <p>If the issue is recurring across Finance, Fundraising, Programs, impact reporting, or board materials, the work can extend into longer-term decision and data support.</p>
 
   <p>The work typically starts with the decisions leadership is currently responsible for and the reporting that sits underneath them.</p>
 
@@ -1123,28 +1474,6 @@
 </div>
 <p></p>
   <p><strong>Best fit for:</strong> EDs and senior leaders who want the numbers ready before the conversation, not explained after it.</p>
-
-  <h4 style="color:#A22120;">Focused Reporting &amp; Data Projects</h4>
-
-  <p>For organizations with a defined reporting, dashboard, or analytics issue to resolve.</p>
-
-  <p>This may involve redesigning a dashboard, clarifying KPIs, reconciling inconsistent reports, or building a performance view leadership can actually use in practice.</p>
-
-  <p>These engagements are scoped and deliverable-focused, but still grounded in decision use.</p>
-
-  <p>The question is not only whether the report is technically correct.</p>
-
-  <p>The question is whether the information is clear enough, aligned enough, and contextualized enough to support action.</p>
-
-<p class="no-bottom-margin"><strong>Best fit for:</strong> organizations with a specific reporting problem to solve. If the questions keep coming across multiple decisions and functions, Ongoing Decision & Data Support is likely the better fit.</p>
-
-<p class="section-link">
-  <a href="work-samples.html">
-    See Client Sample Dashboards and Case Studies →
-  </a>
-</p>
-
-</div>      
 
 
 <h3 id="what-changes" style="text-align:left;">What Changes</h3>
